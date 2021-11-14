@@ -1,4 +1,4 @@
-# Softwareentwicklungprojekt: <Kompetenzdatenbank>
+# Softwareentwicklungprojekt: Kompetenzdatenbank
 
 * Teammitglieder:
 	1. <Kenneth_Austin>
