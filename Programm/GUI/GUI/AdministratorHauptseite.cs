@@ -8,11 +8,13 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class Hauptseite : Form
+    public partial class AdministratorHauptseite : Form
     {
-        public Hauptseite()
+        public AdministratorHauptseite()
         {
             InitializeComponent();
         }
+
+ 
     }
 }
