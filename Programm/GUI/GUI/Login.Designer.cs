@@ -1,7 +1,7 @@
 ﻿
 namespace GUI
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         ///  Required designer variable.
@@ -35,11 +35,12 @@ namespace GUI
             this.ClearButton = new System.Windows.Forms.Button();
             this.LoginButton = new System.Windows.Forms.Button();
             this.checkbxShowPas = new System.Windows.Forms.CheckBox();
-            this.txtpassword = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.AdministratorMitarbeiter = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // Error_Label
@@ -87,6 +88,7 @@ namespace GUI
             this.ClearButton.TabIndex = 36;
             this.ClearButton.Text = "CLEAR";
             this.ClearButton.UseVisualStyleBackColor = false;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
             // LoginButton
             // 
@@ -102,6 +104,7 @@ namespace GUI
             this.LoginButton.TabIndex = 37;
             this.LoginButton.Text = "LOGIN";
             this.LoginButton.UseVisualStyleBackColor = false;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // checkbxShowPas
             // 
@@ -115,18 +118,19 @@ namespace GUI
             this.checkbxShowPas.TabIndex = 35;
             this.checkbxShowPas.Text = "Password zeigen";
             this.checkbxShowPas.UseVisualStyleBackColor = true;
+            this.checkbxShowPas.CheckedChanged += new System.EventHandler(this.checkbxShowPas_CheckedChanged);
             // 
-            // txtpassword
+            // txtPassword
             // 
-            this.txtpassword.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtpassword.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtpassword.Location = new System.Drawing.Point(293, 212);
-            this.txtpassword.Multiline = true;
-            this.txtpassword.Name = "txtpassword";
-            this.txtpassword.PasswordChar = '•';
-            this.txtpassword.Size = new System.Drawing.Size(410, 28);
-            this.txtpassword.TabIndex = 33;
+            this.txtPassword.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPassword.Location = new System.Drawing.Point(293, 212);
+            this.txtPassword.Multiline = true;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '•';
+            this.txtPassword.Size = new System.Drawing.Size(410, 28);
+            this.txtPassword.TabIndex = 33;
             // 
             // label3
             // 
@@ -163,18 +167,32 @@ namespace GUI
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(235, 54);
+            this.label1.Location = new System.Drawing.Point(239, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(520, 32);
             this.label1.TabIndex = 41;
             this.label1.Text = "Wilkommen auf der Kompetenz DB Applikation";
             // 
-            // Form1
+            // AdministratorMitarbeiter
+            // 
+            this.AdministratorMitarbeiter.AutoSize = true;
+            this.AdministratorMitarbeiter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AdministratorMitarbeiter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AdministratorMitarbeiter.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AdministratorMitarbeiter.Location = new System.Drawing.Point(630, 293);
+            this.AdministratorMitarbeiter.Name = "AdministratorMitarbeiter";
+            this.AdministratorMitarbeiter.Size = new System.Drawing.Size(137, 29);
+            this.AdministratorMitarbeiter.TabIndex = 42;
+            this.AdministratorMitarbeiter.Text = "Administrator";
+            this.AdministratorMitarbeiter.UseVisualStyleBackColor = true;
+            // 
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(997, 526);
+            this.Controls.Add(this.AdministratorMitarbeiter);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Error_Label);
             this.Controls.Add(this.label6);
@@ -182,11 +200,11 @@ namespace GUI
             this.Controls.Add(this.ClearButton);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.checkbxShowPas);
-            this.Controls.Add(this.txtpassword);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label2);
-            this.Name = "Form1";
+            this.Name = "Login";
             this.Text = "KompetenzDatenbank";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -202,11 +220,12 @@ namespace GUI
         private System.Windows.Forms.Button ClearButton;
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.CheckBox checkbxShowPas;
-        private System.Windows.Forms.TextBox txtpassword;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox AdministratorMitarbeiter;
     }
 }
 
