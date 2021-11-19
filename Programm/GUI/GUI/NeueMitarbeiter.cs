@@ -8,13 +8,16 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class MitarbeiterHauptseite : Form
+    public partial class NeueMitarbeiter : Form
     {
-        public MitarbeiterHauptseite()
+        public NeueMitarbeiter()
         {
             InitializeComponent();
         }
 
-
+        private void Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

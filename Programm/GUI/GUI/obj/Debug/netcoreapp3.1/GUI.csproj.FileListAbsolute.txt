@@ -4,7 +4,6 @@ C:\Users\Reynaldo Domenico\Desktop\Kompetenzdatenbank\Programm\GUI\GUI\bin\Debug
 C:\Users\Reynaldo Domenico\Desktop\Kompetenzdatenbank\Programm\GUI\GUI\bin\Debug\netcoreapp3.1\GUI.runtimeconfig.dev.json
 C:\Users\Reynaldo Domenico\Desktop\Kompetenzdatenbank\Programm\GUI\GUI\bin\Debug\netcoreapp3.1\GUI.dll
 C:\Users\Reynaldo Domenico\Desktop\Kompetenzdatenbank\Programm\GUI\GUI\bin\Debug\netcoreapp3.1\GUI.pdb
-C:\Users\Reynaldo Domenico\Desktop\Kompetenzdatenbank\Programm\GUI\GUI\obj\Debug\netcoreapp3.1\GUI.csprojAssemblyReference.cache
 C:\Users\Reynaldo Domenico\Desktop\Kompetenzdatenbank\Programm\GUI\GUI\obj\Debug\netcoreapp3.1\GUI.Login.resources
 C:\Users\Reynaldo Domenico\Desktop\Kompetenzdatenbank\Programm\GUI\GUI\obj\Debug\netcoreapp3.1\GUI.csproj.GenerateResource.cache
 C:\Users\Reynaldo Domenico\Desktop\Kompetenzdatenbank\Programm\GUI\GUI\obj\Debug\netcoreapp3.1\GUI.AssemblyInfoInputs.cache
@@ -16,3 +15,4 @@ C:\Users\Reynaldo Domenico\Desktop\Kompetenzdatenbank\Programm\GUI\GUI\obj\Debug
 C:\Users\Reynaldo Domenico\Desktop\Kompetenzdatenbank\Programm\GUI\GUI\obj\Debug\netcoreapp3.1\GUI.AdministratorHauptseite.resources
 C:\Users\Reynaldo Domenico\Desktop\Kompetenzdatenbank\Programm\GUI\GUI\obj\Debug\netcoreapp3.1\GUI.MitarbeiterHauptseite.resources
 C:\Users\Reynaldo Domenico\Desktop\Kompetenzdatenbank\Programm\GUI\GUI\obj\Debug\netcoreapp3.1\GUI.Properties.Resources.resources
+C:\Users\Reynaldo Domenico\Desktop\Kompetenzdatenbank\Programm\GUI\GUI\obj\Debug\netcoreapp3.1\GUI.NeueMitarbeiter.resources
