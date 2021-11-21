@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Reynaldo Domenico\\Desktop\\Kompetenzdatenbank\\Programm\\GUI\\GUI\\GUI.csproj": {}
+    "C:\\Users\\49176\\Downloads\\newFolder\\Programm\\GUI\\GUI\\GUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Reynaldo Domenico\\Desktop\\Kompetenzdatenbank\\Programm\\GUI\\GUI\\GUI.csproj": {
+    "C:\\Users\\49176\\Downloads\\newFolder\\Programm\\GUI\\GUI\\GUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Reynaldo Domenico\\Desktop\\Kompetenzdatenbank\\Programm\\GUI\\GUI\\GUI.csproj",
+        "projectUniqueName": "C:\\Users\\49176\\Downloads\\newFolder\\Programm\\GUI\\GUI\\GUI.csproj",
         "projectName": "GUI",
-        "projectPath": "C:\\Users\\Reynaldo Domenico\\Desktop\\Kompetenzdatenbank\\Programm\\GUI\\GUI\\GUI.csproj",
-        "packagesPath": "C:\\Users\\Reynaldo Domenico\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Reynaldo Domenico\\Desktop\\Kompetenzdatenbank\\Programm\\GUI\\GUI\\obj\\",
+        "projectPath": "C:\\Users\\49176\\Downloads\\newFolder\\Programm\\GUI\\GUI\\GUI.csproj",
+        "packagesPath": "C:\\Users\\49176\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\49176\\Downloads\\newFolder\\Programm\\GUI\\GUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Reynaldo Domenico\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\49176\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -42,6 +43,16 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.27, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -60,7 +71,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
