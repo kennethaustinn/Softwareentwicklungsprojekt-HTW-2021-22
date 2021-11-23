@@ -12,6 +12,7 @@ namespace GUI
 {
     public partial class Login : Form
     {
+        public static Login login = new Login();
         public Login()
         {
             InitializeComponent();
@@ -43,17 +44,9 @@ namespace GUI
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            if(AdministratorMitarbeiter.Checked)
-            {
-                
-                AdministratorHauptseite f2 = new AdministratorHauptseite();
-                f2.ShowDialog();
-            }
-            else 
-            {
-                MitarbeiterHauptseite f1 = new MitarbeiterHauptseite();
-                f1.ShowDialog();
-            }
+            this.Hide();
+            AdministratorHauptseite.administratorHauptseite.ShowDialog();
+            this.Close();
         }
     }
 }

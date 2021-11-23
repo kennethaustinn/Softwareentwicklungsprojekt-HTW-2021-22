@@ -30,8 +30,6 @@ namespace GUI
         private void InitializeComponent()
         {
             this.Error_Label = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.ClearButton = new System.Windows.Forms.Button();
             this.LoginButton = new System.Windows.Forms.Button();
             this.checkbxShowPas = new System.Windows.Forms.CheckBox();
@@ -40,7 +38,6 @@ namespace GUI
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.AdministratorMitarbeiter = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // Error_Label
@@ -53,27 +50,6 @@ namespace GUI
             this.Error_Label.Size = new System.Drawing.Size(93, 19);
             this.Error_Label.TabIndex = 40;
             this.Error_Label.Text = "ErrorMessage";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label6.Location = new System.Drawing.Point(420, 397);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(150, 21);
-            this.label6.TabIndex = 38;
-            this.label6.Text = "Regristieren Sie hier";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(432, 382);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(128, 15);
-            this.label5.TabIndex = 39;
-            this.label5.Text = "Haben Sie kein Konto ?";
             // 
             // ClearButton
             // 
@@ -173,30 +149,14 @@ namespace GUI
             this.label1.TabIndex = 41;
             this.label1.Text = "Wilkommen auf der Kompetenz DB Applikation";
             // 
-            // AdministratorMitarbeiter
-            // 
-            this.AdministratorMitarbeiter.AutoSize = true;
-            this.AdministratorMitarbeiter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AdministratorMitarbeiter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AdministratorMitarbeiter.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AdministratorMitarbeiter.Location = new System.Drawing.Point(630, 293);
-            this.AdministratorMitarbeiter.Name = "AdministratorMitarbeiter";
-            this.AdministratorMitarbeiter.Size = new System.Drawing.Size(137, 29);
-            this.AdministratorMitarbeiter.TabIndex = 42;
-            this.AdministratorMitarbeiter.Text = "Administrator";
-            this.AdministratorMitarbeiter.UseVisualStyleBackColor = true;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(997, 526);
-            this.Controls.Add(this.AdministratorMitarbeiter);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Error_Label);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.ClearButton);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.checkbxShowPas);
@@ -215,8 +175,6 @@ namespace GUI
         #endregion
 
         private System.Windows.Forms.Label Error_Label;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button ClearButton;
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.CheckBox checkbxShowPas;
@@ -225,7 +183,6 @@ namespace GUI
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox AdministratorMitarbeiter;
     }
 }
 

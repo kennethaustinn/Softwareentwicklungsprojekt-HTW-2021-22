@@ -10,5 +10,11 @@
     <Compile Update="MitarbeiterHauptseite.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="MitarbeiterListe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NeueMitarbeiter.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
