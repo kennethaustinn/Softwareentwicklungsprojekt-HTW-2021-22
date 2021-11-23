@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Reynaldo Domenico\\Desktop\\Kompetenzdatenbank\\Programm\\GUI\\GUI\\GUI.csproj",
+      "projectUniqueName": "C:\\Users\\Reynaldo Domenico\\Desktop\\Softwareentwicklung\\Kompetenzdatenbank\\team6\\Programm\\GUI\\GUI\\GUI.csproj",
       "projectName": "GUI",
-      "projectPath": "C:\\Users\\Reynaldo Domenico\\Desktop\\Kompetenzdatenbank\\Programm\\GUI\\GUI\\GUI.csproj",
+      "projectPath": "C:\\Users\\Reynaldo Domenico\\Desktop\\Softwareentwicklung\\Kompetenzdatenbank\\team6\\Programm\\GUI\\GUI\\GUI.csproj",
       "packagesPath": "C:\\Users\\Reynaldo Domenico\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Reynaldo Domenico\\Desktop\\Kompetenzdatenbank\\Programm\\GUI\\GUI\\obj\\",
+      "outputPath": "C:\\Users\\Reynaldo Domenico\\Desktop\\Softwareentwicklung\\Kompetenzdatenbank\\team6\\Programm\\GUI\\GUI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
