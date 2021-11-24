@@ -80,26 +80,31 @@ namespace GUI
         private void NeueMitarbeiterButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.Black);
+            openChildForm(new NeueMitarbeiter());
         }
 
         private void MitarbeiterListeButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.Black);
+            openChildForm(new MitarbeiterListe());
         }
 
         private void ProjekteListeButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.Black);
+            openChildForm(new ProjektListe());
         }
 
         private void KompetenzListeButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.Black);
+            openChildForm(new KompetenzListe());
         }
 
         private void EinstellungenButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.Black);
+            openChildForm(new Einstellungen());
         }
 
         private void HomeLogo_Click(object sender, EventArgs e)

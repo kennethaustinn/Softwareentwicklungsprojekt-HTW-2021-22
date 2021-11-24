@@ -41,10 +41,10 @@ namespace GUI
             this.panelLogo = new System.Windows.Forms.Panel();
             this.HomeLogo = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.currentChildFormText = new System.Windows.Forms.Label();
+            this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
-            this.currentChildFormText = new System.Windows.Forms.Label();
             this.panelSideMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomeLogo)).BeginInit();
@@ -69,7 +69,7 @@ namespace GUI
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(220, 584);
+            this.panelSideMenu.Size = new System.Drawing.Size(220, 616);
             this.panelSideMenu.TabIndex = 0;
             // 
             // EinstellungenButton
@@ -214,23 +214,16 @@ namespace GUI
             this.panel1.Size = new System.Drawing.Size(866, 60);
             this.panel1.TabIndex = 1;
             // 
-            // panel2
+            // currentChildFormText
             // 
-            this.panel2.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(220, 60);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(866, 20);
-            this.panel2.TabIndex = 2;
-            // 
-            // panelChildForm
-            // 
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(220, 80);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(866, 504);
-            this.panelChildForm.TabIndex = 3;
+            this.currentChildFormText.AutoSize = true;
+            this.currentChildFormText.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.currentChildFormText.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.currentChildFormText.Location = new System.Drawing.Point(58, 12);
+            this.currentChildFormText.Name = "currentChildFormText";
+            this.currentChildFormText.Size = new System.Drawing.Size(78, 29);
+            this.currentChildFormText.TabIndex = 1;
+            this.currentChildFormText.Text = "Home";
             // 
             // iconCurrentChildForm
             // 
@@ -246,29 +239,36 @@ namespace GUI
             this.iconCurrentChildForm.TabIndex = 0;
             this.iconCurrentChildForm.TabStop = false;
             // 
-            // currentChildFormText
+            // panel2
             // 
-            this.currentChildFormText.AutoSize = true;
-            this.currentChildFormText.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.currentChildFormText.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.currentChildFormText.Location = new System.Drawing.Point(58, 12);
-            this.currentChildFormText.Name = "currentChildFormText";
-            this.currentChildFormText.Size = new System.Drawing.Size(78, 29);
-            this.currentChildFormText.TabIndex = 1;
-            this.currentChildFormText.Text = "Home";
+            this.panel2.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(220, 60);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(866, 20);
+            this.panel2.TabIndex = 2;
+            // 
+            // panelChildForm
+            // 
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(220, 80);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(866, 536);
+            this.panelChildForm.TabIndex = 3;
             // 
             // AdministratorHauptseite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(1086, 584);
+            this.ClientSize = new System.Drawing.Size(1086, 616);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelSideMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MinimumSize = new System.Drawing.Size(950, 600);
+            this.MinimumSize = new System.Drawing.Size(950, 655);
             this.Name = "AdministratorHauptseite";
             this.Text = "Kompetenzdatenbank";
             this.panelSideMenu.ResumeLayout(false);

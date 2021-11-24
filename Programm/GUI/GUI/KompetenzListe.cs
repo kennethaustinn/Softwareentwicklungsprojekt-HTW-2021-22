@@ -1,10 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Text;
+using System.Windows.Forms;
 
 namespace GUI
 {
-    class KompetenzListe
+    public partial class KompetenzListe : Form
     {
+        public KompetenzListe()
+        {
+            InitializeComponent();
+        }
     }
 }
