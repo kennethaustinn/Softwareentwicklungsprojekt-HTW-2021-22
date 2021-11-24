@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "HWyXKuU8kUlDZVjomsJWm8i5DEFYjWW+z75nRNVMQGsm3YYD0tgt+/Oif7VbQXYEDEaqcSNpO6kmHEx1+me0YA==",
+  "dgSpecHash": "p/krXdI3OYdvy4Wp0Y51MVvK/bF5qIoVk00NXIT/BQJbQ92CTOBczgk7RFUorWKgOjf5fMPgTZdH1tvc3VDPvQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\49176\\Downloads\\newFolder\\Programm\\GUI\\GUI\\GUI.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Reynaldo Domenico\\Desktop\\Softwareentwicklung\\Kompetenzdatenbank\\team6\\Programm\\GUI\\GUI\\GUI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Reynaldo Domenico\\.nuget\\packages\\fontawesome.sharp\\5.15.3\\fontawesome.sharp.5.15.3.nupkg.sha512"
+  ],
   "logs": []
 }
