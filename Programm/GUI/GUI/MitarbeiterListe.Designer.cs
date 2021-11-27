@@ -41,6 +41,9 @@ namespace GUI
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -56,7 +59,7 @@ namespace GUI
             this.dataGridView1.Location = new System.Drawing.Point(32, 27);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(918, 559);
+            this.dataGridView1.Size = new System.Drawing.Size(922, 563);
             this.dataGridView1.TabIndex = 0;
             // 
             // Column1
@@ -109,7 +112,7 @@ namespace GUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(982, 608);
+            this.ClientSize = new System.Drawing.Size(984, 611);
             this.Controls.Add(this.dataGridView1);
             this.Name = "MitarbeiterListe";
             this.Text = "MitarbeiterListe";

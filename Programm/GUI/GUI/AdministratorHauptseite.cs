@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
+using System.Runtime.InteropServices;
 
 namespace GUI
 {
@@ -23,6 +24,12 @@ namespace GUI
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelSideMenu.Controls.Add(leftBorderBtn);
+
+            //ControlBox entfernen
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
     private void ActivateButton(object senderBtn, Color color)
@@ -74,7 +81,6 @@ namespace GUI
             panelChildForm.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-
         }
 
         private void NeueMitarbeiterButton_Click(object sender, EventArgs e)
@@ -114,25 +120,58 @@ namespace GUI
 
         private void Reset()
         {
-            DisableButton();
-            leftBorderBtn.Visible = false;
-            iconCurrentChildForm.IconChar = IconChar.Home;
-            currentChildFormText.Text = "Home";
+            if (activeForm != null)
+            {
+                DisableButton();
+                activeForm.Close();
+                leftBorderBtn.Visible = false;
+                iconCurrentChildForm.IconChar = IconChar.Home;
+                currentChildFormText.Text = "Home";
+            }
+        }
+
+        //Drag Form
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void BtnMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnMaximize_Click(object sender, EventArgs e)
+        {
+            if(WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Maximized;
+            }    
+            else
+            {
+                WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
 
-
-
-
-
-
-        // Image Sliding Main Menu
 
         //private int ImageNumber = 1;
 
         //private void Slide()
         //{
-        //    if(ImageNumber == 4)
+        //    if (ImageNumber == 4)
         //    {
         //        ImageNumber = 1;
         //    }

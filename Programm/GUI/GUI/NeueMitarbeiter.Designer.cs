@@ -56,10 +56,11 @@ namespace GUI
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(60, 44);
+            this.panel1.Location = new System.Drawing.Point(34, 27);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(874, 535);
+            this.panel1.Size = new System.Drawing.Size(922, 563);
             this.panel1.TabIndex = 3;
+
             // 
             // label7
             // 
@@ -145,7 +146,7 @@ namespace GUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(987, 616);
+            this.ClientSize = new System.Drawing.Size(984, 611);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "NeueMitarbeiter";

@@ -78,3 +78,5 @@ C:\Users\Reynaldo Domenico\Desktop\Softwareentwicklung\Kompetenzdatenbank\team6\
 C:\Users\Reynaldo Domenico\Desktop\Softwareentwicklung\Kompetenzdatenbank\team6\Programm\GUI\GUI\obj\Debug\netcoreapp3.1\GUI.Einstellungen.resources
 C:\Users\Reynaldo Domenico\Desktop\Softwareentwicklung\Kompetenzdatenbank\team6\Programm\GUI\GUI\obj\Debug\netcoreapp3.1\GUI.KompetenzListe.resources
 C:\Users\Reynaldo Domenico\Desktop\Softwareentwicklung\Kompetenzdatenbank\team6\Programm\GUI\GUI\obj\Debug\netcoreapp3.1\GUI.ProjektListe.resources
+C:\Users\Reynaldo Domenico\Desktop\Softwareentwicklung\Kompetenzdatenbank\team6\Programm\GUI\GUI\obj\Debug\netcoreapp3.1\GUI.Kompetenz.resources
+C:\Users\Reynaldo Domenico\Desktop\Softwareentwicklung\Kompetenzdatenbank\team6\Programm\GUI\GUI\obj\Debug\netcoreapp3.1\GUI.Projekt.resources
