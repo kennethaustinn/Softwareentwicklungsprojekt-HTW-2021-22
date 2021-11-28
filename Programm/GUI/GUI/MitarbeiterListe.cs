@@ -14,5 +14,24 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void MitarbeiterListe_Shown(object sender, EventArgs e)
+        {
+            MitarbeiterListeTable.Rows.Add(
+                new object[]
+                {
+                    1,
+                    "Mustermann",
+                    "Müller",
+                    "Design",
+                    "Bildverarbeitung"
+                }
+                );
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

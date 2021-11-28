@@ -13,6 +13,16 @@
         "frameworkReferences": [
           "Microsoft.WindowsDesktop.App"
         ]
+      },
+      "SQLConnection/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/SQLConnection.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SQLConnection.dll": {}
+        }
       }
     }
   },
@@ -32,11 +42,17 @@
         "lib/net48/FontAwesome.Sharp.dll",
         "lib/netcoreapp3.1/FontAwesome.Sharp.dll"
       ]
+    },
+    "SQLConnection/1.0.0": {
+      "type": "project",
+      "path": "../SQLConnection/SQLConnection.csproj",
+      "msbuildProject": "../SQLConnection/SQLConnection.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "FontAwesome.Sharp >= 5.15.3"
+      "FontAwesome.Sharp >= 5.15.3",
+      "SQLConnection >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -69,7 +85,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Reynaldo Domenico\\Desktop\\Softwareentwicklung\\Kompetenzdatenbank\\team6\\Programm\\GUI\\SQLConnection\\SQLConnection.csproj": {
+              "projectPath": "C:\\Users\\Reynaldo Domenico\\Desktop\\Softwareentwicklung\\Kompetenzdatenbank\\team6\\Programm\\GUI\\SQLConnection\\SQLConnection.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
