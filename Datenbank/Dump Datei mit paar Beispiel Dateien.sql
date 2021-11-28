@@ -27,7 +27,7 @@ DROP TABLE IF EXISTS `kompetenz`;
 CREATE TABLE `kompetenz` (
   `Kompetenz_ID` int(11) NOT NULL,
   `Name` varchar(45) NOT NULL,
-  `Bezeichnung` varchar(45) NOT NULL,
+  `Bezeichnung` varchar(45) DEFAULT NULL,
   `Alternativebezeichnung` varchar(45) DEFAULT NULL,
   `Beschreibung` longtext DEFAULT NULL,
   PRIMARY KEY (`Kompetenz_ID`)
@@ -40,34 +40,8 @@ CREATE TABLE `kompetenz` (
 
 LOCK TABLES `kompetenz` WRITE;
 /*!40000 ALTER TABLE `kompetenz` DISABLE KEYS */;
+INSERT INTO `kompetenz` VALUES (1,'Textverarbeitungte','Schreibprogramm',NULL,'die Erstellung und Bearbeitung von schriftlichen Texten mithilfe von organisatorischen und technischen Mitteln'),(2,'Tabellenkalkulation',NULL,NULL,'Eingabe und Verarbeitung von numerischen und alphanumerischen Daten in Form einer Tabelle'),(3,'Präsentationsprogramme','Präsentation',NULL,'Erarbeitung und Präsentation eines Vortrages oder Referates unterstützt.'),(4,'Frontend','User Interface / User Experience','UI / UX','Entwicklung dynamischer Anwendungen sowie die Konzeption moderner und nutzerfreundlicher User-Interfaces'),(5,'Backend','Programmierung','Coding','Tätigkeit, Computerprogramme zu erstellen');
 /*!40000 ALTER TABLE `kompetenz` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `kompetenz_hat_unterkompetenz`
---
-
-DROP TABLE IF EXISTS `kompetenz_hat_unterkompetenz`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `kompetenz_hat_unterkompetenz` (
-  `Kompetenz_Kompetenz_ID` int(11) NOT NULL,
-  `Unterkompetenz_Unterkompetenz_ID` int(11) NOT NULL,
-  PRIMARY KEY (`Kompetenz_Kompetenz_ID`,`Unterkompetenz_Unterkompetenz_ID`),
-  KEY `fk_Kompetenz_has_Unterkompetenz_Unterkompetenz1_idx` (`Unterkompetenz_Unterkompetenz_ID`),
-  KEY `fk_Kompetenz_has_Unterkompetenz_Kompetenz1_idx` (`Kompetenz_Kompetenz_ID`),
-  CONSTRAINT `fk_Kompetenz_has_Unterkompetenz_Kompetenz1` FOREIGN KEY (`Kompetenz_Kompetenz_ID`) REFERENCES `kompetenz` (`Kompetenz_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Kompetenz_has_Unterkompetenz_Unterkompetenz1` FOREIGN KEY (`Unterkompetenz_Unterkompetenz_ID`) REFERENCES `unterkompetenz` (`Unterkompetenz_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `kompetenz_hat_unterkompetenz`
---
-
-LOCK TABLES `kompetenz_hat_unterkompetenz` WRITE;
-/*!40000 ALTER TABLE `kompetenz_hat_unterkompetenz` DISABLE KEYS */;
-/*!40000 ALTER TABLE `kompetenz_hat_unterkompetenz` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -79,6 +53,8 @@ DROP TABLE IF EXISTS `mitarbeiter`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `mitarbeiter` (
   `Mitarbeiter_ID` int(11) NOT NULL,
+  `Benutzername` varchar(45) NOT NULL,
+  `Passwort` varchar(45) NOT NULL,
   `Vorname` varchar(45) DEFAULT NULL,
   `Name` varchar(45) NOT NULL,
   `Aufgabenbereich` mediumtext NOT NULL,
@@ -94,6 +70,7 @@ CREATE TABLE `mitarbeiter` (
 
 LOCK TABLES `mitarbeiter` WRITE;
 /*!40000 ALTER TABLE `mitarbeiter` DISABLE KEYS */;
+INSERT INTO `mitarbeiter` VALUES (1,'maxm','pass123','Max','Mustermann','Backend','IT','Mitarbeiter'),(2,'thomasm','pass123','Thomas','Müller','System','IT','Administrator'),(3,'sarahe','pass123','Sarah','Engelmann','Frontend','IT','Mitarbeiter'),(4,'jakobs','pass123','Jakob','Schwarz','Content Manager','IT','Mitarbeiter'),(5,'annal','pass123','Anna','Linke','Bildverarbeitung','IT','Mitarbeiter');
 /*!40000 ALTER TABLE `mitarbeiter` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -121,6 +98,7 @@ CREATE TABLE `mitarbeiter_hat_kompetenz` (
 
 LOCK TABLES `mitarbeiter_hat_kompetenz` WRITE;
 /*!40000 ALTER TABLE `mitarbeiter_hat_kompetenz` DISABLE KEYS */;
+INSERT INTO `mitarbeiter_hat_kompetenz` VALUES (1,5),(2,5),(3,4),(4,4),(5,4);
 /*!40000 ALTER TABLE `mitarbeiter_hat_kompetenz` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -162,8 +140,7 @@ CREATE TABLE `projekt` (
   `Projekt_ID` int(11) NOT NULL,
   `Name` varchar(45) NOT NULL,
   `Start` date NOT NULL,
-  `Ende` date NOT NULL,
-  `Laufzeit` varchar(45) NOT NULL,
+  `Ende` date DEFAULT NULL,
   `Beschreibung` longtext DEFAULT NULL,
   PRIMARY KEY (`Projekt_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -175,6 +152,7 @@ CREATE TABLE `projekt` (
 
 LOCK TABLES `projekt` WRITE;
 /*!40000 ALTER TABLE `projekt` DISABLE KEYS */;
+INSERT INTO `projekt` VALUES (1,'Flöhmarkt Webapplikation','2020-02-01','2020-12-15','Es handelt sich um eine Webapplikation für Marktplatz für gebrauchte Ware'),(2,'Ballspiel Android','2019-05-30','2019-07-28','Es ist eine Ballspiel wird in Android Handy betrieben'),(3,'Kompetenzdatenbank','2021-10-20',NULL,'Datenbankanwendung, die Mitarbeiter, Projekte und Kompetenzen verwaltet in Desktop');
 /*!40000 ALTER TABLE `projekt` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -214,8 +192,11 @@ DROP TABLE IF EXISTS `unterkompetenz`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `unterkompetenz` (
   `Unterkompetenz_ID` int(11) NOT NULL,
+  `Kompetenz_id` int(11) NOT NULL,
   `Name` varchar(45) NOT NULL,
-  PRIMARY KEY (`Unterkompetenz_ID`)
+  PRIMARY KEY (`Unterkompetenz_ID`),
+  KEY `Unterkompetenz_idx` (`Kompetenz_id`),
+  CONSTRAINT `fk_unterkompetenz` FOREIGN KEY (`Kompetenz_id`) REFERENCES `kompetenz` (`Kompetenz_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -225,6 +206,7 @@ CREATE TABLE `unterkompetenz` (
 
 LOCK TABLES `unterkompetenz` WRITE;
 /*!40000 ALTER TABLE `unterkompetenz` DISABLE KEYS */;
+INSERT INTO `unterkompetenz` VALUES (1,4,'Bildverarbeitung'),(2,4,'Content Management'),(3,5,'Datenbankmanagement'),(4,5,'Softwareentwicklung'),(5,5,'IT-Sicherheit'),(6,4,'HTML & CSS Programmierung');
 /*!40000 ALTER TABLE `unterkompetenz` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -241,4 +223,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-16 13:58:45
+-- Dump completed on 2021-11-28 18:37:10
