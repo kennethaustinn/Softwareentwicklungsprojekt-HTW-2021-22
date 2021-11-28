@@ -11,6 +11,18 @@
           "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
         }
       },
+      "FontAwesome.Sharp/5.15.3": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/FontAwesome.Sharp.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/FontAwesome.Sharp.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App"
+        ]
+      },
       "Google.Protobuf/3.14.0": {
         "type": "package",
         "dependencies": {
@@ -274,6 +286,19 @@
             "rid": "win"
           }
         }
+      },
+      "SQLConnection/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "MySql.Data": "8.0.27"
+        },
+        "compile": {
+          "bin/placeholder/SQLConnection.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SQLConnection.dll": {}
+        }
       }
     }
   },
@@ -301,6 +326,22 @@
         "lib/netstandard2.0/BouncyCastle.Crypto.xml",
         "lib/xamarinios/BouncyCastle.Crypto.dll",
         "lib/xamarinios/BouncyCastle.Crypto.xml"
+      ]
+    },
+    "FontAwesome.Sharp/5.15.3": {
+      "sha512": "b72giuP5i2aR2W+u1gdYfYnTRkMIvI78idSDgrgcSV0aSE/nwJcMoh3sItxugMqOcNeIHxveGxAxcrcTYmwlHA==",
+      "type": "package",
+      "path": "fontawesome.sharp/5.15.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fontawesome.sharp.5.15.3.nupkg.sha512",
+        "fontawesome.sharp.nuspec",
+        "lib/net40/FontAwesome.Sharp.dll",
+        "lib/net45/FontAwesome.Sharp.dll",
+        "lib/net472/FontAwesome.Sharp.dll",
+        "lib/net48/FontAwesome.Sharp.dll",
+        "lib/netcoreapp3.1/FontAwesome.Sharp.dll"
       ]
     },
     "Google.Protobuf/3.14.0": {
@@ -841,32 +882,37 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "SQLConnection/1.0.0": {
+      "type": "project",
+      "path": "../SQLConnection/SQLConnection.csproj",
+      "msbuildProject": "../SQLConnection/SQLConnection.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "MySql.Data >= 8.0.27"
+      "FontAwesome.Sharp >= 5.15.3",
+      "SQLConnection >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\49176\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Reynaldo Domenico\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\49176\\Desktop\\FachKonzept\\Programm\\GUI\\GUI\\GUI.csproj",
+      "projectUniqueName": "C:\\Users\\Reynaldo Domenico\\Desktop\\Softwareentwicklung\\Kompetenzdatenbank\\team6\\Programm\\GUI\\GUI\\GUI.csproj",
       "projectName": "GUI",
-      "projectPath": "C:\\Users\\49176\\Desktop\\FachKonzept\\Programm\\GUI\\GUI\\GUI.csproj",
-      "packagesPath": "C:\\Users\\49176\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\49176\\Desktop\\FachKonzept\\Programm\\GUI\\GUI\\obj\\",
+      "projectPath": "C:\\Users\\Reynaldo Domenico\\Desktop\\Softwareentwicklung\\Kompetenzdatenbank\\team6\\Programm\\GUI\\GUI\\GUI.csproj",
+      "packagesPath": "C:\\Users\\Reynaldo Domenico\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Reynaldo Domenico\\Desktop\\Softwareentwicklung\\Kompetenzdatenbank\\team6\\Programm\\GUI\\GUI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\49176\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Reynaldo Domenico\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -879,7 +925,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Reynaldo Domenico\\Desktop\\Softwareentwicklung\\Kompetenzdatenbank\\team6\\Programm\\GUI\\SQLConnection\\SQLConnection.csproj": {
+              "projectPath": "C:\\Users\\Reynaldo Domenico\\Desktop\\Softwareentwicklung\\Kompetenzdatenbank\\team6\\Programm\\GUI\\SQLConnection\\SQLConnection.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -892,9 +942,9 @@
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
-          "MySql.Data": {
+          "FontAwesome.Sharp": {
             "target": "Package",
-            "version": "[8.0.27, )"
+            "version": "[5.15.3, )"
           }
         },
         "imports": [
@@ -911,11 +961,14 @@
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           },
+          "Microsoft.WindowsDesktop.App": {
+            "privateAssets": "none"
+          },
           "Microsoft.WindowsDesktop.App.WindowsForms": {
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

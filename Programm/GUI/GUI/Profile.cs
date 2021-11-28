@@ -8,13 +8,12 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class NeueMitarbeiter : Form
+    public partial class Profile : Form
     {
-        public NeueMitarbeiter()
+        public Profile()
         {
             InitializeComponent();
         }
-
 
     }
 }
