@@ -298,7 +298,10 @@
         },
         "runtime": {
           "bin/placeholder/SQLConnection.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
       }
     }
   },
