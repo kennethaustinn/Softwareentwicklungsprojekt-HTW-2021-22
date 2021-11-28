@@ -27,11 +27,29 @@ namespace GUI
                     "Bildverarbeitung"
                 }
                 );
+            MitarbeiterListeTable.Rows.Add(
+               new object[]
+               {
+                    2,
+                    "Morris",
+                    "Philip",
+                    "Coding",
+                    "Programmierung"
+               }
+               );
         }
 
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
 
+        private void MitarbeiterListeTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {
+                Profile form1 = new Profile();
+                form1.ShowDialog();
+            }
         }
     }
 }

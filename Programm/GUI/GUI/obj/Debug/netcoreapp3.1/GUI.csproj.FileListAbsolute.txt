@@ -84,3 +84,5 @@ C:\Users\Reynaldo Domenico\Desktop\Softwareentwicklung\Kompetenzdatenbank\team6\
 C:\Users\Reynaldo Domenico\Desktop\Softwareentwicklung\Kompetenzdatenbank\team6\Programm\GUI\GUI\obj\Debug\netcoreapp3.1\GUI.CustomTextBox.resources
 C:\Users\Reynaldo Domenico\Desktop\Softwareentwicklung\Kompetenzdatenbank\team6\Programm\GUI\GUI\bin\Debug\netcoreapp3.1\SQLConnection.exe
 C:\Users\Reynaldo Domenico\Desktop\Softwareentwicklung\Kompetenzdatenbank\team6\Programm\GUI\GUI\bin\Debug\netcoreapp3.1\SQLConnection.pdb
+C:\Users\Reynaldo Domenico\Desktop\Softwareentwicklung\Kompetenzdatenbank\team6\Programm\GUI\GUI\obj\Debug\netcoreapp3.1\GUI.Wilkommen.resources
+C:\Users\Reynaldo Domenico\Desktop\Softwareentwicklung\Kompetenzdatenbank\team6\Programm\GUI\GUI\obj\Debug\netcoreapp3.1\GUI.Profile.resources

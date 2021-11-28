@@ -44,9 +44,18 @@ namespace GUI
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
+            //timer1.Start();
             this.Hide();
+            //int counter = 0;
+            //counter++;
+            //Wilkommen form2 = new  Wilkommen();
+            //form2.ShowDialog();
+            //if (counter == 10)
+            //   timer1.Stop();
+            //this.Hide();
             AdministratorHauptseite.administratorHauptseite.ShowDialog();
             this.Close();
+
         }
     }
 }

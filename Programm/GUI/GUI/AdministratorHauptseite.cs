@@ -18,6 +18,7 @@ namespace GUI
 
     private IconButton currentBtn;
     private Panel leftBorderBtn;
+    private Form currentChildForm;
     public AdministratorHauptseite()
         {
             InitializeComponent();
@@ -71,14 +72,14 @@ namespace GUI
         private Form activeForm = null;
         private void openChildForm(Form childForm)
         {
-            if (activeForm != null)
-            activeForm.Close();
+            if (currentChildForm != null)
+                currentChildForm.Close();
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            panelChildForm.Controls.Add(childForm);
-            panelChildForm.Tag = childForm;
+            panel1.Controls.Add(childForm);
+            panel1.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
@@ -115,6 +116,7 @@ namespace GUI
 
         private void HomeLogo_Click(object sender, EventArgs e)
         {
+            currentChildForm.Close();
             Reset();
         }
 
