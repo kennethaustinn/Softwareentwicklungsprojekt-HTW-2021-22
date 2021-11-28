@@ -14,7 +14,9 @@ Die Datenbank wird zeigen, welcher Mitarbeiter welche Kompetenz besitzt. Darübe
 
 ## Abgabe Sprint 1 (28.11.2021)  
 Was wir gemacht haben :
+* Datenbank : Für die Datenbank wir haben schon ein Datenbank erstellt mit MySQL DB da wir haben xampp und benutzen phpmyadmin als die Verbindung mit unserem localserver im Rechner. Wir haben schon auch Tabellen mit gewünchste Datenbank, die von dem Product Owner erstellt.
 
 Installationshinweise :
+* Datenbank : Gehen Sie unter Folder Datenbank und die 'Dump Datei mit paar Beispiel Dateien.sql' in phpmyadmin importieren
 	
 
