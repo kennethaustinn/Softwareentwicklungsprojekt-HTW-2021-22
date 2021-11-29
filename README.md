@@ -19,7 +19,7 @@ Was wir gemacht haben :
 * Fachkonzept : wir haben die Verbindung mit Datenbank (lokal) schon erstellt .
 und die CRUD-Methoden implementiert ,fällt noch die Überprufung mit Gui und Datenbank.
 
-* GUI : für die GUI haben wir zuerst bereits die Login-Seite mit ID- und Passworteingabe erstellt, dann eine Hauptseite, die im Flat-Stil basiert, wir haben eine Liste von Mitarbeitern, Projekt, Kompetenz erstellt und verwenden DataGridView, um die Dateien von dem Datenbank anzuzeigen
+* GUI : für die GUI haben wir zuerst bereits die Login-Seite mit ID- und Passworteingabe erstellt, dann eine Hauptseite, die im UI Flat Style basiert, wir haben eine Liste von Mitarbeitern, Projekt, Kompetenz erstellt und verwenden DataGridView, um die Dateien von dem Datenbank anzuzeigen
 Kompetenz, Projekt, Mitarbeiter Seite wie im Pflichtenheft gemacht.
 fällt noch die Logik für Verbindung zwichen frontend und backend.
 
