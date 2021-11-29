@@ -59,7 +59,24 @@ namespace GUI
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("http://gfai.de");
+            try
+            {
+                VisitLink();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unable to open link that was clicked.");
+            }
+        }
+
+        private void VisitLink()
+        {
+            // Change the color of the link text by setting LinkVisited
+            // to true.
+            linkLabel1.LinkVisited = true;
+            //Call the Process.Start method to open the default browser
+            //with a URL:
+            Process.Start("https://www.google.com/");
         }
     }
 }

@@ -33,7 +33,7 @@ namespace GUI
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
-    private void ActivateButton(object senderBtn, Color color)
+        private void ActivateButton(object senderBtn, Color color)
         {
             if (senderBtn != null)
             {
@@ -73,8 +73,10 @@ namespace GUI
         private void openChildForm(Form childForm)
         {
             if (currentChildForm != null)
+            {
                 currentChildForm.Close();
-            activeForm = childForm;
+            }
+            currentChildForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
@@ -116,16 +118,16 @@ namespace GUI
 
         private void HomeLogo_Click(object sender, EventArgs e)
         {
-            currentChildForm.Close();
             Reset();
+            currentChildForm.Close();           
         }
 
         private void Reset()
         {
-            if (activeForm != null)
+            if (currentChildForm != null)
             {
                 DisableButton();
-                activeForm.Close();
+                currentChildForm.Close();
                 leftBorderBtn.Visible = false;
                 iconCurrentChildForm.IconChar = IconChar.Home;
                 currentChildFormText.Text = "Home";

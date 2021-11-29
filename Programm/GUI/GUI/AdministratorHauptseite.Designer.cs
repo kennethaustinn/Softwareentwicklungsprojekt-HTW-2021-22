@@ -51,6 +51,7 @@ namespace GUI
             this.currentChildFormText = new System.Windows.Forms.Label();
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panelSideMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelChildForm.SuspendLayout();
@@ -58,6 +59,7 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.HomeLogo)).BeginInit();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -341,11 +343,21 @@ namespace GUI
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(220, 60);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(964, 701);
             this.panel1.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(398, 184);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 17);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "label3";
             // 
             // AdministratorHauptseite
             // 
@@ -358,9 +370,10 @@ namespace GUI
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelSideMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(950, 750);
             this.Name = "AdministratorHauptseite";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kompetenzdatenbank";
             this.panelSideMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
@@ -371,6 +384,8 @@ namespace GUI
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -396,5 +411,6 @@ namespace GUI
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
     }
 }
