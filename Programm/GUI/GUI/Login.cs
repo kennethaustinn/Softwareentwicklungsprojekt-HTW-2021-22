@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace GUI
 {
@@ -18,44 +19,47 @@ namespace GUI
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void LoginButton_Click_1(object sender, EventArgs e)
         {
-
-        }
-
-        private void ClearButton_Click(object sender, EventArgs e)
-        {
-            txtUsername.Text = "";
-            txtPassword.Text = "";
-            txtUsername.Focus();
-        }
-
-        private void checkbxShowPas_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkbxShowPas.Checked)
-            {
-                txtPassword.UseSystemPasswordChar = true;
-            }
-            else
-            {
-                txtPassword.UseSystemPasswordChar = false;
-            }
-        }
-
-        private void LoginButton_Click(object sender, EventArgs e)
-        {
-            //timer1.Start();
             this.Hide();
-            //int counter = 0;
-            //counter++;
-            //Wilkommen form2 = new  Wilkommen();
-            //form2.ShowDialog();
-            //if (counter == 10)
-            //   timer1.Stop();
-            //this.Hide();
             AdministratorHauptseite.administratorHauptseite.ShowDialog();
             this.Close();
+        }
 
+        private void txtUsername_Click(object sender, EventArgs e)
+        {
+            txtUsername.BackColor = Color.White;
+            panel3.BackColor = Color.White;
+            txtPassword.BackColor = Color.WhiteSmoke;
+            panel4.BackColor = Color.WhiteSmoke;
+        }
+
+        private void txtPassword_Click(object sender, EventArgs e)
+        {
+            txtUsername.BackColor = Color.WhiteSmoke;
+            panel3.BackColor = Color.WhiteSmoke;
+            txtPassword.BackColor = Color.White;
+            panel4.BackColor = Color.White;
+        }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void iconPictureBox2_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = false;
+        }
+
+        private void iconPictureBox2_MouseUp(object sender, MouseEventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = true;
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("http://gfai.de");
         }
     }
 }
