@@ -67,9 +67,6 @@ namespace GUI
             }
         }
 
-        
-
-        private Form activeForm = null;
         private void openChildForm(Form childForm)
         {
             if (currentChildForm != null)
@@ -169,25 +166,23 @@ namespace GUI
             Application.Exit();
         }
 
+        private void AdministratorHauptseite_Load(object sender, EventArgs e)
+        {
+            //DateTimer.Start();
+            TimeLabel.Text = DateTime.Now.ToLongTimeString();
+            DateLabel.Text = DateTime.Now.ToLongDateString();
+        }
 
+        private void DateTimer_Tick(object sender, EventArgs e)
+        {
+            TimeLabel.Text = DateTime.Now.ToLongTimeString();
+            DateTimer.Start();
+        }
 
-        //private int ImageNumber = 1;
-
-        //private void Slide()
-        //{
-        //    if (ImageNumber == 4)
-        //    {
-        //        ImageNumber = 1;
-        //    }
-        //    string imagestring = $"_{ImageNumber}";
-        //    pictureBox3.Image = (Image)Resources.ResourceManager.GetObject(imagestring);
-        //    ImageNumber++;
-        //}
-
-        //private void timer1_Tick(object sender, EventArgs e)
-        //{
-        //    Slide();
-        //}
-
+        private void ProfileButton_Click(object sender, EventArgs e)
+        {
+            Profile form1 = new Profile();
+            form1.ShowDialog();
+        }
     }
 }
