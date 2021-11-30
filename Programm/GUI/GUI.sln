@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GUI", "GUI\GUI.csproj", "{66CE8812-AE30-4B12-AD27-8474ECDF5D7C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQLConnection", "SQLConnection\SQLConnection.csproj", "{F614C6B0-CC50-41F7-BE42-EDB5C8ABDF2D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLConnection", "SQLConnection\SQLConnection.csproj", "{F614C6B0-CC50-41F7-BE42-EDB5C8ABDF2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -19,6 +19,7 @@ namespace GUI
             InitializeComponent();
         }
 
+        private bool PasswordShowClicked = false;
         private void LoginButton_Click(object sender, EventArgs e)
         {
             if (txtUsername.Text == "mitarbeiter")
@@ -88,6 +89,17 @@ namespace GUI
             Process.Start("https://www.google.com/");
         }
 
-
+        private void iconPictureBox2_Click(object sender, EventArgs e)
+        {
+            PasswordShowClicked = true;
+            if (PasswordShowClicked = true)
+            {
+                txtPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtPassword.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

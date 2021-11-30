@@ -273,6 +273,7 @@ namespace GUI
             this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.iconPictureBox2.TabIndex = 1;
             this.iconPictureBox2.TabStop = false;
+            this.iconPictureBox2.Click += new System.EventHandler(this.iconPictureBox2_Click);
             this.iconPictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.iconPictureBox2_MouseDown);
             this.iconPictureBox2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.iconPictureBox2_MouseUp);
             // 
