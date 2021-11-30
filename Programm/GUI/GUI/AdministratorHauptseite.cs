@@ -19,6 +19,7 @@ namespace GUI
     private IconButton currentBtn;
     private Panel leftBorderBtn;
     private Form currentChildForm;
+    
     public AdministratorHauptseite()
         {
             InitializeComponent();
@@ -183,6 +184,14 @@ namespace GUI
         {
             Profile form1 = new Profile();
             form1.ShowDialog();
+        }
+
+        private void LogoutButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login form1 = new Login();
+            form1.ShowDialog();
+            this.Close();
         }
     }
 }

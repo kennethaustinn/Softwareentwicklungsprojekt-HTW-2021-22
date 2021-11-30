@@ -19,11 +19,20 @@ namespace GUI
             InitializeComponent();
         }
 
-        private void LoginButton_Click_1(object sender, EventArgs e)
+        private void LoginButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            AdministratorHauptseite.administratorHauptseite.ShowDialog();
-            this.Close();
+            if (txtUsername.Text == "mitarbeiter")
+            {
+                this.Hide();
+                MitarbeiterHauptseite.mitarbeiterHauptseite.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                this.Hide();
+                AdministratorHauptseite.administratorHauptseite.ShowDialog();
+                this.Close();
+            }
         }
 
         private void txtUsername_Click(object sender, EventArgs e)
@@ -78,5 +87,7 @@ namespace GUI
             //with a URL:
             Process.Start("https://www.google.com/");
         }
+
+
     }
 }

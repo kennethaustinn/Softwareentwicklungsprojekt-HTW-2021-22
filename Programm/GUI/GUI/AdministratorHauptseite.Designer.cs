@@ -33,6 +33,7 @@ namespace GUI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministratorHauptseite));
             this.DateTimer = new System.Windows.Forms.Timer(this.components);
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.LogoutButton = new FontAwesome.Sharp.IconButton();
             this.EinstellungenButton = new FontAwesome.Sharp.IconButton();
             this.KompetenzListeButton = new FontAwesome.Sharp.IconButton();
             this.ProjekteListeButton = new FontAwesome.Sharp.IconButton();
@@ -89,6 +90,7 @@ namespace GUI
             // panelSideMenu
             // 
             this.panelSideMenu.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panelSideMenu.Controls.Add(this.LogoutButton);
             this.panelSideMenu.Controls.Add(this.EinstellungenButton);
             this.panelSideMenu.Controls.Add(this.KompetenzListeButton);
             this.panelSideMenu.Controls.Add(this.ProjekteListeButton);
@@ -100,6 +102,29 @@ namespace GUI
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(220, 720);
             this.panelSideMenu.TabIndex = 0;
+            // 
+            // LogoutButton
+            // 
+            this.LogoutButton.BackColor = System.Drawing.Color.Snow;
+            this.LogoutButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.LogoutButton.FlatAppearance.BorderSize = 0;
+            this.LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogoutButton.ForeColor = System.Drawing.Color.Firebrick;
+            this.LogoutButton.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            this.LogoutButton.IconColor = System.Drawing.Color.Black;
+            this.LogoutButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.LogoutButton.IconSize = 34;
+            this.LogoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LogoutButton.Location = new System.Drawing.Point(0, 660);
+            this.LogoutButton.Name = "LogoutButton";
+            this.LogoutButton.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.LogoutButton.Size = new System.Drawing.Size(220, 60);
+            this.LogoutButton.TabIndex = 7;
+            this.LogoutButton.Text = "Logout";
+            this.LogoutButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LogoutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.LogoutButton.UseVisualStyleBackColor = false;
+            this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
             // 
             // EinstellungenButton
             // 
@@ -311,11 +336,11 @@ namespace GUI
             // 
             this.Username.AutoSize = true;
             this.Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Username.Location = new System.Drawing.Point(729, 12);
+            this.Username.Location = new System.Drawing.Point(700, 12);
             this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(83, 20);
+            this.Username.Size = new System.Drawing.Size(103, 20);
             this.Username.TabIndex = 7;
-            this.Username.Text = "Username";
+            this.Username.Text = "Administrator";
             // 
             // iconPictureBox1
             // 
@@ -325,7 +350,7 @@ namespace GUI
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox1.IconSize = 39;
-            this.iconPictureBox1.Location = new System.Drawing.Point(680, 5);
+            this.iconPictureBox1.Location = new System.Drawing.Point(651, 5);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(43, 39);
             this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -614,5 +639,6 @@ namespace GUI
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label NextProject;
+        private FontAwesome.Sharp.IconButton LogoutButton;
     }
 }

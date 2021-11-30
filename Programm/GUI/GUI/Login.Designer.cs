@@ -33,11 +33,13 @@ namespace GUI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.CloseButton = new FontAwesome.Sharp.IconButton();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -51,8 +53,6 @@ namespace GUI
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.CloseButton = new FontAwesome.Sharp.IconPictureBox();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -60,7 +60,6 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CloseButton)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -76,6 +75,19 @@ namespace GUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 530);
             this.panel1.TabIndex = 42;
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.linkLabel2.LinkColor = System.Drawing.Color.WhiteSmoke;
+            this.linkLabel2.Location = new System.Drawing.Point(199, 490);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(78, 16);
+            this.linkLabel2.TabIndex = 32;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "www.gfai.de";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // label3
             // 
@@ -122,6 +134,7 @@ namespace GUI
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.CloseButton);
             this.panel2.Controls.Add(this.linkLabel1);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
@@ -131,12 +144,27 @@ namespace GUI
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.CloseButton);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(300, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(450, 530);
             this.panel2.TabIndex = 43;
+            // 
+            // CloseButton
+            // 
+            this.CloseButton.BackColor = System.Drawing.Color.Beige;
+            this.CloseButton.FlatAppearance.BorderSize = 0;
+            this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CloseButton.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
+            this.CloseButton.IconColor = System.Drawing.Color.Black;
+            this.CloseButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.CloseButton.IconSize = 42;
+            this.CloseButton.Location = new System.Drawing.Point(408, 0);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(42, 42);
+            this.CloseButton.TabIndex = 32;
+            this.CloseButton.UseVisualStyleBackColor = false;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // linkLabel1
             // 
@@ -207,7 +235,7 @@ namespace GUI
             this.LoginButton.TabIndex = 26;
             this.LoginButton.Text = "LOGIN";
             this.LoginButton.UseVisualStyleBackColor = false;
-            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click_1);
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // panel4
             // 
@@ -296,34 +324,6 @@ namespace GUI
             this.label4.TabIndex = 4;
             this.label4.Text = "Konto einloggen";
             // 
-            // CloseButton
-            // 
-            this.CloseButton.BackColor = System.Drawing.Color.Beige;
-            this.CloseButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CloseButton.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
-            this.CloseButton.IconColor = System.Drawing.SystemColors.ControlText;
-            this.CloseButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.CloseButton.IconSize = 42;
-            this.CloseButton.Location = new System.Drawing.Point(408, 0);
-            this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(42, 42);
-            this.CloseButton.TabIndex = 0;
-            this.CloseButton.TabStop = false;
-            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.linkLabel2.LinkColor = System.Drawing.Color.WhiteSmoke;
-            this.linkLabel2.Location = new System.Drawing.Point(199, 490);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(78, 16);
-            this.linkLabel2.TabIndex = 32;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "www.gfai.de";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -348,7 +348,6 @@ namespace GUI
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CloseButton)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -361,7 +360,6 @@ namespace GUI
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private FontAwesome.Sharp.IconPictureBox CloseButton;
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtPassword;
@@ -376,6 +374,7 @@ namespace GUI
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.LinkLabel linkLabel2;
+        private FontAwesome.Sharp.IconButton CloseButton;
     }
 }
 
