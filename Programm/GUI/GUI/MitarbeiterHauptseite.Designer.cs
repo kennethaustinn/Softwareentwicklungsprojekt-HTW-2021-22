@@ -533,6 +533,7 @@ namespace GUI
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(950, 720);
             this.Name = "MitarbeiterHauptseite";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MitarbeiterHauptseite";
             this.Load += new System.EventHandler(this.MitarbeiterHauptseite_Load);
             this.panelSideMenu.ResumeLayout(false);
