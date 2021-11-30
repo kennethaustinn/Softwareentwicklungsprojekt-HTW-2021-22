@@ -19,6 +19,7 @@ namespace GUI
     private IconButton currentBtn;
     private Panel leftBorderBtn;
     private Form currentChildForm;
+    
     public AdministratorHauptseite()
         {
             InitializeComponent();
@@ -33,7 +34,7 @@ namespace GUI
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
-    private void ActivateButton(object senderBtn, Color color)
+        private void ActivateButton(object senderBtn, Color color)
         {
             if (senderBtn != null)
             {
@@ -67,14 +68,13 @@ namespace GUI
             }
         }
 
-        
-
-        private Form activeForm = null;
         private void openChildForm(Form childForm)
         {
             if (currentChildForm != null)
+            {
                 currentChildForm.Close();
-            activeForm = childForm;
+            }
+            currentChildForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
@@ -116,16 +116,16 @@ namespace GUI
 
         private void HomeLogo_Click(object sender, EventArgs e)
         {
-            currentChildForm.Close();
             Reset();
+            currentChildForm.Close();           
         }
 
         private void Reset()
         {
-            if (activeForm != null)
+            if (currentChildForm != null)
             {
                 DisableButton();
-                activeForm.Close();
+                currentChildForm.Close();
                 leftBorderBtn.Visible = false;
                 iconCurrentChildForm.IconChar = IconChar.Home;
                 currentChildFormText.Text = "Home";
@@ -167,25 +167,31 @@ namespace GUI
             Application.Exit();
         }
 
+        private void AdministratorHauptseite_Load(object sender, EventArgs e)
+        {
+            //DateTimer.Start();
+            TimeLabel.Text = DateTime.Now.ToLongTimeString();
+            DateLabel.Text = DateTime.Now.ToLongDateString();
+        }
 
+        private void DateTimer_Tick(object sender, EventArgs e)
+        {
+            TimeLabel.Text = DateTime.Now.ToLongTimeString();
+            DateTimer.Start();
+        }
 
-        //private int ImageNumber = 1;
+        private void ProfileButton_Click(object sender, EventArgs e)
+        {
+            Profile form1 = new Profile();
+            form1.ShowDialog();
+        }
 
-        //private void Slide()
-        //{
-        //    if (ImageNumber == 4)
-        //    {
-        //        ImageNumber = 1;
-        //    }
-        //    string imagestring = $"_{ImageNumber}";
-        //    pictureBox3.Image = (Image)Resources.ResourceManager.GetObject(imagestring);
-        //    ImageNumber++;
-        //}
-
-        //private void timer1_Tick(object sender, EventArgs e)
-        //{
-        //    Slide();
-        //}
-
+        private void LogoutButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login form1 = new Login();
+            form1.ShowDialog();
+            this.Close();
+        }
     }
 }
