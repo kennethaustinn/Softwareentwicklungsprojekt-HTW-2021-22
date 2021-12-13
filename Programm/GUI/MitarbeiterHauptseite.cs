@@ -178,10 +178,10 @@ namespace GUI
 
         private void LogoutButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login form1 = new Login();
-            form1.ShowDialog();
-            this.Close();
+            //this.Hide();
+            //Login form1 = new Login();
+            //form1.ShowDialog();
+            //this.Close();
         }
     }
 }

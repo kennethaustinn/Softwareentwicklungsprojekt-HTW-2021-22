@@ -23,15 +23,16 @@ namespace GUI
         {
             if (txtUsername.Text == "mitarbeiter")
             {
-                this.Hide();
-                MitarbeiterHauptseite.mitarbeiterHauptseite.ShowDialog();
-                this.Close();
+                Hauptseite.hauptseite.NeueMitarbeiterButton.Hide();
+                Hauptseite.hauptseite.MitarbeiterListeButton.Hide();
+                Hauptseite.hauptseite.Username.Text = "Mitarbeiter";
+                this.Hide();               
+                Hauptseite.hauptseite.ShowDialog();               
             }
             else
             {
                 this.Hide();
-                AdministratorHauptseite.administratorHauptseite.ShowDialog();
-                this.Close();
+                Hauptseite.hauptseite.ShowDialog();
             }
         }
 
@@ -88,6 +89,9 @@ namespace GUI
             Process.Start("https://www.google.com/");
         }
 
-
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }

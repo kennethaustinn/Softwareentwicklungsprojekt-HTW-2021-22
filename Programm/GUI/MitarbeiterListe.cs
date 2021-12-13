@@ -51,5 +51,11 @@ namespace GUI
                 form1.ShowDialog();
             }
         }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            
+            Hauptseite.hauptseite.openChildForm(new NeueMitarbeiter());
+        }
     }
 }

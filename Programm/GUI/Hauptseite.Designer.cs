@@ -1,7 +1,7 @@
 ﻿
 namespace GUI
 {
-    partial class AdministratorHauptseite
+    partial class Hauptseite
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace GUI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministratorHauptseite));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hauptseite));
             this.DateTimer = new System.Windows.Forms.Timer(this.components);
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.LogoutButton = new FontAwesome.Sharp.IconButton();
@@ -566,7 +566,7 @@ namespace GUI
             this.label3.TabIndex = 8;
             this.label3.Text = "Herzlich Wilkommen bei der Kompetenzdatenbank";
             // 
-            // AdministratorHauptseite
+            // Hauptseite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -579,7 +579,7 @@ namespace GUI
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(950, 720);
-            this.Name = "AdministratorHauptseite";
+            this.Name = "Hauptseite";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kompetenzdatenbank";
             this.Load += new System.EventHandler(this.AdministratorHauptseite_Load);
@@ -610,8 +610,6 @@ namespace GUI
         private FontAwesome.Sharp.IconButton EinstellungenButton;
         private FontAwesome.Sharp.IconButton KompetenzListeButton;
         private FontAwesome.Sharp.IconButton ProjekteListeButton;
-        private FontAwesome.Sharp.IconButton MitarbeiterListeButton;
-        private FontAwesome.Sharp.IconButton NeueMitarbeiterButton;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.PictureBox HomeLogo;
         private System.Windows.Forms.Panel panelTitleBar;
@@ -627,7 +625,6 @@ namespace GUI
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton DownButton;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private System.Windows.Forms.Label Username;
         private System.Windows.Forms.Label DateLabel;
         private System.Windows.Forms.Label TimeLabel;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
@@ -640,5 +637,8 @@ namespace GUI
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label NextProject;
         private FontAwesome.Sharp.IconButton LogoutButton;
+        public FontAwesome.Sharp.IconButton NeueMitarbeiterButton;
+        public FontAwesome.Sharp.IconButton MitarbeiterListeButton;
+        public System.Windows.Forms.Label Username;
     }
 }
