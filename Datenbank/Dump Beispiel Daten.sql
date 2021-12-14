@@ -54,7 +54,7 @@ DROP TABLE IF EXISTS `mitarbeiter`;
 CREATE TABLE `mitarbeiter` (
   `Mitarbeiter_ID` int(11) NOT NULL,
   `Benutzername` varchar(45) NOT NULL,
-  `Passwort` varchar(45) NOT NULL,
+  `Passwort` varbinary(45) NOT NULL,
   `Vorname` varchar(45) DEFAULT NULL,
   `Name` varchar(45) NOT NULL,
   `Aufgabenbereich` mediumtext NOT NULL,
@@ -223,4 +223,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-28 18:37:10
+-- Dump completed on 2021-12-14 23:25:56
