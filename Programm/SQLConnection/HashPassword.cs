@@ -25,10 +25,12 @@ namespace SQLConnection
             return Convert.ToBase64String(encryptedbyts);
 
         }
-            public void importHashPasswordTODataBase(string password)
-        { 
-            string PasswordAsHash = Hashpassword(password); 
-            string command = $"insert into mitarbeiter values ({PasswordAsHash})";
+        public void ImportHashPassword(int Mitarbeiter_ID, String Benutzername, String Passwort, String Vorname, String Name, String Aufgabenbereich, string Abteilung , string Rolle) // user einfugen
+        {
+
+            string PasswordAsHash = Hashpassword(Passwort);
+            string command = $"insert into mitarbeiter values({Mitarbeiter_ID},{Benutzername},{PasswordAsHash},{Vorname},{Name}" +
+                $",{Aufgabenbereich},{Abteilung} ,{Rolle})";
             MySqlConnection databasConnection = new MySqlConnection("datasource=127.0.0.1;port=3306;username=root;password=;database=kompetenzdb;");
             MySqlCommand commandToDatabase = new MySqlCommand(command, databasConnection);
             commandToDatabase.CommandTimeout = 60;
