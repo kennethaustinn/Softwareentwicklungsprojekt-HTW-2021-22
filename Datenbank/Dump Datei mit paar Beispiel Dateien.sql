@@ -1,5 +1,5 @@
-CREATE DATABASE  IF NOT EXISTS `kompetenzdb` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `kompetenzdb`;
+CREATE DATABASE  IF NOT EXISTS kompetenzdb /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE kompetenzdb;
 -- MariaDB dump 10.17  Distrib 10.4.14-MariaDB, for Win64 (AMD64)
 --
 -- Host: 127.0.0.1    Database: kompetenzdb
