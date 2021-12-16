@@ -36,14 +36,13 @@ namespace GUI
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.AufgabenbereichInput = new System.Windows.Forms.TextBox();
+            this.AbteilungInput = new System.Windows.Forms.TextBox();
+            this.VornameInput = new System.Windows.Forms.TextBox();
+            this.NameInput = new System.Windows.Forms.TextBox();
+            this.XTD = new System.Windows.Forms.TextBox();
+            this.PasswordInput = new System.Windows.Forms.TextBox();
+            this.BenutzernameInput = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -67,14 +66,13 @@ namespace GUI
             this.panel1.Controls.Add(this.richTextBox1);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.iconButton1);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.AufgabenbereichInput);
+            this.panel1.Controls.Add(this.AbteilungInput);
+            this.panel1.Controls.Add(this.VornameInput);
+            this.panel1.Controls.Add(this.NameInput);
+            this.panel1.Controls.Add(this.XTD);
+            this.panel1.Controls.Add(this.PasswordInput);
+            this.panel1.Controls.Add(this.BenutzernameInput);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
@@ -176,95 +174,75 @@ namespace GUI
             this.label8.TabIndex = 16;
             this.label8.Text = "Kompetenzen :";
             // 
-            // iconButton1
+            // AufgabenbereichInput
             // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.AufgabenbereichInput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Key;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 20;
-            this.iconButton1.Location = new System.Drawing.Point(566, 111);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(157, 27);
-            this.iconButton1.TabIndex = 15;
-            this.iconButton1.Text = "Passwort anzeigen";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.AufgabenbereichInput.Location = new System.Drawing.Point(236, 453);
+            this.AufgabenbereichInput.Name = "AufgabenbereichInput";
+            this.AufgabenbereichInput.Size = new System.Drawing.Size(162, 22);
+            this.AufgabenbereichInput.TabIndex = 14;
             // 
-            // textBox7
+            // AbteilungInput
             // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.AbteilungInput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.Location = new System.Drawing.Point(236, 453);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(162, 22);
-            this.textBox7.TabIndex = 14;
+            this.AbteilungInput.Location = new System.Drawing.Point(236, 397);
+            this.AbteilungInput.Name = "AbteilungInput";
+            this.AbteilungInput.Size = new System.Drawing.Size(162, 22);
+            this.AbteilungInput.TabIndex = 13;
             // 
-            // textBox6
+            // VornameInput
             // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.VornameInput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.Location = new System.Drawing.Point(236, 397);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(162, 22);
-            this.textBox6.TabIndex = 13;
+            this.VornameInput.Location = new System.Drawing.Point(236, 338);
+            this.VornameInput.Name = "VornameInput";
+            this.VornameInput.Size = new System.Drawing.Size(162, 22);
+            this.VornameInput.TabIndex = 12;
             // 
-            // textBox5
+            // NameInput
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.NameInput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.Location = new System.Drawing.Point(236, 338);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(162, 22);
-            this.textBox5.TabIndex = 12;
+            this.NameInput.Location = new System.Drawing.Point(236, 285);
+            this.NameInput.Name = "NameInput";
+            this.NameInput.Size = new System.Drawing.Size(162, 22);
+            this.NameInput.TabIndex = 11;
             // 
-            // textBox4
+            // XTD
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.XTD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Location = new System.Drawing.Point(236, 285);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(162, 22);
-            this.textBox4.TabIndex = 11;
+            this.XTD.Location = new System.Drawing.Point(236, 237);
+            this.XTD.Name = "XTD";
+            this.XTD.Size = new System.Drawing.Size(162, 22);
+            this.XTD.TabIndex = 10;
             // 
-            // textBox3
+            // PasswordInput
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.PasswordInput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Location = new System.Drawing.Point(236, 237);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(162, 22);
-            this.textBox3.TabIndex = 10;
+            this.PasswordInput.Location = new System.Drawing.Point(365, 116);
+            this.PasswordInput.Name = "PasswordInput";
+            this.PasswordInput.Size = new System.Drawing.Size(145, 22);
+            this.PasswordInput.TabIndex = 9;
             // 
-            // textBox2
+            // BenutzernameInput
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.BenutzernameInput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(365, 116);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(145, 22);
-            this.textBox2.TabIndex = 9;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(365, 54);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(145, 22);
-            this.textBox1.TabIndex = 8;
+            this.BenutzernameInput.Location = new System.Drawing.Point(365, 54);
+            this.BenutzernameInput.Name = "BenutzernameInput";
+            this.BenutzernameInput.Size = new System.Drawing.Size(145, 22);
+            this.BenutzernameInput.TabIndex = 8;
             // 
             // label7
             // 
@@ -404,13 +382,16 @@ namespace GUI
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox AufgabenbereichInput;
+        private System.Windows.Forms.TextBox AbteilungInput;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox NameInput;
+        private System.Windows.Forms.TextBox XTD;
+        private System.Windows.Forms.TextBox PasswordInput;
+        private System.Windows.Forms.TextBox BenutzernameInput;
+        private System.Windows.Forms.TextBox V;
+        private System.Windows.Forms.TextBox VornameInput;
+        private System.Windows.Forms.TextBox VOrn;
+        private System.Windows.Forms.TextBox XT;
     }
 }

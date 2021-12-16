@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using MySql.Data.MySqlClient;
+using RestAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -30,7 +31,7 @@ namespace RestAPI.Controllers
             DataTable table = new DataTable();
             string sqlDatasource = _configuration.GetConnectionString("KompetenzDatenbankcon");
             MySqlDataReader myReader;
-            using(MySqlConnection mycon = new MySqlConnection(sqlDatasource))
+            using (MySqlConnection mycon = new MySqlConnection(sqlDatasource))
             {
                 mycon.Open();
                 using (MySqlCommand myCommand = new MySqlCommand(query, mycon))
@@ -43,6 +44,87 @@ namespace RestAPI.Controllers
                 }
             }
             return new JsonResult(table);
+        }
+
+        [HttpPost]
+        public JsonResult Post(Mitarbeiter mit)
+        {
+            string query = @"
+                    insert into Mitarbeiter(Benutzername, Passwort, Aufgabenbereich, Rolle, name, Mitarbeiter_ID, vorname, Abteilung) values (@Benutzername,@Passwort,@Aufgabenbereich,@Rolle, 
+                                @name,@Mitarbeiter_ID,@vorname,@Abteilung)";
+            DataTable table = new DataTable();
+            string sqlDatasource = _configuration.GetConnectionString("KompetenzDatenbankcon");
+            MySqlDataReader myReader;
+            using (MySqlConnection mycon = new MySqlConnection(sqlDatasource))
+            {
+                mycon.Open();
+                using (MySqlCommand myCommand = new MySqlCommand(query, mycon))
+                {
+                    myCommand.Parameters.AddWithValue("@Benutzername", mit.Benutzername);
+                    myCommand.Parameters.AddWithValue("@Passwort", mit.Passwort);
+                    myCommand.Parameters.AddWithValue("@Aufgabenbereich", mit.Aufgabenbereich);
+                    myCommand.Parameters.AddWithValue("@Rolle", mit.Rolle);
+                    myCommand.Parameters.AddWithValue("@Abteilung", mit.Abteilung);
+                    myCommand.Parameters.AddWithValue("@Mitarbeiter_ID", mit.Mitarbeiter_ID);
+                    myCommand.Parameters.AddWithValue("@name", mit.Name);
+                    myCommand.Parameters.AddWithValue("@vorname", mit.Vorname);
+                    myReader = myCommand.ExecuteReader();
+                    table.Load(myReader);
+
+                    myReader.Close();
+                    mycon.Close();
+                }
+            }
+            return new JsonResult("Added");
+        }
+
+        [HttpPut]
+        public JsonResult put(Mitarbeiter mit)
+        {
+            string query = @"
+                    update mitarbeiter set name = @name where Mitarbeiter_ID = @Mitarbeiter_ID";
+            DataTable table = new DataTable();
+            string sqlDatasource = _configuration.GetConnectionString("KompetenzDatenbankcon");
+            MySqlDataReader myReader;
+            using (MySqlConnection mycon = new MySqlConnection(sqlDatasource))
+            {
+                mycon.Open();
+                using (MySqlCommand myCommand = new MySqlCommand(query, mycon))
+                {
+                    myCommand.Parameters.AddWithValue("@Mitarbeiter_ID", mit.Mitarbeiter_ID);
+                    myCommand.Parameters.AddWithValue("@name", mit.Name);
+                    myReader = myCommand.ExecuteReader();
+                    table.Load(myReader);
+
+                    myReader.Close();
+                    mycon.Close();
+                }
+            }
+            return new JsonResult("Updated");
+        }
+
+        [HttpDelete("{id}")]
+        public JsonResult delete(int id)
+        {
+            string query = @"
+                    delete from mitarbeiter where Mitarbeiter_ID = @Mitarbeiter_ID";
+            DataTable table = new DataTable();
+            string sqlDatasource = _configuration.GetConnectionString("KompetenzDatenbankcon");
+            MySqlDataReader myReader;
+            using (MySqlConnection mycon = new MySqlConnection(sqlDatasource))
+            {
+                mycon.Open();
+                using (MySqlCommand myCommand = new MySqlCommand(query, mycon))
+                {
+                    myCommand.Parameters.AddWithValue("@Mitarbeiter_ID", id);
+                    myReader = myCommand.ExecuteReader();
+                    table.Load(myReader);
+                    myReader.Close();
+                    mycon.Close();
+                }
+            }
+            return new JsonResult("Deleted");
+
         }
     }
 }

@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SQLConnection\SQLConnection.csproj" />
+    <ProjectReference Include="..\RestAPI\RestAPI.csproj" />
   </ItemGroup>
 
   <ItemGroup>
