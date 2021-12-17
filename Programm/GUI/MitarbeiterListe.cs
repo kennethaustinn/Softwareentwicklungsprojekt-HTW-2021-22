@@ -4,7 +4,15 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
+using System.Linq;
 using System.Windows.Forms;
+using Newtonsoft.Json.Serialization;
+using Newtonsoft.Json;
+using RestAPI;
+using System.Net.Http;
+using System.Net.Http.Formatting;
+using System.Threading.Tasks;
+using System.Net;
 
 namespace GUI
 {
@@ -17,26 +25,16 @@ namespace GUI
 
         private void MitarbeiterListe_Shown(object sender, EventArgs e)
         {
-            MitarbeiterListeTable.Rows.Add(
-                new object[]
-                {
-                    1,
-                    "Mustermann",
-                    "Müller",
-                    "Design",
-                    "Bildverarbeitung"
-                }
-                );
-            MitarbeiterListeTable.Rows.Add(
-               new object[]
-               {
-                    2,
-                    "Morris",
-                    "Philip",
-                    "Coding",
-                    "Programmierung"
-               }
-               );
+            //HttpClient clint = new HttpClient();
+            //clint.BaseAddress = new Uri("https://localhost:44340/");
+            //HttpResponseMessage response = clint.GetAsync("api/mitarbeiter").Result;
+            //var emp = response.Content.ReadAsAsync<IEnumerable<RestAPI.Models.Mitarbeiter>>.Result;
+            //MitarbeiterListeTable.DataSource = emp;
+            //string strurltest = string.Format("https://localhost:44340/api/mitarbeiter");
+            //WebRequest requestObjGet = WebRequest.Create(strurltest);
+            //requestObjGet.Method = "GET";
+            //HttpWebRequest responsObjGet = null;
+            //responsObjGet = (HttpWebResponse)requestObjGet.GetResponse();
         }
 
 
