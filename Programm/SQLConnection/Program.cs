@@ -6,7 +6,7 @@ namespace SQLConnection
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ConnectToDataBase connectToDataBas = new ConnectToDataBase();
         }
     }
 }

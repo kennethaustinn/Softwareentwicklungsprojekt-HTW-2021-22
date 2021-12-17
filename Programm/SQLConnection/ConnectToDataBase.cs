@@ -10,18 +10,26 @@ namespace SQLConnection
 {
     class ConnectToDataBase
     {
+
+
         private string connectionString;
         private List<string[]> informationenList = new List<string[]>(); // {"22"  , "zak"}
 
         // class mitarbeirt : vornme , .......
         public ConnectToDataBase() // connect to server 
         {
-            this.connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=kompetenzdb;"; // test = databas_name
+            Console.WriteLine("Versuchen zu verbinden mit der Datenbank: 127.0.0.1:3306 mit der User root");
+            this.connectionString = "datasource=127.0.0.1;port=3306;username=root;password=7744Radman;database=kompetenzdb;"; // test = databas_name
+            Console.WriteLine("Verbindung mit dem Datenbank erfolgreich");
+            Read();
 
         }
 
+
         public void Read() // lesen informationen 
         {
+            Console.WriteLine("Versuchen zu lesen von der Datenbank ...");
+
             string command = $"select * from  mitarbeiter";// user
             MySqlConnection databasConnection = new MySqlConnection(connectionString); // Verbindung erstellen // mydatabase
             MySqlCommand commandToDatabase = new MySqlCommand(command, databasConnection);// comand in database übermitlen
