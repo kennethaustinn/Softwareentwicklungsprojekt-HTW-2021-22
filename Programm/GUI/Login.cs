@@ -102,7 +102,7 @@ namespace GUI
 
                if (reader.Read())
                 {
-                    // Uberprüft ob es ein 
+                    // Uberprüft ob es ein Administrator und Mitarbeiter
                     if (reader[8].ToString() == "Administrator")
                     {
                         this.Hide();
