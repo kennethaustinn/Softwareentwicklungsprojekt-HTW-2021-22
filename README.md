@@ -42,13 +42,13 @@ Installationshinweise :
 * Datenbank : Machen Sie eine neue Connection im App mysqlworkbench mit :  
 hostname :kompetenzdatenbank.mysql.database.azure.com  
 username :kompetenzdb@kompetenzdatenbank  
-password :Kompetenz2021   	
+password :Kompetenz2021
 Für die Lokal Datenbank importieren, gehen Sie unter Folder Datenbank und die 'Dump mit Passwort.sql' in phpmyadmin importieren. 
 
 * GUI: Run und für Anmeldung können Sie gerne für :  
 Administrator - Benutzername : 'thomasm' als Passwort : 'pass123'  
 Mitarbeiter -   Benutzername : 'maxm' als Passwort : 'pass123'
 
-*REST: Machen Sie die Projekt "RestAPI" als "set as start up project", dann run die Programm, kopieren Sie die URL, die im Browser angezeigt wird.
+* REST: Machen Sie die Projekt "RestAPI" als "set as start up project", dann run die Programm, kopieren Sie die URL, die im Browser angezeigt wird.
 zum Beispiel "https://localhost:44340/weatherforecast", nehmen Sie die "https://localhost:44340/" und fügen Sie in dem Postman ein, addieren Sie die URL mit was wollen sie zeigen, zum Beispiel mitarbeiter, es wird als "https://localhost:44340/API/mitarbeiter" sein.
 für den Befehl(Get,Post,Put,Delete) im Postman bitte JSON (body-> raw-> JSON) verwenden.
