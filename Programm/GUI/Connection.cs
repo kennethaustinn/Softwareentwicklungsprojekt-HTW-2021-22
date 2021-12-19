@@ -9,16 +9,11 @@ namespace GUI
 {
     class Connection
     {
-        static string server = "127.0.0.1;";
-        static string database = "kompetenzdb;";
-        static string Uid = "kenneth;";
-        static string password = "test123;";
-
         public static MySqlConnection connMaster;
 
         public static MySqlConnection DataSource()
         {
-            connMaster = new MySqlConnection($"server={server} database ={database} Uid= {Uid} password={password}");
+            connMaster = new MySqlConnection($"datasource=kompetenzdatenbank.mysql.database.azure.com;port=3306;username=kompetenzdb@kompetenzdatenbank;password=Kompetenz2021;database=kompetenzdb");
             return connMaster;
 
         }

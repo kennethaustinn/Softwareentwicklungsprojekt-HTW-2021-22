@@ -106,14 +106,14 @@ namespace GUI
                     if (reader[8].ToString() == "Administrator")
                     {
                         this.Hide();
-                        AdministratorHauptseite.administratorHauptseite.ShowDialog();
-                        this.Close();
+                        Hauptseite.hauptseite.ShowDialog();
                     }
                     else if (reader[8].ToString() == "Mitarbeiter")
                     {
+                        Hauptseite.hauptseite.NeueMitarbeiterButton.Hide();
+                        Hauptseite.hauptseite.MitarbeiterListeButton.Hide();
                         this.Hide();
-                        MitarbeiterHauptseite.mitarbeiterHauptseite.ShowDialog();
-                        this.Close();
+                        Hauptseite.hauptseite.ShowDialog();
                     }
                     else
                     {

@@ -338,9 +338,9 @@ namespace GUI
             this.Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Username.Location = new System.Drawing.Point(700, 12);
             this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(103, 20);
+            this.Username.Size = new System.Drawing.Size(83, 20);
             this.Username.TabIndex = 7;
-            this.Username.Text = "Administrator";
+            this.Username.Text = "Username";
             // 
             // iconPictureBox1
             // 
