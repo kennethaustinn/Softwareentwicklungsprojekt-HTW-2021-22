@@ -16,12 +16,16 @@ namespace GUI
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// mit dem Event wird die ganze Eingabe in der Klasse insertData weitergeleitet und dort in Datenbank gespeichert
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void iconButton3_Click(object sender, EventArgs e)
         {
             if(txtUser.Text==""|| txtPassword.Text == "")
             {
-                MessageBox.Show("Bitte die Benutzername und oder Passwort ausfüllen");
+                MessageBox.Show("Bitte die Benutzername und oder Passwort unbedingt ausfüllen!!");
             }
             insrtd.InsertData(txtUser.Text, txtPassword.Text, txtVorname.Text, txtName.Text, txtAufgabenbereich.Text, txtAbteilung.Text, txtRolle.Text);
         }

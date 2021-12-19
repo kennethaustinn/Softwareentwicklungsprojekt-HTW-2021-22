@@ -11,7 +11,7 @@ namespace GUI {
         Connection con = new Connection();
         Encrypt en = new Encrypt();
         /// <summary>
-        /// Einfügen neue User wird durch dieser Methode 
+        /// Einfügen neue User wird durch dieser Methode gemacht. Jeder Eingabe wird in MySQL gelagert durch die Connection mit MySQL 
         /// </summary>
         /// <param name="benutzerInsert"></param>
         /// <param name="passInsert"></param>

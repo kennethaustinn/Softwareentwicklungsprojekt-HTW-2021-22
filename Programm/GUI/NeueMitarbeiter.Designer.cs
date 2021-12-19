@@ -30,13 +30,13 @@ namespace GUI
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.speichernButton = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.passwortButton = new FontAwesome.Sharp.IconButton();
             this.txtAufgabenbereich = new System.Windows.Forms.TextBox();
             this.txtAbteilung = new System.Windows.Forms.TextBox();
             this.txtVorname = new System.Windows.Forms.TextBox();
@@ -61,13 +61,13 @@ namespace GUI
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.panel1.Controls.Add(this.iconButton3);
+            this.panel1.Controls.Add(this.speichernButton);
             this.panel1.Controls.Add(this.iconButton2);
             this.panel1.Controls.Add(this.richTextBox2);
             this.panel1.Controls.Add(this.richTextBox1);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.iconButton1);
+            this.panel1.Controls.Add(this.passwortButton);
             this.panel1.Controls.Add(this.txtAufgabenbereich);
             this.panel1.Controls.Add(this.txtAbteilung);
             this.panel1.Controls.Add(this.txtVorname);
@@ -88,26 +88,26 @@ namespace GUI
             this.panel1.Size = new System.Drawing.Size(804, 552);
             this.panel1.TabIndex = 3;
             // 
-            // iconButton3
+            // speichernButton
             // 
-            this.iconButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.speichernButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton3.BackColor = System.Drawing.Color.Green;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.iconButton3.IconColor = System.Drawing.Color.Black;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 20;
-            this.iconButton3.Location = new System.Drawing.Point(670, 497);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(100, 29);
-            this.iconButton3.TabIndex = 21;
-            this.iconButton3.Text = "Speichern";
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = false;
-            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
+            this.speichernButton.BackColor = System.Drawing.Color.Green;
+            this.speichernButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.speichernButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.speichernButton.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.speichernButton.IconColor = System.Drawing.Color.Black;
+            this.speichernButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.speichernButton.IconSize = 20;
+            this.speichernButton.Location = new System.Drawing.Point(670, 497);
+            this.speichernButton.Name = "speichernButton";
+            this.speichernButton.Size = new System.Drawing.Size(100, 29);
+            this.speichernButton.TabIndex = 21;
+            this.speichernButton.Text = "Speichern";
+            this.speichernButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.speichernButton.UseVisualStyleBackColor = false;
+            this.speichernButton.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // iconButton2
             // 
@@ -177,27 +177,24 @@ namespace GUI
             this.label8.TabIndex = 16;
             this.label8.Text = "Kompetenzen :";
             // 
-            // AufgabenbereichInput
+            // passwortButton
             // 
-            ////this.AufgabenbereichInput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            //| System.Windows.Forms.AnchorStyles.Left) 
-            //| System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Key;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 20;
-            this.iconButton1.Location = new System.Drawing.Point(566, 111);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(157, 27);
-            this.iconButton1.TabIndex = 15;
-            this.iconButton1.Text = "Passwort anzeigen";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.iconButton1_MouseDown);
-            this.iconButton1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.iconButton1_MouseUp);
+            this.passwortButton.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.passwortButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.passwortButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.passwortButton.IconChar = FontAwesome.Sharp.IconChar.Key;
+            this.passwortButton.IconColor = System.Drawing.Color.Black;
+            this.passwortButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.passwortButton.IconSize = 20;
+            this.passwortButton.Location = new System.Drawing.Point(566, 111);
+            this.passwortButton.Name = "passwortButton";
+            this.passwortButton.Size = new System.Drawing.Size(157, 27);
+            this.passwortButton.TabIndex = 15;
+            this.passwortButton.Text = "Passwort anzeigen";
+            this.passwortButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.passwortButton.UseVisualStyleBackColor = false;
+            this.passwortButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.iconButton1_MouseDown);
+            this.passwortButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.iconButton1_MouseUp);
             // 
             // txtAufgabenbereich
             // 
@@ -402,13 +399,13 @@ namespace GUI
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton speichernButton;
         private FontAwesome.Sharp.IconButton iconButton2;
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton passwortButton;
         private System.Windows.Forms.TextBox txtAufgabenbereich;
         private System.Windows.Forms.TextBox txtAbteilung;
         private System.Windows.Forms.TextBox txtVorname;
