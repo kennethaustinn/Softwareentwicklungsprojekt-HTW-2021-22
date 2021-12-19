@@ -22,7 +22,10 @@ namespace RestAPI.Controllers
             _configuration = configuration;
         }
 
-        //Ein Request um die Datei von Projekt Tabelle in der Datenbank aufrufen
+        /// <summary>
+        /// Ein Request um die Datei von Projekt Tabelle in der Datenbank aufrufen
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public JsonResult Get()
         {
@@ -46,7 +49,11 @@ namespace RestAPI.Controllers
             return new JsonResult(table);
         }
 
-        //Ein Request um eine Datei in dem Projekt Tabelle von der Datenbank einzufügen
+        /// <summary>
+        /// Ein Request um eine Datei in dem Projekt Tabelle von der Datenbank einzufügen
+        /// </summary>
+        /// <param name="pro"></param>
+        /// <returns></returns>
         [HttpPost]
         public JsonResult Post(Projekt pro)
         {
@@ -75,7 +82,11 @@ namespace RestAPI.Controllers
             return new JsonResult("Added");
         }
 
-        //Ein Request um eine Datei in dem Projekt Tabelle von der Datenbank zu editieren
+        /// <summary>
+        /// Ein Request um eine Datei in dem Projekt Tabelle von der Datenbank zu editieren
+        /// </summary>
+        /// <param name="pro"></param>
+        /// <returns></returns>
         [HttpPut]
         public JsonResult put(Projekt pro)
         {
@@ -101,7 +112,11 @@ namespace RestAPI.Controllers
             return new JsonResult("Updated");
         }
 
-        //Ein Request um eine Datei in dem Projekt Tabelle von der Datenbank zu entfernen
+        /// <summary>
+        /// Ein Request um eine Datei in dem Projekt Tabelle von der Datenbank zu entfernen
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         public JsonResult delete(int id)
         {

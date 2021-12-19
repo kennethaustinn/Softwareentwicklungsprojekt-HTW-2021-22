@@ -22,7 +22,10 @@ namespace RestAPI.Controllers
             _configuration = configuration;
         }
 
-        //Ein Request um die Datei von Kompetenz Tabelle in der Datenbank aufrufen
+        /// <summary>
+        /// Ein Request um die Datei von Kompetenz Tabelle in der Datenbank aufrufen
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public JsonResult Get()
         {
@@ -46,8 +49,12 @@ namespace RestAPI.Controllers
             return new JsonResult(table);
         }
 
-        //Ein Request um eine Datei in dem Kompetenz Tabelle von der Datenbank einzufügen
 
+        /// <summary>
+        /// Ein Request um eine Datei in dem Kompetenz Tabelle von der Datenbank einzufügen
+        /// </summary>
+        /// <param name="kom"></param>
+        /// <returns></returns>
         [HttpPost]
         public JsonResult Post(Kompetenz kom)
         {
@@ -76,7 +83,11 @@ namespace RestAPI.Controllers
             return new JsonResult("Added");
         }
 
-        //Ein Request um eine Datei in dem Kompetenz Tabelle von der Datenbank zu editieren
+        /// <summary>
+        /// Ein Request um eine Datei in dem Kompetenz Tabelle von der Datenbank zu editieren
+        /// </summary>
+        /// <param name="kom"></param>
+        /// <returns></returns>
         [HttpPut]
         public JsonResult put(Kompetenz kom)
         {
@@ -102,7 +113,11 @@ namespace RestAPI.Controllers
             return new JsonResult("Updated");
         }
 
-        //Ein Request um eine Datei in dem Kompetenz Tabelle von der Datenbank zu entfernen
+        /// <summary>
+        /// in Request um eine Datei in dem Kompetenz Tabelle von der Datenbank zu entfernen
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         public JsonResult delete(int id)
         {
