@@ -39,7 +39,8 @@ Die Hauptseite von Mitarbeiter und Administrator in einem Formular erstellt,
 Nach dem Login wird nach Rolle gefiltert, die in der Datenbank gespeichert ist, wenn die Rolle Administrator ist, wird die Hauptseite mit der Option Administrator angezeigt und wenn die Rolle mitarbeiter ist, zeigt es die Hauptseite des Mitarbeiters
 
 Installationshinweise :
-* Datenbank : Gehen Sie unter Folder Datenbank und die 'Dump mit Passwort.sql' in phpmyadmin importieren. 
+* Datenbank : Machen Sie ein neu Connection, mit hostname :kompetenzdatenbank.mysql.database.azure.com, username :kompetenzdb@kompetenzdatenbank,  password :Kompetenz2021	
+und für die Datenbank importieren, gehen Sie unter Folder Datenbank und die 'Dump mit Passwort.sql' in phpmyadmin importieren. 
 * GUI: Run und für Anmeldung können Sie gerne für :  
 Administrator - Benutzername : 'thomasm' als Passwort : 'pass123'  
 Mitarbeiter -   Benutzername : 'maxm' als Passwort : 'pass123'
