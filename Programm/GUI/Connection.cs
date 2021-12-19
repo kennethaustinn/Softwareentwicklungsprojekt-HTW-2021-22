@@ -10,7 +10,7 @@ namespace GUI
     class Connection
     {
         static string server = "127.0.0.1;";
-        static string database = "test;";
+        static string database = "kompetenzdb;";
         static string Uid = "kenneth;";
         static string password = "test123;";
 

@@ -25,20 +25,20 @@ namespace GUI
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            //if (txtUsername.Text == "mitarbeiter")
-            //{
-            //    this.Hide();
-            //    MitarbeiterHauptseite.mitarbeiterHauptseite.ShowDialog();
-            //    this.Close();
-            //}
-            //else
-            //{
-            //    this.Hide();
-            //    AdministratorHauptseite.administratorHauptseite.ShowDialog();
-            //    this.Close();
-            //}
+            if (txtUsername.Text == "mitarbeiter")
+            {
+                this.Hide();
+                MitarbeiterHauptseite.mitarbeiterHauptseite.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                this.Hide();
+                AdministratorHauptseite.administratorHauptseite.ShowDialog();
+                this.Close();
+            }
 
-            SelectData(txtUsername.Text, txtPassword.Text);
+            //SelectData(txtUsername.Text, txtPassword.Text);
         }
 
         private void txtUsername_Click(object sender, EventArgs e)

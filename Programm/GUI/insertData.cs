@@ -11,22 +11,27 @@ namespace GUI {
         Connection con = new Connection();
         Encrypt en = new Encrypt();
 
-        public string InsertData(string userInsert, string passInsert)
+        public string InsertData(string benutzerInsert, string passInsert, string vornameInsert, string nameInsert, string aufgabenInsert, string abteilungInsert, string rolleInsert)
         {
             try
             {
                 Connection.DataSource();
                 con.connOpen();
                 MySqlCommand command = new MySqlCommand();
-                command.CommandText = "INSERT INTO users (userName, Password) values (@name , @password)";
-                command.Parameters.AddWithValue("@name", userInsert);
+                command.CommandText = "INSERT INTO mitarbeiter (Benutzername, Passwort, Vorname, Name, Aufgabenbereich, Abteilung, Rolle) values (@benutzername ,@password ,@vorname,@name ,@aufgabenbereich ,@abteilung ,@rolle)";
+                command.Parameters.AddWithValue("@benutzername", benutzerInsert);
                 command.Parameters.AddWithValue("@password", Encrypt.HashString(passInsert));
+                command.Parameters.AddWithValue("@vorname", vornameInsert);
+                command.Parameters.AddWithValue("@name", nameInsert);
+                command.Parameters.AddWithValue("@aufgabenbereich", aufgabenInsert);
+                command.Parameters.AddWithValue("@abteilung", abteilungInsert);
+                command.Parameters.AddWithValue("@rolle", rolleInsert);
                 command.Connection = Connection.connMaster;
                 command.ExecuteNonQuery();
                 System.Windows.Forms.MessageBox.Show("Account created");
                 con.connClose();
 
-                return userInsert + passInsert;
+                return benutzerInsert + passInsert + vornameInsert + nameInsert + aufgabenInsert + abteilungInsert + rolleInsert;
 
 
             }
