@@ -33,10 +33,10 @@ namespace GUI
             this.label6 = new System.Windows.Forms.Label();
             this.buttonChangePasswort = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtAltPassword = new System.Windows.Forms.TextBox();
             this.buttonChangeBenutzername = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.TxtComNewPassword = new System.Windows.Forms.TextBox();
+            this.txtComNewPassword = new System.Windows.Forms.TextBox();
             this.txtNewPassword = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtBenutzername = new System.Windows.Forms.TextBox();
@@ -51,10 +51,10 @@ namespace GUI
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.buttonChangePasswort);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.txtPassword);
+            this.panel1.Controls.Add(this.txtAltPassword);
             this.panel1.Controls.Add(this.buttonChangeBenutzername);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.TxtComNewPassword);
+            this.panel1.Controls.Add(this.txtComNewPassword);
             this.panel1.Controls.Add(this.txtNewPassword);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.txtBenutzername);
@@ -72,9 +72,9 @@ namespace GUI
             this.label6.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.Location = new System.Drawing.Point(419, 56);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(134, 37);
+            this.label6.Size = new System.Drawing.Size(231, 37);
             this.label6.TabIndex = 29;
-            this.label6.Text = "Passwort";
+            this.label6.Text = "Passwort ändern";
             // 
             // buttonChangePasswort
             // 
@@ -86,6 +86,7 @@ namespace GUI
             this.buttonChangePasswort.TabIndex = 28;
             this.buttonChangePasswort.Text = "Speichern";
             this.buttonChangePasswort.UseVisualStyleBackColor = true;
+            this.buttonChangePasswort.Click += new System.EventHandler(this.buttonChangePasswort_Click);
             // 
             // label3
             // 
@@ -93,19 +94,19 @@ namespace GUI
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(419, 152);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 32);
+            this.label3.Size = new System.Drawing.Size(183, 32);
             this.label3.TabIndex = 26;
-            this.label3.Text = "Altes Passwort";
+            this.label3.Text = "Altes Passwort : ";
             // 
-            // txtPassword
+            // txtAltPassword
             // 
-            this.txtPassword.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.txtPassword.Location = new System.Drawing.Point(419, 189);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(418, 27);
-            this.txtPassword.TabIndex = 25;
+            this.txtAltPassword.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtAltPassword.Location = new System.Drawing.Point(419, 189);
+            this.txtAltPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAltPassword.Name = "txtAltPassword";
+            this.txtAltPassword.PasswordChar = '*';
+            this.txtAltPassword.Size = new System.Drawing.Size(418, 27);
+            this.txtAltPassword.TabIndex = 25;
             // 
             // buttonChangeBenutzername
             // 
@@ -125,19 +126,19 @@ namespace GUI
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(419, 296);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(224, 32);
+            this.label4.Size = new System.Drawing.Size(236, 32);
             this.label4.TabIndex = 23;
-            this.label4.Text = "Passwort bestätigen";
+            this.label4.Text = "Passwort bestätigen :";
             // 
-            // TxtComNewPassword
+            // txtComNewPassword
             // 
-            this.TxtComNewPassword.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.TxtComNewPassword.Location = new System.Drawing.Point(419, 332);
-            this.TxtComNewPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TxtComNewPassword.Name = "TxtComNewPassword";
-            this.TxtComNewPassword.PasswordChar = '*';
-            this.TxtComNewPassword.Size = new System.Drawing.Size(418, 27);
-            this.TxtComNewPassword.TabIndex = 22;
+            this.txtComNewPassword.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtComNewPassword.Location = new System.Drawing.Point(419, 332);
+            this.txtComNewPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtComNewPassword.Name = "txtComNewPassword";
+            this.txtComNewPassword.PasswordChar = '*';
+            this.txtComNewPassword.Size = new System.Drawing.Size(418, 27);
+            this.txtComNewPassword.TabIndex = 22;
             // 
             // txtNewPassword
             // 
@@ -155,9 +156,9 @@ namespace GUI
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(419, 224);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(198, 32);
+            this.label5.Size = new System.Drawing.Size(192, 32);
             this.label5.TabIndex = 20;
-            this.label5.Text = "Passwort ändern?";
+            this.label5.Text = "Neues Passwort :";
             // 
             // txtBenutzername
             // 
@@ -174,9 +175,9 @@ namespace GUI
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(57, 152);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(270, 32);
+            this.label2.Size = new System.Drawing.Size(260, 32);
             this.label2.TabIndex = 18;
-            this.label2.Text = "Benutzername ändern : ";
+            this.label2.Text = "Neue Benutzername  : ";
             // 
             // label1
             // 
@@ -184,9 +185,9 @@ namespace GUI
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(57, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 37);
+            this.label1.Size = new System.Drawing.Size(299, 37);
             this.label1.TabIndex = 17;
-            this.label1.Text = "Benutzername";
+            this.label1.Text = "Benutzername ändern";
             // 
             // Einstellungen
             // 
@@ -209,10 +210,10 @@ namespace GUI
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonChangePasswort;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtAltPassword;
         private System.Windows.Forms.Button buttonChangeBenutzername;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox TxtComNewPassword;
+        private System.Windows.Forms.TextBox txtComNewPassword;
         private System.Windows.Forms.TextBox txtNewPassword;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtBenutzername;

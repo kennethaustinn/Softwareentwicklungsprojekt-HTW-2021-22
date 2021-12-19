@@ -36,5 +36,49 @@ namespace GUI
             }
             
         }
+
+        private void buttonChangePasswort_Click(object sender, EventArgs e)
+        {
+            Connection.DataSource();
+            con.connOpen();
+            MySqlCommand command = new MySqlCommand();
+            command.CommandText = ("select * from mitarbeiter where Hashedpasswort ='" + Encrypt.HashString(txtAltPassword.Text) + "'and Benutzername ='" + Hauptseite.hauptseite.Username.Text + "'");
+            command.Connection = Connection.connMaster;
+            MySqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                con.connClose();
+                if (txtNewPassword.Text == txtComNewPassword.Text)
+                {
+                    try
+                    {
+                        con.connOpen();
+                        command.CommandText = ("update mitarbeiter set Hashedpasswort ='" + Encrypt.HashString(txtNewPassword.Text) + "', Saltedpasswort ='" + Encrypt.SaltString(txtNewPassword.Text) + "' where Benutzername ='" + Hauptseite.hauptseite.Username.Text + "'");
+                        command.Connection = Connection.connMaster;
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Passwort aktualisiert");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Passwort nicht gleich! Bitte versuchen Sie es nochmal erneut", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtNewPassword.Text = "";
+                    txtComNewPassword.Text = "";
+                }
+            }
+            else
+            {
+                MessageBox.Show("Altes Passwort Falsch! Bitte versuchen Sie es erneut", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtAltPassword.Text = "";
+                txtNewPassword.Text = "";
+                txtComNewPassword.Text = "";
+            }
+            con.connClose();
+
+        }
     }
 }
