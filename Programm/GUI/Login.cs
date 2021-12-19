@@ -127,7 +127,7 @@ namespace GUI
                 }
                 else
                 {
-                    MessageBox.Show("Konto exstiert nicht!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Passwort falsch oder Sie haben kein Konto", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
                 return userInsert + passInsert;
