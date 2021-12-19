@@ -23,7 +23,7 @@ namespace GUI
             InitializeComponent();
         }
 
-        private void MitarbeiterListe_Shown(object sender, EventArgs e)
+        private async void MitarbeiterListe_Shown(object sender, EventArgs e)
         {
             //HttpClient clint = new HttpClient();
             //clint.BaseAddress = new Uri("https://localhost:44340/");
@@ -35,6 +35,8 @@ namespace GUI
             //requestObjGet.Method = "GET";
             //HttpWebRequest responsObjGet = null;
             //responsObjGet = (HttpWebResponse)requestObjGet.GetResponse();
+            var responce = await RestHelper.GetALL();
+            MitarbeiterListeTable.DataSource = responce;
         }
 
 

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace RestAPI.Models
 {
+    //Ein Anforderungstext für das JSON-Dokument und die Struktur dieses JSON-Dokuments (Mitarbeiter)
     public class Mitarbeiter
     {
         public int Mitarbeiter_ID { get; set; }        

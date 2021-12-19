@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace RestAPI.Models
 {
+    //Ein Anforderungstext für das JSON-Dokument und die Struktur dieses JSON-Dokuments (Kompetenz)
     public class Kompetenz
     {
         public int Kompetenz_ID { get; set; }

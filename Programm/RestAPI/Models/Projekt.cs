@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace RestAPI.Models
 {
+    //Ein Anforderungstext für das JSON-Dokument und die Struktur dieses JSON-Dokuments (Projekt)
     public class Projekt
     {
         public int Projekt_ID { get; set; }
