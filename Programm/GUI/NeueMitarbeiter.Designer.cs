@@ -107,7 +107,6 @@ namespace GUI
             this.speichernButton.Text = "Speichern";
             this.speichernButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.speichernButton.UseVisualStyleBackColor = false;
-            this.speichernButton.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // iconButton2
             // 
