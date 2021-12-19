@@ -16,7 +16,7 @@ namespace SQLConnection
         // class mitarbeirt : vornme , .......
         public ConnectToDataBase() // connect to server 
         {
-            this.connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=kompetenzdb;"; // test = databas_name
+            this.connectionString = "datasource=kompetenzdatenbank.mysql.database.azure.com;port=3306;username=kompetenzdb@kompetenzdatenbank;password=Kompetenz2021;database=kompetenzdb"); // test = databas_name
 
         }
 
