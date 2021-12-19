@@ -197,6 +197,7 @@ namespace GUI
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = false;
             this.iconButton1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.iconButton1_MouseDown);
+            this.iconButton1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.iconButton1_MouseUp);
             // 
             // txtAufgabenbereich
             // 

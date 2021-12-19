@@ -30,5 +30,10 @@ namespace GUI
         {
             txtPassword.UseSystemPasswordChar = false;
         }
+
+        private void iconButton1_MouseUp(object sender, MouseEventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = true;
+        }
     }
 }
