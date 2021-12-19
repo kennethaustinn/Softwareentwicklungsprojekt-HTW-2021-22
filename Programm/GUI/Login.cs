@@ -7,12 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 using System.Diagnostics;
 
 namespace GUI
 {
     public partial class Login : Form
     {
+        Connection con = new Connection();
+        
+
         public static Login login = new Login();
         public Login()
         {
@@ -21,19 +25,9 @@ namespace GUI
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text == "mitarbeiter")
-            {
-                this.Hide();
-                MitarbeiterHauptseite.mitarbeiterHauptseite.ShowDialog();
-                this.Close();
-            }
-            else
-            {
-                this.Hide();
-                AdministratorHauptseite.administratorHauptseite.ShowDialog();
-                this.Close();
-            }
+            SelectData(txtUsername.Text, txtPassword.Text);
         }
+    
 
         private void txtUsername_Click(object sender, EventArgs e)
         {
@@ -72,7 +66,7 @@ namespace GUI
             {
                 VisitLink();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Unable to open link that was clicked.");
             }
@@ -86,6 +80,63 @@ namespace GUI
             //Call the Process.Start method to open the default browser
             //with a URL:
             Process.Start("https://www.google.com/");
+        }
+        /// <summary>
+        /// Diese Methode uberprüft die Login Datei in MySQL Database, die schon angegeben (Benutzername und Passwort) 
+        /// </summary>
+        /// <param name="userInsert"></param>
+        /// <param name="passInsert"></param>
+        /// <returns></returns>
+        private string SelectData(string userInsert, string passInsert)
+        {
+            try
+            {
+                Connection.DataSource();
+                con.connOpen();
+                MySqlCommand command = new MySqlCommand();
+                command.CommandText = ("select * from mitarbeiter where (Benutzername, Hashedpasswort) = (@name, @password)");
+                command.Parameters.AddWithValue("@name", userInsert);
+                command.Parameters.AddWithValue("@password", Encrypt.HashString(passInsert));
+                command.Connection = Connection.connMaster;
+                MySqlDataReader reader = command.ExecuteReader();
+
+               if (reader.Read())
+                {
+                    // Uberprüft ob es ein 
+                    if (reader[8].ToString() == "Administrator")
+                    {
+                        this.Hide();
+                        AdministratorHauptseite.administratorHauptseite.ShowDialog();
+                        this.Close();
+                    }
+                    else if (reader[8].ToString() == "Mitarbeiter")
+                    {
+                        this.Hide();
+                        MitarbeiterHauptseite.mitarbeiterHauptseite.ShowDialog();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Rolle falsch eingegeben! Nur Mitarbeiter oder Administrator", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Konto exstiert nicht!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                return userInsert + passInsert;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return null;
+            }
+            finally
+            {
+                con.connClose();
+            }
         }
 
 
