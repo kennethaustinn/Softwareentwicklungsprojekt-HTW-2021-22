@@ -35,8 +35,8 @@ namespace GUI
             //requestObjGet.Method = "GET";
             //HttpWebRequest responsObjGet = null;
             //responsObjGet = (HttpWebResponse)requestObjGet.GetResponse();
-            var responce = await RestHelper.GetALL();
-            MitarbeiterListeTable.DataSource = responce;
+            //var responce = await RestHelper.GetALL();
+            //MitarbeiterListeTable.DataSource = responce;
         }
 
 
