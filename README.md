@@ -41,5 +41,5 @@ Nach dem Login wird nach Rolle gefiltert, die in der Datenbank gespeichert ist, 
 Installationshinweise :
 * Datenbank : Gehen Sie unter Folder Datenbank und die 'Dump mit Passwort.sql' in phpmyadmin importieren. 
 * GUI: Run und für Anmeldung können Sie gerne für :
-Administrator - Benutzername : 'thomasm' als Passwort : 'pass123'
-Mitarbeiter -   Benutzername : 'maxm' als Passwort : 'pass123'
+- Administrator - Benutzername : 'thomasm' als Passwort : 'pass123'
+- Mitarbeiter -   Benutzername : 'maxm' als Passwort : 'pass123'
