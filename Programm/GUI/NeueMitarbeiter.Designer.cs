@@ -177,9 +177,9 @@ namespace GUI
             this.label8.TabIndex = 16;
             this.label8.Text = "Kompetenzen :";
             // 
-            // iconButton1
+            // AufgabenbereichInput
             // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.AufgabenbereichInput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.iconButton1.BackColor = System.Drawing.Color.CornflowerBlue;

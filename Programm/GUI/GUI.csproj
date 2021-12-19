@@ -8,11 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="FontAwesome.Sharp" Version="5.15.3" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="MySql.Data" Version="8.0.27" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SQLConnection\SQLConnection.csproj" />
+    <ProjectReference Include="..\RestAPI\RestAPI.csproj" />
   </ItemGroup>
 
   <ItemGroup>

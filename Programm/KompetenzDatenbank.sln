@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GUI", "GUI\GUI.csproj", "{66CE8812-AE30-4B12-AD27-8474ECDF5D7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLConnection", "SQLConnection\SQLConnection.csproj", "{F614C6B0-CC50-41F7-BE42-EDB5C8ABDF2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQLConnection", "SQLConnection\SQLConnection.csproj", "{F614C6B0-CC50-41F7-BE42-EDB5C8ABDF2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestAPI", "RestAPI\RestAPI.csproj", "{B63B986D-6CDE-49FC-9B9B-EDBAA0ACBCA0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{F614C6B0-CC50-41F7-BE42-EDB5C8ABDF2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F614C6B0-CC50-41F7-BE42-EDB5C8ABDF2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F614C6B0-CC50-41F7-BE42-EDB5C8ABDF2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B63B986D-6CDE-49FC-9B9B-EDBAA0ACBCA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B63B986D-6CDE-49FC-9B9B-EDBAA0ACBCA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B63B986D-6CDE-49FC-9B9B-EDBAA0ACBCA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B63B986D-6CDE-49FC-9B9B-EDBAA0ACBCA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

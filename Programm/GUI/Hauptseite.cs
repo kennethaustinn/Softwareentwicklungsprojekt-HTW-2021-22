@@ -11,16 +11,16 @@ using System.Runtime.InteropServices;
 
 namespace GUI
 {
-    public partial class AdministratorHauptseite : Form
+    public partial class Hauptseite : Form
     { 
 
-    public static AdministratorHauptseite administratorHauptseite = new AdministratorHauptseite();
+    public static Hauptseite hauptseite = new Hauptseite();
 
     private IconButton currentBtn;
     private Panel leftBorderBtn;
     private Form currentChildForm;
     
-    public AdministratorHauptseite()
+    public Hauptseite()
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
@@ -34,7 +34,7 @@ namespace GUI
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
-        private void ActivateButton(object senderBtn, Color color)
+        public void ActivateButton(object senderBtn, Color color)
         {
             if (senderBtn != null)
             {
@@ -68,7 +68,7 @@ namespace GUI
             }
         }
 
-        private void openChildForm(Form childForm)
+        public void openChildForm(Form childForm)
         {
             if (currentChildForm != null)
             {
@@ -189,9 +189,8 @@ namespace GUI
         private void LogoutButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Login form1 = new Login();
-            form1.ShowDialog();
-            this.Close();
-        }
+            Login m = new Login();
+            m.Show();
+         }
     }
 }
