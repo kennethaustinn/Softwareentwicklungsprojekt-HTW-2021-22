@@ -9,6 +9,11 @@ namespace GUI
 {
     class Encrypt
     {
+        /// <summary>
+        /// Ändern das Passwort in Hash, aus String Datei von der Eingabe der Nutzer
+        /// </summary>
+        /// <param name="passwordString"></param>
+        /// <returns></returns>
         public static string HashString(string passwordString)
         {
             StringBuilder sb = new StringBuilder();
@@ -16,6 +21,11 @@ namespace GUI
                 sb.Append(b.ToString("X3"));
             return sb.ToString();
         }
+        /// <summary>
+        /// Ändern das Passwort in Salt, aus String Datei von der Eingabe der Nutzer
+        /// </summary>
+        /// <param name="passwordString"></param>
+        /// <returns></returns>
         public static string SaltString(string passwordString)
         {
             string salt = CreateSalt(10);
@@ -24,7 +34,11 @@ namespace GUI
                 sb.Append(b.ToString("X3"));
             return sb.ToString();
         }
-
+        /// <summary>
+        /// Generieren ein Zufall Zahlen damit man es für Password Salting verwenden kann
+        /// </summary>
+        /// <param name="size"></param>
+        /// <returns></returns>
         public static string CreateSalt(int size)
         {
             using (var generator = RandomNumberGenerator.Create())
@@ -34,11 +48,22 @@ namespace GUI
                 return Convert.ToBase64String(salt);
             }
         }
+        /// <summary>
+        /// Hashing wird mit dieser Methode durchgeführt mit Namespace von Cryptography mit SHA256 Verfahren
+        /// </summary>
+        /// <param name="passwordString"></param>
+        /// <returns></returns>
         public static byte[] GetHash(string passwordString)
         {
             using (HashAlgorithm algorithm = SHA256.Create())
                 return algorithm.ComputeHash(Encoding.UTF8.GetBytes(passwordString));
         }
+        /// <summary>
+        /// Salting wird mit dieser Methode durchgeführt mit Namespace von Cryptography mit SHA256 Verfahren 
+        /// </summary>
+        /// <param name="passwordString"></param>
+        /// <param name="salt"></param>
+        /// <returns></returns>
         public static byte[] GetSalt (string passwordString, string salt)
         {
             using (HashAlgorithm algorithm = SHA256.Create())

@@ -16,7 +16,11 @@ namespace GUI
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// wenn das Button gedrückt wurde, wird die Benutzername aktualisiert und in der Datenbank gelagert
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonChangeBenutzername_Click(object sender, EventArgs e)
         {
             try
@@ -37,7 +41,12 @@ namespace GUI
             }
             
         }
-
+        /// <summary>
+        /// Mit diesem Event wird das alte Password vergleicht ob die Eingabe schon genau wie die in der Datenbank und auch das zwei neue Passwort
+        /// wurde verglichen. Wenn alles klappt dann wird das Passwort aktualisiert und in der Datenbank gespeichert
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonChangePasswort_Click(object sender, EventArgs e)
         {
             Connection.DataSource();

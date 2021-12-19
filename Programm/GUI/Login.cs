@@ -22,7 +22,7 @@ namespace GUI
         {
             InitializeComponent();
         }
-
+        // Wenn das Login Button geklickt würde die Eingabe in weitere Methode uberprüft ob es mit der Eingabe gleich sind
         private void LoginButton_Click(object sender, EventArgs e)
         {
             SelectData(txtUsername.Text, txtPassword.Text);
@@ -44,22 +44,22 @@ namespace GUI
             txtPassword.BackColor = Color.White;
             panel4.BackColor = Color.White;
         }
-
+        // Um das Applikation zu schliessen durch das Click des X Buttons
         private void CloseButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
+        // Mit dem Event wird das Password Character lesbar wenn das Schloss Icon gedrückt ist
         private void iconPictureBox2_MouseDown(object sender, MouseEventArgs e)
         {
             txtPassword.UseSystemPasswordChar = false;
         }
-
+        // Mit dem Event wird das Password Character unlesbar wenn das Schloss Icon nicht mehr gedrückt ist
         private void iconPictureBox2_MouseUp(object sender, MouseEventArgs e)
         {
             txtPassword.UseSystemPasswordChar = true;
         }
-
+        // Wenn das Link geklickt wird diesem Event durchgeführt und das Web wird geöffnet
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             try
@@ -71,7 +71,6 @@ namespace GUI
                 MessageBox.Show("Unable to open link that was clicked.");
             }
         }
-
         private void VisitLink()
         {
             // Change the color of the link text by setting LinkVisited
@@ -142,7 +141,7 @@ namespace GUI
                 con.connClose();
             }
         }
-
+        // Um das Form zu minimieren
         private void iconButton1_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;

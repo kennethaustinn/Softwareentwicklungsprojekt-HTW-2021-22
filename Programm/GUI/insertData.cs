@@ -10,7 +10,17 @@ namespace GUI {
     {
         Connection con = new Connection();
         Encrypt en = new Encrypt();
-
+        /// <summary>
+        /// Einfügen neue User wird durch dieser Methode 
+        /// </summary>
+        /// <param name="benutzerInsert"></param>
+        /// <param name="passInsert"></param>
+        /// <param name="vornameInsert"></param>
+        /// <param name="nameInsert"></param>
+        /// <param name="aufgabenInsert"></param>
+        /// <param name="abteilungInsert"></param>
+        /// <param name="rolleInsert"></param>
+        /// <returns></returns>
         public string InsertData(string benutzerInsert, string passInsert, string vornameInsert, string nameInsert, string aufgabenInsert, string abteilungInsert, string rolleInsert)
         {
             try
