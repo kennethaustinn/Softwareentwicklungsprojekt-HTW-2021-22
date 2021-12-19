@@ -25,21 +25,9 @@ namespace GUI
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text == "mitarbeiter")
-            {
-                this.Hide();
-                MitarbeiterHauptseite.mitarbeiterHauptseite.ShowDialog();
-                this.Close();
-            }
-            else
-            {
-                this.Hide();
-                AdministratorHauptseite.administratorHauptseite.ShowDialog();
-                this.Close();
-            }
-
-            //SelectData(txtUsername.Text, txtPassword.Text);
+            SelectData(txtUsername.Text, txtPassword.Text);
         }
+    
 
         private void txtUsername_Click(object sender, EventArgs e)
         {
@@ -78,7 +66,7 @@ namespace GUI
             {
                 VisitLink();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Unable to open link that was clicked.");
             }
@@ -93,6 +81,12 @@ namespace GUI
             //with a URL:
             Process.Start("https://www.google.com/");
         }
+        /// <summary>
+        /// Diese Methode uberprüft die Login Datei in MySQL Database, die schon angegeben (Benutzername und Passwort) 
+        /// </summary>
+        /// <param name="userInsert"></param>
+        /// <param name="passInsert"></param>
+        /// <returns></returns>
         private string SelectData(string userInsert, string passInsert)
         {
             try
@@ -100,21 +94,36 @@ namespace GUI
                 Connection.DataSource();
                 con.connOpen();
                 MySqlCommand command = new MySqlCommand();
-                command.CommandText = ("select * from users where (userName, Password) = (@name, @password)");
+                command.CommandText = ("select * from mitarbeiter where (Benutzername, Hashedpasswort) = (@name, @password)");
                 command.Parameters.AddWithValue("@name", userInsert);
                 command.Parameters.AddWithValue("@password", Encrypt.HashString(passInsert));
                 command.Connection = Connection.connMaster;
                 MySqlDataReader reader = command.ExecuteReader();
 
-                if (reader.Read())
+               if (reader.Read())
                 {
-                    this.Hide();
-                    MitarbeiterHauptseite.mitarbeiterHauptseite.ShowDialog();
-                    this.Close();
+                    // Uberprüft ob es ein 
+                    if (reader[8].ToString() == "Administrator")
+                    {
+                        this.Hide();
+                        AdministratorHauptseite.administratorHauptseite.ShowDialog();
+                        this.Close();
+                    }
+                    else if (reader[8].ToString() == "Mitarbeiter")
+                    {
+                        this.Hide();
+                        MitarbeiterHauptseite.mitarbeiterHauptseite.ShowDialog();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Rolle falsch eingegeben! Nur Mitarbeiter oder Administrator", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+
                 }
                 else
                 {
-                    MessageBox.Show("Error", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Konto exstiert nicht!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 return userInsert + passInsert;
