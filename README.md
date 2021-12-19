@@ -42,7 +42,7 @@ Installationshinweise :
 * Datenbank : Machen Sie eine neue Connection im App mysqlworkbench mit :  
 hostname :kompetenzdatenbank.mysql.database.azure.com  
 username :kompetenzdb@kompetenzdatenbank  
-password :Kompetenz2021
+password :Kompetenz2021   
 Für die Lokal Datenbank importieren, gehen Sie unter Folder Datenbank und die 'Dump mit Passwort.sql' in phpmyadmin importieren. 
 
 * GUI: Run und für Anmeldung können Sie gerne für :  
