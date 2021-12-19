@@ -27,5 +27,8 @@ fällt noch die Logik für Verbindung zwichen frontend und backend.
 Installationshinweise :
 * Datenbank : Gehen Sie unter Folder Datenbank und die 'Dump Datei mit paar Beispiel Dateien.sql' in phpmyadmin importieren
 * GUI: Gehen Sie unter Folder Programm und Sie können das Programm starten, indem Sie auf KompetenzDatenBank.sln klicken
-	
 
+## Abgabe Sprint 2 (28.11.2021)
+* Datenbank :  
+* Fachkonzept :
+* GUI : 
