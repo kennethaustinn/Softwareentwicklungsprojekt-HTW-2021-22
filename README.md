@@ -29,11 +29,17 @@ Installationshinweise :
 * GUI: Gehen Sie unter Folder Programm und Sie können das Programm starten, indem Sie auf KompetenzDatenBank.sln klicken
 
 ## Abgabe Sprint 2 (19.12.2021)
-* Datenbank :  Datenbank für Passwort als Hash erstellen,
-Erstellen die Logik von Hash und Salting, damit das in der Datenbank gespeicherte Passwort in abstrakter Form ist.
+* Datenbank :  Datenbank für Passwort als Hash und Salting erstellt, damit das in der Datenbank gespeicherte Passworte unlesbar und sicherer sind. Unsere Datenbank ist jetzt online, das heißt alle Konnektivität ist direkt mit Microsoft Azure verbunden.
 
-* Fachkonzept : ein REST server erstellen, aber noch nicht in dem GUI implementiert, trotzdem läuft der Code, kann man im Postman testen, um zu debuggen (GET, POST, PUT, DELETE)
+* Fachkonzept : ein REST server erstellen, aber noch nicht in dem GUI implementiert. Der Code läuft ganz gut und man kann mit Postman testen, um zu debuggen (GET, POST, PUT, DELETE). 
+Hashing und Salting Passwort erfolgt durch Hashing Verfahren SHA256. Schon angebunden mit der GUI und man kann sich anmelden und auch registieren (nur Administrator).
 
-* GUI : Jetzt kann man sich mit den Daten aus der Datenbank anmelden. 
-Die Hauptseite von mitarbeiter und Administrator in einem Formular erstellt,
+* GUI : Für Anmeldung kann man sich mit den Daten aus der Datenbank anmelden. 
+Die Hauptseite von Mitarbeiter und Administrator in einem Formular erstellt,
 Nach dem Login wird nach Rolle gefiltert, die in der Datenbank gespeichert ist, wenn die Rolle Administrator ist, wird die Hauptseite mit der Option Administrator angezeigt und wenn die Rolle mitarbeiter ist, zeigt es die Hauptseite des Mitarbeiters
+
+Installationshinweise :
+* Datenbank : Gehen Sie unter Folder Datenbank und die 'Dump mit Passwort.sql' in phpmyadmin importieren. 
+* GUI: Run und für Anmeldung können Sie gerne für :
+Administrator - Benutzername : 'thomasm' als Passwort : 'pass123'
+Mitarbeiter -   Benutzername : 'maxm' als Passwort : 'pass123'
