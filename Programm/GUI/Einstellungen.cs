@@ -27,6 +27,7 @@ namespace GUI
                 command.CommandText = ("update mitarbeiter set Benutzername ='" + txtBenutzername.Text + "' where Benutzername ='" + Hauptseite.hauptseite.Username.Text + "'");
                 command.Connection = Connection.connMaster;
                 command.ExecuteNonQuery();
+                txtBenutzername.Text =  "";
                 MessageBox.Show("Benutzername aktualisiert");
                 con.connClose();
             }
@@ -56,6 +57,9 @@ namespace GUI
                         command.CommandText = ("update mitarbeiter set Hashedpasswort ='" + Encrypt.HashString(txtNewPassword.Text) + "', Saltedpasswort ='" + Encrypt.SaltString(txtNewPassword.Text) + "' where Benutzername ='" + Hauptseite.hauptseite.Username.Text + "'");
                         command.Connection = Connection.connMaster;
                         command.ExecuteNonQuery();
+                        txtAltPassword.Text = "";
+                        txtNewPassword.Text = "";
+                        txtComNewPassword.Text = "";
                         MessageBox.Show("Passwort aktualisiert");
                     }
                     catch (Exception ex)
