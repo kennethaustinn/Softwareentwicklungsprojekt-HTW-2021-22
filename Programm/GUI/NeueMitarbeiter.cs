@@ -21,7 +21,7 @@ namespace GUI
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void iconButton3_Click(object sender, EventArgs e)
+        private void speichernButton_Click(object sender, EventArgs e)
         {
             if(txtUser.Text==""|| txtPassword.Text == "")
             {
@@ -40,5 +40,6 @@ namespace GUI
             txtPassword.UseSystemPasswordChar = true;
         }
 
+        
     }
 }
