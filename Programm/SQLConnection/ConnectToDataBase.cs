@@ -30,7 +30,7 @@ namespace SQLConnection
         {
             Console.WriteLine("Versuchen zu lesen von der Datenbank ...");
 
-            string command = $"select * from  mitarbeiter";// user
+            string command = $"select * from  mitarbeiter";
             MySqlConnection databasConnection = new MySqlConnection(connectionString); // Verbindung erstellen // mydatabase
             MySqlCommand commandToDatabase = new MySqlCommand(command, databasConnection);// comand in database übermitlen
             commandToDatabase.CommandTimeout = 60;
@@ -52,6 +52,7 @@ namespace SQLConnection
                         string[] zeile = { (reader.GetString(0)), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5) };
                         // int id = Int32.Parse(reader.GetString(0)); // "22" ->22
                         // klass mitarbeiter 
+                        Console.WriteLine(zeile[1]);
                         informationenList.Add(zeile); // Mitarbeitern jetzt hier gespeichert
                     }
                     MessageBox.Show("alle angegebene information ist richtig gelesen");
