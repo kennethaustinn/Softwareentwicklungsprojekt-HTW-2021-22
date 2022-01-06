@@ -7,19 +7,19 @@ stages:
 build:
   stage: build
   tags:
-   - Docker
-   - FB2
-   - Windows
-   - Runner
+  - Docker
+  - FB2
+  - Windows
+  - Runner
   script:
-   - dotnet build ".C:\Users\kenne\source\repos\KompetenzDB\Programm\KompetenzDatenbank.sln"
-    
+  - dotnet build ".\Programm\KompetenzDatenbank.sln"
+   
 test:
   stage: test
   tags:
-   - Docker
-   - FB2
-   - Windows
-   - Runner
+  - Docker
+  - FB2
+  - Windows
+  - Runner
   script:
-    - dotnet test
+    - dotnet test ".\Programm\KompetenzDatenbank.sln"
