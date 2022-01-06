@@ -12,7 +12,7 @@ build:
    - Windows
    - Runner
   script:
-    - dotnet build "C:\Users\kenne\source\repos\KompetenzDB\Programm\KompetenzDatenbank.sln"
+   - dotnet build ".\Programm\KompetenzDatenbank.sln"
     
 test:
   stage: test
