@@ -11,15 +11,16 @@ using System.Runtime.InteropServices;
 
 namespace GUI
 {
-    public partial class MitarbeiterHauptseite : Form
-    {
+    public partial class Hauptseite : Form
+    { 
 
-        public static MitarbeiterHauptseite mitarbeiterHauptseite = new MitarbeiterHauptseite();
+    public static Hauptseite hauptseite = new Hauptseite();
 
-        private IconButton currentBtn;
-        private Panel leftBorderBtn;
-        private Form currentChildForm;
-        public MitarbeiterHauptseite()
+    private IconButton currentBtn;
+    private Panel leftBorderBtn;
+    private Form currentChildForm;
+    
+    public Hauptseite()
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
@@ -33,7 +34,7 @@ namespace GUI
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
-        private void ActivateButton(object senderBtn, Color color)
+        public void ActivateButton(object senderBtn, Color color)
         {
             if (senderBtn != null)
             {
@@ -67,7 +68,7 @@ namespace GUI
             }
         }
 
-        private void openChildForm(Form childForm)
+        public void openChildForm(Form childForm)
         {
             if (currentChildForm != null)
             {
@@ -83,6 +84,18 @@ namespace GUI
             childForm.Show();
         }
 
+        private void NeueMitarbeiterButton_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, Color.Black);
+            openChildForm(new NeueMitarbeiter());
+        }
+
+        private void MitarbeiterListeButton_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, Color.Black);
+            openChildForm(new MitarbeiterListe());
+        }
+
         private void ProjekteListeButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.Black);
@@ -95,17 +108,16 @@ namespace GUI
             openChildForm(new KompetenzListe());
         }
 
-        private void ProfileButton_Click(object sender, EventArgs e)
+        private void EinstellungenButton_Click(object sender, EventArgs e)
         {
-            Profile form1 = new Profile();
-            form1.ShowDialog();
+            ActivateButton(sender, Color.Black);
+            openChildForm(new Einstellungen());
         }
 
         private void HomeLogo_Click(object sender, EventArgs e)
         {
-
             Reset();
-            currentChildForm.Close();
+            currentChildForm.Close();           
         }
 
         private void Reset()
@@ -133,41 +145,33 @@ namespace GUI
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        //Minimize
-        private void iconButton3_Click(object sender, EventArgs e)
+        private void BtnMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
 
-        //Maximize
-        private void iconButton2_Click(object sender, EventArgs e)
+        private void btnMaximize_Click(object sender, EventArgs e)
         {
-            if (WindowState == FormWindowState.Normal)
+            if(WindowState == FormWindowState.Normal)
             {
                 WindowState = FormWindowState.Maximized;
-            }
+            }    
             else
             {
                 WindowState = FormWindowState.Normal;
             }
         }
 
-        //Close
-        private void iconButton1_Click(object sender, EventArgs e)
+        private void BtnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void EinstellungenButton_Click(object sender, EventArgs e)
+        private void AdministratorHauptseite_Load(object sender, EventArgs e)
         {
-            ActivateButton(sender, Color.Black);
-            openChildForm(new Einstellungen());
-        }
-
-        private void MitarbeiterHauptseite_Load(object sender, EventArgs e)
-        {
-          TimeLabel.Text = DateTime.Now.ToLongTimeString();
-          DateLabel.Text = DateTime.Now.ToLongDateString();
+            //DateTimer.Start();
+            TimeLabel.Text = DateTime.Now.ToLongTimeString();
+            DateLabel.Text = DateTime.Now.ToLongDateString();
         }
 
         private void DateTimer_Tick(object sender, EventArgs e)
@@ -176,12 +180,17 @@ namespace GUI
             DateTimer.Start();
         }
 
+        private void ProfileButton_Click(object sender, EventArgs e)
+        {
+            Profile form1 = new Profile();
+            form1.ShowDialog();
+        }
+
         private void LogoutButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Login form1 = new Login();
-            form1.ShowDialog();
-            this.Close();
-        }
+            Login m = new Login();
+            m.Show();
+         }
     }
 }

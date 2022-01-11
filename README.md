@@ -27,5 +27,28 @@ fällt noch die Logik für Verbindung zwichen frontend und backend.
 Installationshinweise :
 * Datenbank : Gehen Sie unter Folder Datenbank und die 'Dump Datei mit paar Beispiel Dateien.sql' in phpmyadmin importieren
 * GUI: Gehen Sie unter Folder Programm und Sie können das Programm starten, indem Sie auf KompetenzDatenBank.sln klicken
-	
 
+## Abgabe Sprint 2 (19.12.2021)
+* Datenbank :  Datenbank für Passwort als Hash und Salting erstellt, damit das in der Datenbank gespeicherte Passworte unlesbar und sicherer sind. Unsere Datenbank ist jetzt online, das heißt alle Konnektivität ist direkt mit Microsoft Azure verbunden.
+
+* Fachkonzept : ein REST server erstellen, aber noch nicht in dem GUI implementiert. Der Code läuft ganz gut und man kann mit Postman testen, um zu debuggen (GET, POST, PUT, DELETE). 
+Hashing und Salting Passwort erfolgt durch Hashing Verfahren SHA256. Schon angebunden mit der GUI und man kann sich anmelden und auch registieren (nur Administrator).
+
+* GUI : Für Anmeldung kann man sich mit den Daten aus der Datenbank anmelden. 
+Die Hauptseite von Mitarbeiter und Administrator in einem Formular erstellt,
+Nach dem Login wird nach Rolle gefiltert, die in der Datenbank gespeichert ist, wenn die Rolle Administrator ist, wird die Hauptseite mit der Option Administrator angezeigt und wenn die Rolle mitarbeiter ist, zeigt es die Hauptseite des Mitarbeiters
+
+Installationshinweise :
+* Datenbank : Machen Sie eine neue Connection im App **mysqlworkbench** mit :  
+hostname :kompetenzdatenbank.mysql.database.azure.com  
+username :kompetenzdb@kompetenzdatenbank  
+password :Kompetenz2021   
+Für die Lokal Datenbank importieren, gehen Sie unter Folder Datenbank und die 'Dump mit Passwort.sql' in **phpmyadmin** importieren. 
+
+* GUI: Run und für Anmeldung können Sie gerne für :  
+Administrator - Benutzername : 'thomasm' als Passwort : 'pass123'  
+Mitarbeiter -   Benutzername : 'maxm' oder 'jakobs' als Passwort : 'pass123'
+
+* REST: Machen Sie die Projekt "RestAPI" als "set as start up project", dann run die Programm, kopieren Sie die URL, die im Browser angezeigt wird.
+zum Beispiel "https://localhost:44340/weatherforecast", nehmen Sie die "https://localhost:44340/" und fügen Sie in dem **Postman** ein, addieren Sie die URL mit was wollen sie zeigen, zum Beispiel mitarbeiter, es wird als "https://localhost:44340/API/mitarbeiter" sein.
+für den Befehl(Get,Post,Put,Delete) im **Postman** bitte JSON (body-> raw-> JSON) verwenden.

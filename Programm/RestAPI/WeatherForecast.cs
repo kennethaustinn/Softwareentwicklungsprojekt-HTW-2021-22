@@ -1,6 +1,6 @@
 using System;
 
-namespace REST_API_KompetenzDB
+namespace RestAPI
 {
     public class WeatherForecast
     {

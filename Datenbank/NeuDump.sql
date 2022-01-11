@@ -52,16 +52,18 @@ DROP TABLE IF EXISTS `mitarbeiter`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `mitarbeiter` (
-  `Mitarbeiter_ID` int(11) NOT NULL,
-  `Benutzername` varchar(45) NOT NULL,
-  `Passwort` varbinary(45) NOT NULL,
-  `Vorname` varchar(45) DEFAULT NULL,
-  `Name` varchar(45) NOT NULL,
-  `Aufgabenbereich` mediumtext NOT NULL,
-  `Abteilung` varchar(45) NOT NULL,
-  `Rolle` varchar(45) NOT NULL,
+  `Mitarbeiter_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Benutzername` varchar(20) NOT NULL,
+  `Hashedpasswort` varbinary(256) NOT NULL,
+  `Saltedpasswort` varbinary(256) NOT NULL,
+  `Vorname` varchar(20) DEFAULT NULL,
+  `Name` varchar(20) NOT NULL,
+  `Aufgabenbereich` varchar(20) NOT NULL,
+  `Abteilung` varchar(20) NOT NULL,
+  `Rolle` varchar(20) NOT NULL,
+  `Biografie` longtext DEFAULT NULL,
   PRIMARY KEY (`Mitarbeiter_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -70,7 +72,7 @@ CREATE TABLE `mitarbeiter` (
 
 LOCK TABLES `mitarbeiter` WRITE;
 /*!40000 ALTER TABLE `mitarbeiter` DISABLE KEYS */;
-INSERT INTO `mitarbeiter` VALUES (1,'maxm','pass123','Max','Mustermann','Backend','IT','Mitarbeiter'),(2,'thomasm','pass123','Thomas','Müller','System','IT','Administrator'),(3,'sarahe','pass123','Sarah','Engelmann','Frontend','IT','Mitarbeiter'),(4,'jakobs','pass123','Jakob','Schwarz','Content Manager','IT','Mitarbeiter'),(5,'annal','pass123','Anna','Linke','Bildverarbeitung','IT','Mitarbeiter');
+INSERT INTO `mitarbeiter` VALUES (1,'maxm','09B0870690A40A704209509A02D0020980C306F0B70060230F20DF0AC0DA08403602307D0F008D08D0FD05B03703704C','0260450800C60040400ED09209009606D01F0210B10D609500603409607D0D70DC0050810E60E80EB06702905109F00C','Max','Mustermann','Backend','IT','Mitarbeiter',''),(2,'thomasm','09B0870690A40A704209509A02D0020980C306F0B70060230F20DF0AC0DA08403602307D0F008D08D0FD05B03703704C','0440FC0B503D0290EA04001C07E0FC01B0520820730AE02E0C903F0850620C402709006F0580BC0AD07E0210F60A90B5','Thomas','Müller','System','IT','Administrator',''),(3,'jakobs','09B0870690A40A704209509A02D0020980C306F0B70060230F20DF0AC0DA08403602307D0F008D08D0FD05B03703704C','0140E80440D10180EE0A300B0E60350FC0680EB0AC01904007E03505C0E40FD09C0AF07D0A40D40F40D20140B2034092','Jakob','Schwarz','Content Manager','IT','Mitarbeiter','');
 /*!40000 ALTER TABLE `mitarbeiter` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -223,4 +225,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-14 23:25:56
+-- Dump completed on 2022-01-11 22:07:23

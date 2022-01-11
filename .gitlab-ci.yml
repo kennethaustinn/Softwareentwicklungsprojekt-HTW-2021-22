@@ -1,0 +1,25 @@
+image : mcr.microsoft.com/dotnet/framework/sdk:4.8-windowsservercore-ltsc2019
+
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+  tags:
+  - Docker
+  - FB2
+  - Windows
+  - Runner
+  script:
+  - dotnet build ".\Programm\KompetenzDatenbank.sln"
+   
+test:
+  stage: test
+  tags:
+  - Docker
+  - FB2
+  - Windows
+  - Runner
+  script:
+    - dotnet test ".\Programm\KompetenzDatenbank.sln"
