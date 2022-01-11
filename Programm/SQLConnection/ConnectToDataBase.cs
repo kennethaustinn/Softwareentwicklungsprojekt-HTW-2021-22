@@ -30,12 +30,12 @@ namespace SQLConnection
         {
             Console.WriteLine("Versuchen zu lesen von der Datenbank ...");
 
-            string command = $"select * from  mitarbeiter";
+            string command = $"select * from  kompetenzdb.mitarbeiter";
             MySqlConnection databasConnection = new MySqlConnection(connectionString); // Verbindung erstellen // mydatabase
             MySqlCommand commandToDatabase = new MySqlCommand(command, databasConnection);// comand in database übermitlen
             commandToDatabase.CommandTimeout = 60;
             MySqlDataReader reader; // um die informationen von Tabelle zu lesen
-
+            // assertEquals(2,read);
             try
             {// überprufen 
                 // offnen database
@@ -74,7 +74,7 @@ namespace SQLConnection
         }
         public void Create(int Mitarbeiter_ID, String Vorname, String Name, String Aufgabenbereich, String Abteilung, String Rolle) // user einfugen
         {
-            string command = $"insert into mitarbeiter values({Mitarbeiter_ID},{Vorname},{Name}" +
+            string command = $"insert into kompetenzdb.mitarbeiter values({Mitarbeiter_ID},{Vorname},{Name}" +
                 $",{Aufgabenbereich},{Abteilung} ,{Rolle})"; // values wird als textbox.text von user gegeben
             MySqlConnection databasConnection = new MySqlConnection(connectionString);
             MySqlCommand commandToDatabase = new MySqlCommand(command, databasConnection);
@@ -101,7 +101,7 @@ namespace SQLConnection
         public void Update(int Mitarbeiter_ID, String Vorname, String Name, String Aufgabenbereich, String Abteilung, String Rolle) // user einfugen
 
         {
-            string command = $"Update mitarbeiter set Vorname={Vorname} , Name={Name} ,Aufgabenbereich={Aufgabenbereich}" +
+            string command = $"Update kompetenzdb.mitarbeiter set Vorname={Vorname} , Name={Name} ,Aufgabenbereich={Aufgabenbereich}" +
                 $", Abteilung={Abteilung},Rolle={Rolle} where Mitarbeiter_ID={Mitarbeiter_ID}";
 
             MySqlConnection databasConnection = new MySqlConnection(connectionString); // Verbindung erstellen // mydatabase
@@ -131,7 +131,7 @@ namespace SQLConnection
         //delet(2)
         public void Delete(int Mitarbeiter_ID)
         {
-            string command = $"Delete from mitarbeiter where Mitarbeiter_ID = {Mitarbeiter_ID} ";
+            string command = $"Delete from kompetenzdb.mitarbeiter where Mitarbeiter_ID = {Mitarbeiter_ID} ";
 
             MySqlConnection databasConnection = new MySqlConnection(connectionString); // Verbindung erstellen // mydatabase
             MySqlCommand commandToDatabase = new MySqlCommand(command, databasConnection); // comand in database übermitlen
@@ -163,7 +163,7 @@ namespace SQLConnection
 
         {
 
-            string command = $"insert into projekt values({Projekt_ID},{Name},{Start}" +
+            string command = $"insert into kompetenzdb.projekt values({Projekt_ID},{Name},{Start}" +
                $",{Ende},{Beschreibung})"; // values wird als textbox.text von user gegeben
             MySqlConnection databasConnection = new MySqlConnection(connectionString);
             MySqlCommand commandToDatabase = new MySqlCommand(command, databasConnection);
@@ -191,7 +191,7 @@ namespace SQLConnection
 
         {
 
-            string command = $"Delete from projekt where Projekt_ID = {Projekt_ID} ";
+            string command = $"Delete from kompetenzdb.projekt where Projekt_ID = {Projekt_ID} ";
 
             MySqlConnection databasConnection = new MySqlConnection(connectionString); // Verbindung erstellen // mydatabase
             MySqlCommand commandToDatabase = new MySqlCommand(command, databasConnection); // comand in database übermitlen
@@ -218,7 +218,7 @@ namespace SQLConnection
         public void Passwortandern(int Mitarbeiter_ID , string Passwort)
         {
             string hashpasswort = HashPassword.Hashpassword(Passwort);
-            string command = $"Update mitarbeiter set passwort={hashpasswort}  where Mitarbeiter_ID={Mitarbeiter_ID}";
+            string command = $"Update kompetenzdb.mitarbeiter set passwort={hashpasswort}  where Mitarbeiter_ID={Mitarbeiter_ID}";
 
             MySqlConnection databasConnection = new MySqlConnection(connectionString); // Verbindung erstellen // mydatabase
             MySqlCommand commandToDatabase = new MySqlCommand(command, databasConnection);// comand in database übermitlen
@@ -240,14 +240,6 @@ namespace SQLConnection
                 MessageBox.Show(ex.Message);
             }
 
-
-
-
-
-
-
-
-
         }
 
 
@@ -255,7 +247,7 @@ namespace SQLConnection
         public void kompetenz(int Kompetenz_ID)
         {
 
-            string command = $"select * from  kompetenz where Kompetenz_ID = {Kompetenz_ID}";
+            string command = $"select * from  kompetenzdb.kompetenz where Kompetenz_ID = {Kompetenz_ID}";
             MySqlConnection databasConnection = new MySqlConnection(connectionString); // Verbindung erstellen // mydatabase
             MySqlCommand commandToDatabase = new MySqlCommand(command, databasConnection);// comand in database übermitlen
             commandToDatabase.CommandTimeout = 60;
@@ -297,11 +289,75 @@ namespace SQLConnection
             }
         }
 
+        public void BiographieÄndern(int Mitarbeiter_ID , string NewBiographie)
+        {
+           
+            string command = $"select Rolle from kompetenzdb.mitarbeiter where Mitarbeiter_ID = {Mitarbeiter_ID} ";
+            string Rolle = " ";
+            MySqlConnection databasConnection = new MySqlConnection(connectionString); // Verbindung erstellen // mydatabase
+            MySqlCommand commandToDatabase = new MySqlCommand(command, databasConnection);// comand in database übermitlen
+            commandToDatabase.CommandTimeout = 60;
+            MySqlDataReader reader;
+
+            try
+            {
+                databasConnection.Open();
+                reader = commandToDatabase.ExecuteReader();
+                if(reader.HasRows)
+                {
+                    Rolle = reader.GetString(0);
+                }else
+                { 
+                    MessageBox.Show("die Tabelle ist leider leer");
+                }
+
+                
+
+
+                databasConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            if(Rolle.Equals("Mitarbeiter"))
+            {
+
+                command = $"update kompetenzdb.mitarbeiter set Biographie= {NewBiographie} where Mitarbeiter_ID = {Mitarbeiter_ID} ;";
+
+
+                databasConnection = new MySqlConnection(connectionString); // Verbindung erstellen // mydatabase
+                commandToDatabase = new MySqlCommand(command, databasConnection);// comand in database übermitlen
+                commandToDatabase.CommandTimeout = 60;
+                MySqlDataReader newreader;
+
+                try
+                {
+                    databasConnection.Open();
+                    newreader = commandToDatabase.ExecuteReader();
+
+                    MessageBox.Show("die Biographie ist geändert");
+
+
+                    databasConnection.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Sie können die Biographie nicht verändern weil Sie nicht Mitarbeiter sind ");
+            }
+
+        }
 
 
 
-
-
+        // Aktivierung = true , = false = deaktviert 
+        // if aKTIVIERUNG = false -> aktivierung = true , mitarbeiter aktiveiren 
 
     }
 
