@@ -346,7 +346,7 @@ namespace SQLConnection
                     MessageBox.Show(ex.Message);
                 }
 
-            }
+            } 
             else
             {
                 MessageBox.Show("Sie können die Biographie nicht verändern weil Sie nicht Mitarbeiter sind ");
