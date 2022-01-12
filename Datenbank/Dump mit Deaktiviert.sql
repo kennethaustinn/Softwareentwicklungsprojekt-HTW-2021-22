@@ -62,7 +62,7 @@ CREATE TABLE `mitarbeiter` (
   `Abteilung` varchar(20) NOT NULL,
   `Rolle` varchar(20) NOT NULL,
   `Biographie` longtext DEFAULT NULL,
-  `Aktiv` tinyint(1) NOT NULL,
+  `Deaktiviert` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`Mitarbeiter_ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -226,4 +226,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-12 11:48:07
+-- Dump completed on 2022-01-12 11:55:11
