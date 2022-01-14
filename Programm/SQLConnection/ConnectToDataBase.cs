@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
+using GUI;
 
 namespace SQLConnection
 {
@@ -354,11 +355,144 @@ namespace SQLConnection
             } 
 
         }
+        /** Deaktivieren = 1 
+          Aktivieren = 0 */
+       
+
+        /*DeAktivieren */
+        public void DeaktivirMitArbeiter(int Mitarbeiter_ID, string Rolle , int DeaktiviertvonMitarbeiter)
+        {
+            /**
+             Rolle From User  
+            DeaktivierungvonMitarbeiter (Deaktivirung Situation von Mitarbeiter mit wünshte ID */
+            if (Rolle.Equals("Administrator") && DeaktiviertvonMitarbeiter == 0)
+            {
+
+                string command = $"Update kompetenzdb.mitarbeiter set Deaktiviert={1} where Mitarbeiter_ID= {Mitarbeiter_ID}";
+
+                MySqlConnection databasConnection = new MySqlConnection(connectionString); // Verbindung erstellen // mydatabase
+                MySqlCommand commandToDatabase = new MySqlCommand(command, databasConnection);// comand in database übermitlen
+                commandToDatabase.CommandTimeout = 60;
+                MySqlDataReader reader;
+
+                try
+                {
+                    databasConnection.Open();
+                    reader = commandToDatabase.ExecuteReader();
+
+                    MessageBox.Show("Mitarbeiter wurde deaktiviert");
+
+                    databasConnection.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
 
 
 
-        // Aktivierung = true , = false = deaktviert 
-        // if aKTIVIERUNG = false -> aktivierung = true , mitarbeiter aktiveiren 
+            }
+            else {
+                if (!Rolle.Equals("Administrator"))
+                    MessageBox.Show("User darf nicht Mitarbeiter Deaktivirern weil er nicht Administrator ist"); 
+                if (DeaktiviertvonMitarbeiter == 1)
+                    MessageBox.Show("Mitarbeiter ist schon deaktiviert");
+
+            }
+
+        }
+
+
+
+
+        /*
+         * Aktivierung 
+        */
+
+        public void AktivierMitArbeiter(int Mitarbeiter_ID, string Rolle, int DeaktiviertvonMitarbeiter)
+        {
+            /**
+             Rolle From User  
+            DeaktivierungvonMitarbeiter (Deaktivirung Situation von Mitarbeiter mit wünshte ID */
+            if (Rolle.Equals("Administrator") && DeaktiviertvonMitarbeiter == 1)
+            {
+
+                string command = $"Update kompetenzdb.mitarbeiter set Deaktiviert={0} where Mitarbeiter_ID= {Mitarbeiter_ID}";
+
+                MySqlConnection databasConnection = new MySqlConnection(connectionString); // Verbindung erstellen // mydatabase
+                MySqlCommand commandToDatabase = new MySqlCommand(command, databasConnection);// comand in database übermitlen
+                commandToDatabase.CommandTimeout = 60;
+                MySqlDataReader reader;
+
+                try
+                {
+                    databasConnection.Open();
+                    reader = commandToDatabase.ExecuteReader();
+
+                    MessageBox.Show("Mitarbeiter wurde aktiviert");
+
+                    databasConnection.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+
+
+            }
+            else
+            {
+                if (!Rolle.Equals("Administrator"))
+                    MessageBox.Show("User darf nicht Mitarbeiter Deaktivirern weil er nicht Administrator ist");
+                if (DeaktiviertvonMitarbeiter == 0)
+                    MessageBox.Show("Mitarbeiter ist schon aktiviert");
+
+            }
+
+        }
+
+        public void PasswortUberschreiben(string password  , string RollVonPerson , int Mitarbeiter_ID)
+        {
+            string HashNewPassword = Encrypt.HashString("password");
+            
+            if(RollVonPerson.Equals("Administrator"))
+            {
+
+                string command = $"Update kompetenzdb.mitarbeiter set Hashedpasswort={HashNewPassword} where Mitarbeiter_ID= {Mitarbeiter_ID}";
+
+                MySqlConnection databasConnection = new MySqlConnection(connectionString); // Verbindung erstellen // mydatabase
+                MySqlCommand commandToDatabase = new MySqlCommand(command, databasConnection);// comand in database übermitlen
+                commandToDatabase.CommandTimeout = 60;
+                MySqlDataReader reader;
+
+                try
+                {
+                    databasConnection.Open();
+                    reader = commandToDatabase.ExecuteReader();
+
+                    MessageBox.Show("Hashpassword wird geändert");
+
+                    databasConnection.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show("Hash Password darf nicht geändert werden weil du nicht Administrator bist ");
+            }
+
+
+
+        }
+
+
+
+
 
     }
 
