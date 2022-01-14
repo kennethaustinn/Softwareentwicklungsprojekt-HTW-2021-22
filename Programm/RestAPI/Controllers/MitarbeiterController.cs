@@ -57,7 +57,7 @@ namespace RestAPI.Controllers
         /// <returns></returns>
         [HttpPost]
         public JsonResult Post(Mitarbeiter mit)
-        {
+        { 
             string query = @"
                     insert into Mitarbeiter(Benutzername, Passwort, Aufgabenbereich, Rolle, name, Mitarbeiter_ID, vorname, Abteilung) values (@Benutzername,@Passwort,@Aufgabenbereich,@Rolle, 
                                 @name,@Mitarbeiter_ID,@vorname,@Abteilung)";
