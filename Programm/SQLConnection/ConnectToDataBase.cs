@@ -12,9 +12,9 @@ namespace SQLConnection
     class ConnectToDataBase
     {
 
-
+     
         private string connectionString;
-        private List<string[]> informationenList = new List<string[]>(); // {"22"  , "zak"}
+        public List<string[]> informationenList = new List<string[]>(); // {"22"  , "zak"}
 
         // class mitarbeirt : vornme , .......
         public ConnectToDataBase() // connect to server 
@@ -22,9 +22,9 @@ namespace SQLConnection
             Console.WriteLine("Versuchen zu verbinden mit der Datenbank: 127.0.0.1:3306 mit der User root");
             this.connectionString = "datasource=127.0.0.1;port=3306;username=root;password=7744Radman;database=kompetenzdb;"; // test = databas_name
             Console.WriteLine("Verbindung mit dem Datenbank erfolgreich");
-            Read();
 
         }
+  
 
 
         public void Read() // lesen informationen 
@@ -36,7 +36,7 @@ namespace SQLConnection
             MySqlCommand commandToDatabase = new MySqlCommand(command, databasConnection);// comand in database übermitlen
             commandToDatabase.CommandTimeout = 60;
             MySqlDataReader reader; // um die informationen von Tabelle zu lesen
-            // assertEquals(2,read);
+           
             try
             {// überprufen 
                 // offnen database
@@ -48,13 +48,14 @@ namespace SQLConnection
                 if (reader.HasRows) // prufen ob mein Table nicht leer
                 {
 
-                    while (reader.Read()) // lese jede zeile // 1232 , zakaria
+                    while (reader.Read())
                     {
-                        string[] zeile = { (reader.GetString(0)), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5) };
-                        // int id = Int32.Parse(reader.GetString(0)); // "22" ->22
-                        // klass mitarbeiter 
-                        Console.WriteLine(zeile[1]);
-                        informationenList.Add(zeile); // Mitarbeitern jetzt hier gespeichert
+                        string[] zeile = { (reader.GetString(0)), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5) , reader.GetString(6),
+                        reader.GetString(7) , reader.GetString(8) , reader.GetString(9) , reader.GetString(10)};
+
+
+                        informationenList.Add(zeile); 
+                     
                     }
                     MessageBox.Show("alle angegebene information ist richtig gelesen");
                 }
