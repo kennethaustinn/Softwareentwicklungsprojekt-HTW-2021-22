@@ -40,5 +40,9 @@ namespace GUI
             txtPassword.UseSystemPasswordChar = true;
         }
 
+        private void speichernButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
