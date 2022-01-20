@@ -188,9 +188,12 @@ namespace GUI
 
         private void LogoutButton_Click(object sender, EventArgs e)
         {
+            Reset();
+            currentChildForm.Close();
             this.Hide();
             Login m = new Login();
             m.Show();
+
          }
     }
 }

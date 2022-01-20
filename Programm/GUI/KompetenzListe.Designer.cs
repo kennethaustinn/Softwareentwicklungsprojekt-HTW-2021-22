@@ -29,66 +29,76 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.ProjektListeTable = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.KompetenzListeTable = new System.Windows.Forms.DataGridView();
+            this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.ProjektListeTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KompetenzListeTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // ProjektListeTable
+            // KompetenzListeTable
             // 
-            this.ProjektListeTable.AllowUserToAddRows = false;
-            this.ProjektListeTable.AllowUserToDeleteRows = false;
-            this.ProjektListeTable.AllowUserToOrderColumns = true;
-            this.ProjektListeTable.AllowUserToResizeRows = false;
-            this.ProjektListeTable.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ProjektListeTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.ProjektListeTable.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
-            this.ProjektListeTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ProjektListeTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkSeaGreen;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.InfoText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ProjektListeTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.ProjektListeTable.ColumnHeadersHeight = 30;
-            this.ProjektListeTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.ProjektListeTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
+            this.KompetenzListeTable.AllowUserToAddRows = false;
+            this.KompetenzListeTable.AllowUserToDeleteRows = false;
+            this.KompetenzListeTable.AllowUserToOrderColumns = true;
+            this.KompetenzListeTable.AllowUserToResizeRows = false;
+            this.KompetenzListeTable.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.KompetenzListeTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.KompetenzListeTable.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
+            this.KompetenzListeTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.KompetenzListeTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.KompetenzListeTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.KompetenzListeTable.ColumnHeadersHeight = 30;
+            this.KompetenzListeTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.KompetenzListeTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column6});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ProjektListeTable.DefaultCellStyle = dataGridViewCellStyle6;
-            this.ProjektListeTable.EnableHeadersVisualStyles = false;
-            this.ProjektListeTable.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ProjektListeTable.Location = new System.Drawing.Point(31, 100);
-            this.ProjektListeTable.Name = "ProjektListeTable";
-            this.ProjektListeTable.RowHeadersVisible = false;
-            this.ProjektListeTable.RowTemplate.Height = 25;
-            this.ProjektListeTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ProjektListeTable.Size = new System.Drawing.Size(788, 457);
-            this.ProjektListeTable.TabIndex = 21;
-            this.ProjektListeTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProjektListeTable_CellContentClick);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.KompetenzListeTable.DefaultCellStyle = dataGridViewCellStyle3;
+            this.KompetenzListeTable.EnableHeadersVisualStyles = false;
+            this.KompetenzListeTable.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.KompetenzListeTable.Location = new System.Drawing.Point(31, 100);
+            this.KompetenzListeTable.Name = "KompetenzListeTable";
+            this.KompetenzListeTable.RowHeadersVisible = false;
+            this.KompetenzListeTable.RowTemplate.Height = 25;
+            this.KompetenzListeTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.KompetenzListeTable.Size = new System.Drawing.Size(788, 457);
+            this.KompetenzListeTable.TabIndex = 21;
+            this.KompetenzListeTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.KompetenzListeTable_CellContentClick);
+            // 
+            // Column6
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.Column6.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column6.FillWeight = 50F;
+            this.Column6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Column6.HeaderText = "Detail";
+            this.Column6.Name = "Column6";
+            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column6.Text = "anzeigen";
+            this.Column6.UseColumnTextForButtonValue = true;
             // 
             // iconPictureBox1
             // 
@@ -183,32 +193,7 @@ namespace GUI
             this.iconButton1.Text = "Add";
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 50F;
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.FillWeight = 150F;
-            this.Column2.HeaderText = "Name";
-            this.Column2.Name = "Column2";
-            // 
-            // Column6
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.Column6.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Column6.FillWeight = 50F;
-            this.Column6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Column6.HeaderText = "Detail";
-            this.Column6.Name = "Column6";
-            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column6.Text = "anzeigen";
-            this.Column6.UseColumnTextForButtonValue = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // KompetenzListe
             // 
@@ -216,7 +201,7 @@ namespace GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(850, 581);
-            this.Controls.Add(this.ProjektListeTable);
+            this.Controls.Add(this.KompetenzListeTable);
             this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.iconButton4);
@@ -226,7 +211,7 @@ namespace GUI
             this.Name = "KompetenzListe";
             this.Text = "KompetenzListe";
             this.Shown += new System.EventHandler(this.KompetenzListe_Shown);
-            ((System.ComponentModel.ISupportInitialize)(this.ProjektListeTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KompetenzListeTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -235,15 +220,13 @@ namespace GUI
 
         #endregion
 
-        private System.Windows.Forms.DataGridView ProjektListeTable;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewButtonColumn Column6;
+        private System.Windows.Forms.DataGridView KompetenzListeTable;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.TextBox textBox1;
         private FontAwesome.Sharp.IconButton iconButton4;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.DataGridViewButtonColumn Column6;
     }
 }

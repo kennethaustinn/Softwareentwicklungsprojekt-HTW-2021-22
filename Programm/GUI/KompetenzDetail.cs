@@ -8,10 +8,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class Profile : Form
+    public partial class KompetenzDetail : Form
     {
-        public static Profile profile = new Profile();
-        public Profile()
+        public KompetenzDetail()
         {
             InitializeComponent();
         }
