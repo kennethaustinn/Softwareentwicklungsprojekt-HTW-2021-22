@@ -41,16 +41,6 @@ namespace GUI
             }
             insrtd.InsertData(txtUser.Text, txtPassword.Text, txtVorname.Text, txtName.Text, txtAufgabenbereich.Text, txtAbteilung.Text, txtRolle.Text);
         }
-        // Mit dem Event wird das Password Character lesbar wenn das Passwort Button gedrückt ist
-        private void iconButton1_MouseDown(object sender, MouseEventArgs e)
-        {
-            txtPassword.UseSystemPasswordChar = false;
-        }
-        // Mit dem Event wird das Password Character unlesbar wenn das Passwort Button nicht mehr gedrückt ist
-        private void iconButton1_MouseUp(object sender, MouseEventArgs e)
-        {
-            txtPassword.UseSystemPasswordChar = true;
-        }
 
     }
 }
