@@ -44,6 +44,32 @@ namespace GUI
             using (HashAlgorithm algorithm = SHA256.Create())
                 return algorithm.ComputeHash(Encoding.UTF8.GetBytes(passwordString + salt));
         }
-        
+        public static string HashhString(string str)
+        {
+            return EncryptString(str);
+        }
+        public static string GeneratedSalt()
+        {
+            using (var crypto = RandomNumberGenerator.Create())
+            {
+                StringBuilder sbb = new StringBuilder();
+                byte[] dataa = new byte[4];
+                for (int i = 0; i <= 6; i++)
+                {
+                    crypto.GetBytes(dataa);
+                    string value = BitConverter.ToString(dataa, 0);
+                    sbb.Append(value);
+                }
+                return EncryptString(sbb.ToString());
+            }
+
+        }
+        private static string EncryptString(string str)
+        {
+            byte[] bytes = Encoding.ASCII.GetBytes(str);
+            var hashed = SHA256.Create().ComputeHash(bytes);
+            return Convert.ToBase64String(hashed);
+        }
+
     }
 }
