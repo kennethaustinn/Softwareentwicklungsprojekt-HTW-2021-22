@@ -28,9 +28,9 @@ namespace GUI {
                 Connection.DataSource();
                 con.connOpen();
                 MySqlCommand command = new MySqlCommand();
-                command.CommandText = "INSERT INTO mitarbeiter (Benutzername, Hashedpasswort,Saltedpasswort, Vorname, Name, Aufgabenbereich, Abteilung, Rolle) values (@benutzername ,@hashpassword, @saltpassword,@vorname,@name ,@aufgabenbereich ,@abteilung ,@rolle)";
+                command.CommandText = "INSERT INTO mitarbeiter (Benutzername, passwort,Saltedpasswort, Vorname, Name, Aufgabenbereich, Abteilung, Rolle) values (@benutzername ,@passwort, @saltpassword,@vorname,@name ,@aufgabenbereich ,@abteilung ,@rolle)";
                 command.Parameters.AddWithValue("@benutzername", benutzerInsert);
-                command.Parameters.AddWithValue("@hashpassword", Encrypt.HashString(passInsert));
+                command.Parameters.AddWithValue("@passwort", Encrypt.HashString(passInsert));
                 command.Parameters.AddWithValue("@saltpassword", Encrypt.SaltString(passInsert));
                 command.Parameters.AddWithValue("@vorname", vornameInsert);
                 command.Parameters.AddWithValue("@name", nameInsert);
@@ -97,14 +97,14 @@ namespace GUI {
                 Connection.DataSource();
                 con.connOpen();
                 MySqlCommand command = new MySqlCommand();
-                command.CommandText = "INSERT INTO Projekt (Name, start, ende, Beschreibung,fertig) values (@name, @start, @ende ,@beschreibung)";
+                command.CommandText = "INSERT INTO Projekt (Name, start, ende, Beschreibung) values (@name, @start, @ende ,@beschreibung)";
                 command.Parameters.AddWithValue("@name", name);
                 command.Parameters.AddWithValue("@start", start);
                 command.Parameters.AddWithValue("@ende", ende);
                 command.Parameters.AddWithValue("@beschreibung", beschreibung);
                 command.Connection = Connection.connMaster;
                 command.ExecuteNonQuery();
-                System.Windows.Forms.MessageBox.Show("Kompetenz hinzugefügt");
+                System.Windows.Forms.MessageBox.Show("Projekt hinzugefügt");
                 con.connClose();
 
                 return name + start + ende + beschreibung;

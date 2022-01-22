@@ -39,5 +39,17 @@ namespace GUI
             }
 
         }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            profileBearbeiten form1 = new profileBearbeiten();
+            form1.txtBenutzername.Text = this.labelBenutzername.Text;
+            form1.txtAbteilung.Text = this.labelAbteilung.Text;
+            form1.txtAufgabenbereich.Text = this.labelAufgabenbereich.Text;
+            form1.txtName.Text = this.labelName.Text;
+            form1.txtVorname.Text = this.labelVorname.Text;
+            form1.ShowDialog();
+            this.Close();
+        }
     }
 }

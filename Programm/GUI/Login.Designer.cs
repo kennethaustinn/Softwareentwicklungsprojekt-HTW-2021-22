@@ -45,7 +45,6 @@ namespace GUI
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.LoginButton = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -141,7 +140,6 @@ namespace GUI
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.LoginButton);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
@@ -229,16 +227,6 @@ namespace GUI
             this.label6.Size = new System.Drawing.Size(60, 16);
             this.label6.TabIndex = 28;
             this.label6.Text = "Support :";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(154, 380);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(155, 18);
-            this.label5.TabIndex = 27;
-            this.label5.Text = "Passwort vergessen ?";
             // 
             // LoginButton
             // 
@@ -392,7 +380,6 @@ namespace GUI
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private FontAwesome.Sharp.IconButton CloseButton;
         private FontAwesome.Sharp.IconButton iconButton1;

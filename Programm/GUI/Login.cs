@@ -100,7 +100,7 @@ namespace GUI
                 Connection.DataSource();
                 con.connOpen();
                 MySqlCommand command = new MySqlCommand();
-                command.CommandText = ("select * from mitarbeiter where (Benutzername, Hashedpasswort) = (@name, @password)");
+                command.CommandText = ("select * from mitarbeiter where (Benutzername, passwort) = (@name, @password)");
                 command.Parameters.AddWithValue("@name", userInsert);
                 command.Parameters.AddWithValue("@password", Encrypt.HashString(passInsert));
                 command.Connection = Connection.connMaster;

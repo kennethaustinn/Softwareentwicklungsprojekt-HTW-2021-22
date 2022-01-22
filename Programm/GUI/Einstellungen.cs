@@ -30,10 +30,12 @@ namespace GUI
                 MySqlCommand command = new MySqlCommand();
                 command.CommandText = ("update mitarbeiter set Benutzername ='" + txtBenutzername.Text + "' where Benutzername ='" + Hauptseite.hauptseite.Username.Text + "'");
                 command.Connection = Connection.connMaster;
-                command.ExecuteNonQuery();
-                txtBenutzername.Text =  "";
+                command.ExecuteNonQuery();             
                 MessageBox.Show("Benutzername aktualisiert");
+                Hauptseite.hauptseite.Username.Text = txtBenutzername.Text;
+                txtBenutzername.Text = "";
                 con.connClose();
+                
             }
             catch (Exception ex)
             {

@@ -163,7 +163,7 @@ namespace GUI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelBenutzername.AutoSize = true;
             this.labelBenutzername.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelBenutzername.Location = new System.Drawing.Point(374, 61);
+            this.labelBenutzername.Location = new System.Drawing.Point(373, 61);
             this.labelBenutzername.Name = "labelBenutzername";
             this.labelBenutzername.Size = new System.Drawing.Size(133, 24);
             this.labelBenutzername.TabIndex = 29;
@@ -187,7 +187,7 @@ namespace GUI
             this.iconButton4.TabIndex = 28;
             this.iconButton4.Text = "Konto deaktivieren";
             this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton4.UseVisualStyleBackColor = false;
+            this.iconButton4.UseVisualStyleBackColor = true;
             // 
             // iconButton3
             // 
@@ -208,6 +208,7 @@ namespace GUI
             this.iconButton3.Text = "Konto bearbeiten";
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // iconButton2
             // 
@@ -360,16 +361,16 @@ namespace GUI
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        public System.Windows.Forms.Label labelPasswort;
+        private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label labelKompetenzen;
         public System.Windows.Forms.Label labelAufgabenbereich;
         public System.Windows.Forms.Label labelAbteilung;
         public System.Windows.Forms.Label labelVorname;
         public System.Windows.Forms.Label labelName;
         public System.Windows.Forms.Label labelBenutzername;
-        public System.Windows.Forms.Label labelPasswort;
-        private System.Windows.Forms.Label label3;
-        public System.Windows.Forms.Label labelKompetenzen;
+        public FontAwesome.Sharp.IconButton iconButton4;
+        public FontAwesome.Sharp.IconButton iconButton3;
+        public FontAwesome.Sharp.IconButton iconButton2;
     }
 }
