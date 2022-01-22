@@ -16,6 +16,18 @@ namespace GUI
         {
             InitializeComponent();
         }
+                   
+        // Mit dem Event wird das Password Character lesbar wenn das Passwort Button gedrückt ist
+        private void iconButton1_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = false;
+        }
+        // Mit dem Event wird das Password Character unlesbar wenn das Passwort Button nicht mehr gedrückt ist
+        private void iconButton1_MouseUp(object sender, MouseEventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = true;
+        }
+
         /// <summary>
         /// mit dem Event wird die ganze Eingabe in der Klasse insertData weitergeleitet und dort in Datenbank gespeichert
         /// </summary>
@@ -40,6 +52,5 @@ namespace GUI
             txtPassword.UseSystemPasswordChar = true;
         }
 
-        
     }
 }

@@ -30,85 +30,127 @@ namespace GUI
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtBezeichnung = new System.Windows.Forms.RichTextBox();
+            this.txtKompetenzName = new System.Windows.Forms.RichTextBox();
+            this.txtAlternativeBezeichnung = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.speichernButton = new FontAwesome.Sharp.IconButton();
             this.label7 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtBeschreibung = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.richTextBox1);
+            this.panel1.Controls.Add(this.txtBezeichnung);
+            this.panel1.Controls.Add(this.txtKompetenzName);
+            this.panel1.Controls.Add(this.txtAlternativeBezeichnung);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.speichernButton);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.txtBeschreibung);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(31, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(922, 563);
+            this.panel1.Size = new System.Drawing.Size(921, 563);
             this.panel1.TabIndex = 1;
             // 
-            // richTextBox1
+            // txtBezeichnung
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(299, 302);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(573, 159);
-            this.richTextBox1.TabIndex = 9;
-            this.richTextBox1.Text = "Unterkompetenzen liste ..";
+            this.txtBezeichnung.Location = new System.Drawing.Point(239, 127);
+            this.txtBezeichnung.Name = "txtBezeichnung";
+            this.txtBezeichnung.Size = new System.Drawing.Size(318, 29);
+            this.txtBezeichnung.TabIndex = 28;
+            this.txtBezeichnung.Text = "";
+            // 
+            // txtKompetenzName
+            // 
+            this.txtKompetenzName.Location = new System.Drawing.Point(288, 50);
+            this.txtKompetenzName.Name = "txtKompetenzName";
+            this.txtKompetenzName.Size = new System.Drawing.Size(251, 29);
+            this.txtKompetenzName.TabIndex = 27;
+            this.txtKompetenzName.Text = "";
+            // 
+            // txtAlternativeBezeichnung
+            // 
+            this.txtAlternativeBezeichnung.Location = new System.Drawing.Point(49, 242);
+            this.txtAlternativeBezeichnung.Name = "txtAlternativeBezeichnung";
+            this.txtAlternativeBezeichnung.Size = new System.Drawing.Size(843, 71);
+            this.txtAlternativeBezeichnung.TabIndex = 26;
+            this.txtAlternativeBezeichnung.Text = "";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(40, 300);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(49, 215);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(243, 21);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Erforderliche Unterkompetenzen :";
+            this.label4.Size = new System.Drawing.Size(224, 24);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "Alternative Bezeichnung :";
             // 
-            // textBox1
+            // label3
             // 
-            this.textBox1.Location = new System.Drawing.Point(49, 61);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(843, 71);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Kompetenz Deskription. . .";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(49, 355);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(138, 24);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Beschreibung :";
             // 
-            // label1
+            // speichernButton
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(49, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Bezeichnung :";
+            this.speichernButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.speichernButton.BackColor = System.Drawing.Color.Green;
+            this.speichernButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.speichernButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.speichernButton.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.speichernButton.IconColor = System.Drawing.Color.Black;
+            this.speichernButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.speichernButton.IconSize = 20;
+            this.speichernButton.Location = new System.Drawing.Point(772, 515);
+            this.speichernButton.Name = "speichernButton";
+            this.speichernButton.Size = new System.Drawing.Size(99, 29);
+            this.speichernButton.TabIndex = 23;
+            this.speichernButton.Text = "Speichern";
+            this.speichernButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.speichernButton.UseVisualStyleBackColor = false;
+            this.speichernButton.Click += new System.EventHandler(this.speichernButton_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(219, 29);
+            this.label7.Location = new System.Drawing.Point(49, 50);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(206, 29);
+            this.label7.Size = new System.Drawing.Size(218, 29);
             this.label7.TabIndex = 12;
-            this.label7.Text = "Kompetenz Name";
+            this.label7.Text = "Kompetenz Name :";
             // 
-            // label2
+            // txtBeschreibung
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(40, 202);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(201, 21);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Alternative Bezeichnungen :";
+            this.txtBeschreibung.Location = new System.Drawing.Point(49, 398);
+            this.txtBeschreibung.Multiline = true;
+            this.txtBeschreibung.Name = "txtBeschreibung";
+            this.txtBeschreibung.Size = new System.Drawing.Size(843, 71);
+            this.txtBeschreibung.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(49, 127);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(164, 29);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Bezeichnung :";
             // 
             // Kompetenz
             // 
@@ -128,11 +170,14 @@ namespace GUI
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBeschreibung;
         private System.Windows.Forms.Label label1;
+        private FontAwesome.Sharp.IconButton speichernButton;
+        public System.Windows.Forms.Label label3;
+        private System.Windows.Forms.RichTextBox txtAlternativeBezeichnung;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RichTextBox txtBezeichnung;
+        private System.Windows.Forms.RichTextBox txtKompetenzName;
     }
 }

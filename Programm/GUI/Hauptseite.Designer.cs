@@ -46,7 +46,6 @@ namespace GUI
             this.label1 = new System.Windows.Forms.Label();
             this.HomeLogo = new System.Windows.Forms.PictureBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.DownButton = new FontAwesome.Sharp.IconButton();
             this.Username = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.BtnExit = new FontAwesome.Sharp.IconButton();
@@ -55,8 +54,6 @@ namespace GUI
             this.currentChildFormText = new System.Windows.Forms.Label();
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.NextProject = new System.Windows.Forms.Label();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             this.DateLabel = new System.Windows.Forms.Label();
             this.TimeLabel = new System.Windows.Forms.Label();
@@ -302,7 +299,6 @@ namespace GUI
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.panelTitleBar.Controls.Add(this.DownButton);
             this.panelTitleBar.Controls.Add(this.Username);
             this.panelTitleBar.Controls.Add(this.iconPictureBox1);
             this.panelTitleBar.Controls.Add(this.BtnExit);
@@ -317,26 +313,12 @@ namespace GUI
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
-            // DownButton
-            // 
-            this.DownButton.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.DownButton.FlatAppearance.BorderSize = 0;
-            this.DownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DownButton.IconChar = FontAwesome.Sharp.IconChar.ChevronDown;
-            this.DownButton.IconColor = System.Drawing.Color.Black;
-            this.DownButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.DownButton.IconSize = 25;
-            this.DownButton.Location = new System.Drawing.Point(809, 12);
-            this.DownButton.Name = "DownButton";
-            this.DownButton.Size = new System.Drawing.Size(33, 23);
-            this.DownButton.TabIndex = 8;
-            this.DownButton.UseVisualStyleBackColor = false;
-            // 
             // Username
             // 
+            this.Username.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Username.AutoSize = true;
             this.Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Username.Location = new System.Drawing.Point(700, 12);
+            this.Username.Location = new System.Drawing.Point(783, 12);
             this.Username.Name = "Username";
             this.Username.Size = new System.Drawing.Size(83, 20);
             this.Username.TabIndex = 7;
@@ -344,13 +326,14 @@ namespace GUI
             // 
             // iconPictureBox1
             // 
+            this.iconPictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconPictureBox1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox1.IconSize = 39;
-            this.iconPictureBox1.Location = new System.Drawing.Point(651, 5);
+            this.iconPictureBox1.Location = new System.Drawing.Point(734, 5);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(43, 39);
             this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -430,8 +413,7 @@ namespace GUI
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.richTextBox1);
-            this.panel1.Controls.Add(this.NextProject);
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.Controls.Add(this.iconPictureBox3);
             this.panel1.Controls.Add(this.DateLabel);
             this.panel1.Controls.Add(this.TimeLabel);
@@ -442,24 +424,6 @@ namespace GUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(964, 701);
             this.panel1.TabIndex = 2;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(168, 136);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(122, 124);
-            this.richTextBox1.TabIndex = 15;
-            this.richTextBox1.Text = "";
-            // 
-            // NextProject
-            // 
-            this.NextProject.AutoSize = true;
-            this.NextProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.NextProject.Location = new System.Drawing.Point(33, 136);
-            this.NextProject.Name = "NextProject";
-            this.NextProject.Size = new System.Drawing.Size(129, 20);
-            this.NextProject.TabIndex = 14;
-            this.NextProject.Text = "Nächste Projekt :";
             // 
             // iconPictureBox3
             // 
@@ -623,7 +587,6 @@ namespace GUI
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private FontAwesome.Sharp.IconButton DownButton;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Label DateLabel;
         private System.Windows.Forms.Label TimeLabel;
@@ -634,8 +597,6 @@ namespace GUI
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Label NextProject;
         private FontAwesome.Sharp.IconButton LogoutButton;
         public FontAwesome.Sharp.IconButton NeueMitarbeiterButton;
         public FontAwesome.Sharp.IconButton MitarbeiterListeButton;

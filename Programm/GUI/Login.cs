@@ -25,9 +25,16 @@ namespace GUI
         // Wenn das Login Button geklickt würde die Eingabe in weitere Methode uberprüft ob es mit der Eingabe gleich sind
         private void LoginButton_Click(object sender, EventArgs e)
         {
+            
+            RestHelper restHelper = new RestHelper();
+            restHelper.endPoint = "https://localhost:44340/api/mitarbeiter/";
+            string strResponse = string.Empty;
+            strResponse = restHelper.makeRequest();
+            restHelper.userName = txtUsername.Text;
+            restHelper.password = txtPassword.Text;
             SelectData(txtUsername.Text, txtPassword.Text);
         }
-    
+
 
         private void txtUsername_Click(object sender, EventArgs e)
         {

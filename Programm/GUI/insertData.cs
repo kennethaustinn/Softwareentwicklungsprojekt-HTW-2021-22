@@ -57,5 +57,70 @@ namespace GUI {
                 con.connClose();
             }
         }
+        public string InsertKompetenz(string name, string bezeichnung, string alternativebezeichnung, string beschreibung)
+        {
+            try
+            {
+                Connection.DataSource();
+                con.connOpen();
+                MySqlCommand command = new MySqlCommand();
+                command.CommandText = "INSERT INTO Kompetenz (Name, Bezeichnung, Alternativebezeichnung, Beschreibung) values (@name, @bezeichnung, @alternativebezeichnung ,@beschreibung)";
+                command.Parameters.AddWithValue("@name", name);
+                command.Parameters.AddWithValue("@bezeichnung", bezeichnung);
+                command.Parameters.AddWithValue("@alternativebezeichnung", alternativebezeichnung);
+                command.Parameters.AddWithValue("@beschreibung", beschreibung);
+                command.Connection = Connection.connMaster;
+                command.ExecuteNonQuery();
+                System.Windows.Forms.MessageBox.Show("Kompetenz hinzugefügt");
+                con.connClose();
+
+                return name + bezeichnung + alternativebezeichnung + beschreibung;
+
+
+            }
+            catch (Exception ex)
+            {
+
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+                return null;
+            }
+            finally
+            {
+                con.connClose();
+            }
+        }
+
+        public string InsertProjekt(string name, string start, string ende, string beschreibung)
+        {
+            try
+            {
+                Connection.DataSource();
+                con.connOpen();
+                MySqlCommand command = new MySqlCommand();
+                command.CommandText = "INSERT INTO Projekt (Name, start, ende, Beschreibung,fertig) values (@name, @start, @ende ,@beschreibung)";
+                command.Parameters.AddWithValue("@name", name);
+                command.Parameters.AddWithValue("@start", start);
+                command.Parameters.AddWithValue("@ende", ende);
+                command.Parameters.AddWithValue("@beschreibung", beschreibung);
+                command.Connection = Connection.connMaster;
+                command.ExecuteNonQuery();
+                System.Windows.Forms.MessageBox.Show("Kompetenz hinzugefügt");
+                con.connClose();
+
+                return name + start + ende + beschreibung;
+
+
+            }
+            catch (Exception ex)
+            {
+
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+                return null;
+            }
+            finally
+            {
+                con.connClose();
+            }
+        }
     }
 }
