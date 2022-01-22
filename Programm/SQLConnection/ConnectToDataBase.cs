@@ -27,7 +27,7 @@ namespace SQLConnection
   
 
 
-        public void Read() // lesen informationen 
+        public void ReadMitarbeiter() ///lesen informationen  // reed fur alle tabelle TO-DO
         {
             Console.WriteLine("Versuchen zu lesen von der Datenbank ...");
 
@@ -246,7 +246,7 @@ namespace SQLConnection
 
 
 
-        public void kompetenz(int Kompetenz_ID)
+        public void kompetenz(int Kompetenz_ID) // test 
         {
 
             string command = $"select * from  kompetenzdb.kompetenz where Kompetenz_ID = {Kompetenz_ID}";
