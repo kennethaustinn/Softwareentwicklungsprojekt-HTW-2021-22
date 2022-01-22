@@ -17,7 +17,7 @@ namespace GUI
         /// <returns></returns>
         public static MySqlConnection DataSource()
         {
-            connMaster = new MySqlConnection($"server=127.0.0.1; database =kompetenzdb; Uid= root; password=;");
+            connMaster = new MySqlConnection($"server=kompetenzdb.mysql.database.azure.com; port=3306;username=neueadmin;password=Kompetenz_2021;database=kompetenzdb");
             return connMaster;
 
         }
