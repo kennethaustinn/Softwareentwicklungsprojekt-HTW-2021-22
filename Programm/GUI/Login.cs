@@ -14,8 +14,7 @@ namespace GUI
 {
     public partial class Login : Form
     {
-        Connection con = new Connection();
-        
+                
 
         public static Login login = new Login();
         public Login()
@@ -93,20 +92,51 @@ namespace GUI
         /// <param name="userInsert"></param>
         /// <param name="passInsert"></param>
         /// <returns></returns>
-        private string SelectData(string userInsert, string passInsert)
+        /// 
+        private string GetPassFromDB(string username)
         {
+            Connection con = new Connection();
             try
             {
                 Connection.DataSource();
                 con.connOpen();
                 MySqlCommand command = new MySqlCommand();
-                command.CommandText = ("select * from mitarbeiter where (Benutzername, Hashedpasswort) = (@name, @password)");
+                command.CommandText = ("select * from mitarbeiter where (Benutzername) = (@name)");
+                command.Parameters.AddWithValue("@name", username);
+                command.Connection = Connection.connMaster;
+                MySqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    return reader[3].ToString();
+                }
+                else
+                {
+                    return null;
+                }
+            }
+
+            finally
+            {
+                con.connClose();
+            }
+
+        }
+
+        private string SelectData(string userInsert, string passInsert)
+        {
+            Connection con = new Connection();
+            try
+            {
+                Connection.DataSource();
+                con.connOpen();
+                MySqlCommand command = new MySqlCommand();
+                command.CommandText = ("select * from mitarbeiter where (Benutzername, Passwort) = (@name, @password)");
                 command.Parameters.AddWithValue("@name", userInsert);
                 command.Parameters.AddWithValue("@password", Encrypt.HashString(passInsert));
                 command.Connection = Connection.connMaster;
                 MySqlDataReader reader = command.ExecuteReader();
 
-               if (reader.Read())
+                if (reader.Read())
                 {
                     // Uberprüft ob es ein Administrator und Mitarbeiter
                     if (reader[8].ToString() == "Administrator")
@@ -121,7 +151,7 @@ namespace GUI
                     {
                         this.Hide();
                         Hauptseite.hauptseite.NeueMitarbeiterButton.Hide();
-                        Hauptseite.hauptseite.MitarbeiterListeButton.Hide();                       
+                        Hauptseite.hauptseite.MitarbeiterListeButton.Hide();
                         Hauptseite.hauptseite.Username.Text = reader[1].ToString();
                         Hauptseite.hauptseite.ShowDialog();
                     }
@@ -138,11 +168,7 @@ namespace GUI
 
                 return userInsert + passInsert;
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return null;
-            }
+
             finally
             {
                 con.connClose();

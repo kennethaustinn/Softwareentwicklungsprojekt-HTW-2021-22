@@ -52,7 +52,7 @@ namespace GUI
             Connection.DataSource();
             con.connOpen();
             MySqlCommand command = new MySqlCommand();
-            command.CommandText = ("select * from mitarbeiter where Hashedpasswort ='" + Encrypt.HashString(txtAltPassword.Text) + "'and Benutzername ='" + Hauptseite.hauptseite.Username.Text + "'");
+            command.CommandText = ("select * from mitarbeiter where Passwort ='" + Encrypt.HashString(txtAltPassword.Text) + "'and Benutzername ='" + Hauptseite.hauptseite.Username.Text + "'");
             command.Connection = Connection.connMaster;
             MySqlDataReader reader = command.ExecuteReader();
             if (reader.Read())
@@ -63,7 +63,7 @@ namespace GUI
                     try
                     {
                         con.connOpen();
-                        command.CommandText = ("update mitarbeiter set Hashedpasswort ='" + Encrypt.HashString(txtNewPassword.Text) + "', Saltedpasswort ='" + Encrypt.SaltString(txtNewPassword.Text) + "' where Benutzername ='" + Hauptseite.hauptseite.Username.Text + "'");
+                        command.CommandText = ("update mitarbeiter set Passwort ='" + Encrypt.HashString(txtNewPassword.Text) + "', Saltedpasswort ='" + Encrypt.SaltString(txtNewPassword.Text) + "' where Benutzername ='" + Hauptseite.hauptseite.Username.Text + "'");
                         command.Connection = Connection.connMaster;
                         command.ExecuteNonQuery();
                         txtAltPassword.Text = "";

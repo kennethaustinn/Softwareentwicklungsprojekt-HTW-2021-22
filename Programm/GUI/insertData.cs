@@ -28,7 +28,7 @@ namespace GUI {
                 Connection.DataSource();
                 con.connOpen();
                 MySqlCommand command = new MySqlCommand();
-                command.CommandText = "INSERT INTO mitarbeiter (Benutzername, Hashedpasswort,Saltedpasswort, Vorname, Name, Aufgabenbereich, Abteilung, Rolle) values (@benutzername ,@hashpassword, @saltpassword,@vorname,@name ,@aufgabenbereich ,@abteilung ,@rolle)";
+                command.CommandText = "INSERT INTO mitarbeiter (Benutzername, Passwort,Saltedpasswort, Vorname, Name, Aufgabenbereich, Abteilung, Rolle, Deaktiviert) values (@benutzername ,@hashpassword, @saltpassword,@vorname,@name ,@aufgabenbereich ,@abteilung ,@rolle,false)";
                 command.Parameters.AddWithValue("@benutzername", benutzerInsert);
                 command.Parameters.AddWithValue("@hashpassword", Encrypt.HashString(passInsert));
                 command.Parameters.AddWithValue("@saltpassword", Encrypt.SaltString(passInsert));
