@@ -21,6 +21,7 @@ namespace GUI
     public partial class MitarbeiterListe : Form
     {
         Connection con = new Connection();
+        public static MitarbeiterListe mitarbeiterListe = new MitarbeiterListe();
         public MitarbeiterListe()
         {
             InitializeComponent();
@@ -64,10 +65,29 @@ namespace GUI
             }
         }
 
+        //private void GetKompetenz()
+        //{
+        //    Connection.DataSource();
+        //    con.connOpen();
+        //    MySqlCommand command = new MySqlCommand();
+        //    command.CommandText = ("select kompetenz.Name from kompetenz, mitarbeiter_hat_kompetenz, mitarbeiter " +
+        //        "where kompetenz.Kompetenz_ID = mitarbeiter_hat_kompetenz.Zugeordnete_Kompetenz " +
+        //        "and mitarbeiter.Mitarbeiter_ID = mitarbeiter_hat_kompetenz.Zugeordnete_Mitarbeiter and mitarbeiter.Mitarbeiter_ID = 1");
+        //    command.Connection = Connection.connMaster;
+        //    MySqlDataReader reader = command.ExecuteReader();
+        //    string a = reader.ToString();
+        //    return a;
+        //}
+
         private void iconButton1_Click(object sender, EventArgs e)
         {
             
             Hauptseite.hauptseite.openChildForm(new NeueMitarbeiter());
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            MitarbeiterListeTable.DataSource = GetEmployeesList();
         }
     }
 }

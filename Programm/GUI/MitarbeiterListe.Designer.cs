@@ -98,6 +98,7 @@ namespace GUI
             this.iconButton3.Text = "Refresh";
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // iconButton4
             // 
@@ -224,7 +225,7 @@ namespace GUI
         private FontAwesome.Sharp.IconButton iconButton4;
         private System.Windows.Forms.TextBox textBox1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private System.Windows.Forms.DataGridView MitarbeiterListeTable;
         private System.Windows.Forms.DataGridViewButtonColumn Column6;
+        public System.Windows.Forms.DataGridView MitarbeiterListeTable;
     }
 }

@@ -3,30 +3,66 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net;
+using System.IO;
 
 namespace GUI
 {
-    public static class RestHelper
+    public enum httpVerb
     {
-       private static readonly string baseURL = "https://localhost:44340/api/";
-       public static async Task<string> GetALL()
+        GET,
+        POST,
+        PUT,
+        DELETE
+    }
+    class RestHelper
+    {
+       
+       public string userName { get; set; }
+       public string password { get; set; }
+       public string endPoint { get; set; }
+       public httpVerb httpMethod { get; set; }
+
+       public RestHelper()
         {
-            using (HttpClient client = new HttpClient())
+            endPoint = string.Empty;
+            httpMethod = httpVerb.GET;
+        }
+
+        public string makeRequest()
+        {
+            string strResponseValue = string.Empty;
+
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(endPoint);
+
+            request.Method = httpMethod.ToString();
+
+            string authHeader = Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(userName + ":" + password));
+            request.Headers.Add("Authorization", authHeader.ToString() + "" + authHeader);
+
+
+            using(HttpWebResponse response = (HttpWebResponse)request.GetResponse())
             {
-                using (HttpResponseMessage res = await client.GetAsync(baseURL + "mitarbeiter")) 
+                if (response.StatusCode != HttpStatusCode.OK)
                 {
-                    using (HttpContent content = res.Content)
+                    throw new ApplicationException("Error" + response.StatusCode.ToString());
+                }
+
+             using (Stream responseStream = response.GetResponseStream())
+                {
+                    if(responseStream != null)
                     {
-                        string data = await content.ReadAsStringAsync();
-                        if(data != null)
+                        using(StreamReader reader = new StreamReader(responseStream))
                         {
-                            return data;
+                            strResponseValue = reader.ReadToEnd();
                         }
                     }
                 }
             }
-            return string.Empty;
+
+            return strResponseValue;
         }
+       
 
     }
 }

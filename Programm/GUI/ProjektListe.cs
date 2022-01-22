@@ -45,10 +45,10 @@ namespace GUI
                 e.RowIndex >= 0)
             {
                 ProjektDetail form1 = new ProjektDetail();
-                form1.labelProjektName.Text = this.ProjektListeTable.CurrentRow.Cells[3].Value.ToString();
-                form1.labelStartDatum.Text = this.ProjektListeTable.CurrentRow.Cells[4].Value.ToString();
-                form1.labelEndeDatum.Text = this.ProjektListeTable.CurrentRow.Cells[5].Value.ToString();
-                form1.labelBeschreibung.Text = this.ProjektListeTable.CurrentRow.Cells[6].Value.ToString();
+                form1.labelProjektName.Text = this.ProjektListeTable.CurrentRow.Cells[2].Value.ToString();
+                form1.labelStartDatum.Text = this.ProjektListeTable.CurrentRow.Cells[3].Value.ToString();
+                form1.labelEndeDatum.Text = this.ProjektListeTable.CurrentRow.Cells[4].Value.ToString();
+                form1.labelBeschreibung.Text = this.ProjektListeTable.CurrentRow.Cells[5].Value.ToString();
                 form1.ShowDialog();
             }
         }

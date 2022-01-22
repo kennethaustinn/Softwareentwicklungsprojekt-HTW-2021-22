@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace GUI
 {
@@ -14,5 +15,14 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void ProjektDetail_Load(object sender, EventArgs e)
+        {
+            DateTime start = DateTime.Parse(labelStartDatum.Text);
+            DateTime ende = DateTime.Parse(labelEndeDatum.Text);
+            TimeSpan duration = ende - start;
+            labelLaufzeit.Text = duration.ToString("dd") + " Tag";
+        }
+
     }
 }

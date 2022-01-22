@@ -30,6 +30,8 @@ namespace GUI
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelKompetenzen = new System.Windows.Forms.Label();
             this.labelAufgabenbereich = new System.Windows.Forms.Label();
             this.labelAbteilung = new System.Windows.Forms.Label();
             this.labelVorname = new System.Windows.Forms.Label();
@@ -38,8 +40,6 @@ namespace GUI
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -55,6 +55,8 @@ namespace GUI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.labelKompetenzen);
             this.panel1.Controls.Add(this.labelAufgabenbereich);
             this.panel1.Controls.Add(this.labelAbteilung);
             this.panel1.Controls.Add(this.labelVorname);
@@ -63,8 +65,6 @@ namespace GUI
             this.panel1.Controls.Add(this.iconButton4);
             this.panel1.Controls.Add(this.iconButton3);
             this.panel1.Controls.Add(this.iconButton2);
-            this.panel1.Controls.Add(this.richTextBox2);
-            this.panel1.Controls.Add(this.richTextBox1);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
@@ -77,6 +77,32 @@ namespace GUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 543);
             this.panel1.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(522, 326);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 24);
+            this.label3.TabIndex = 37;
+            this.label3.Text = "Projekte";
+            // 
+            // labelKompetenzen
+            // 
+            this.labelKompetenzen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelKompetenzen.AutoSize = true;
+            this.labelKompetenzen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelKompetenzen.Location = new System.Drawing.Point(572, 222);
+            this.labelKompetenzen.Name = "labelKompetenzen";
+            this.labelKompetenzen.Size = new System.Drawing.Size(128, 24);
+            this.labelKompetenzen.TabIndex = 36;
+            this.labelKompetenzen.Text = "Kompetenzen";
             // 
             // labelAufgabenbereich
             // 
@@ -202,28 +228,7 @@ namespace GUI
             this.iconButton2.Text = "Konto löschen";
             this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton2.UseVisualStyleBackColor = false;
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox2.Location = new System.Drawing.Point(572, 329);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(146, 106);
-            this.richTextBox2.TabIndex = 25;
-            this.richTextBox2.Text = "";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.Location = new System.Drawing.Point(572, 223);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(146, 90);
-            this.richTextBox1.TabIndex = 24;
-            this.richTextBox1.Text = "";
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // label9
             // 
@@ -353,8 +358,6 @@ namespace GUI
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private FontAwesome.Sharp.IconButton iconButton4;
@@ -366,5 +369,7 @@ namespace GUI
         public System.Windows.Forms.Label labelName;
         public System.Windows.Forms.Label labelBenutzername;
         public System.Windows.Forms.Label labelPasswort;
+        private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label labelKompetenzen;
     }
 }

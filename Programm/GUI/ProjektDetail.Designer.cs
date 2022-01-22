@@ -35,7 +35,6 @@ namespace GUI
             this.labelStartDatum = new System.Windows.Forms.Label();
             this.labelEndeDatum = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -56,7 +55,6 @@ namespace GUI
             this.panel1.Controls.Add(this.labelStartDatum);
             this.panel1.Controls.Add(this.labelEndeDatum);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label4);
@@ -132,20 +130,6 @@ namespace GUI
             this.label1.Size = new System.Drawing.Size(49, 21);
             this.label1.TabIndex = 12;
             this.label1.Text = "Start :";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox1.Location = new System.Drawing.Point(392, 235);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(69, 25);
-            this.checkBox1.TabIndex = 11;
-            this.checkBox1.Text = "Fertig";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -234,6 +218,7 @@ namespace GUI
             this.Controls.Add(this.panel1);
             this.Name = "ProjektDetail";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.ProjektDetail_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -245,7 +230,6 @@ namespace GUI
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelLaufzeit;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
