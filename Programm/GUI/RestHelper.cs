@@ -29,26 +29,29 @@ namespace GUI
             httpMethod = httpVerb.GET;
         }
 
+        //Die HttpWebRequest-Klasse ermöglicht dem Benutzer die direkte Interaktion mit Servern über HTTP.
         public string makeRequest()
         {
             string strResponseValue = string.Empty;
 
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(endPoint);
 
+            //hier kommen die Informationen
             request.Method = httpMethod.ToString();
 
             string authHeader = Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(userName + ":" + password));
             request.Headers.Add("Authorization", authHeader.ToString() + "" + authHeader);
 
-
-            using(HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+            //Überprüft die Response, ob die erhaltene Information richtig ist oder nicht
+            using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
             {
                 if (response.StatusCode != HttpStatusCode.OK)
                 {
                     throw new ApplicationException("Error" + response.StatusCode.ToString());
                 }
 
-             using (Stream responseStream = response.GetResponseStream())
+                //process the response stream
+                using (Stream responseStream = response.GetResponseStream())
                 {
                     if(responseStream != null)
                     {
@@ -57,11 +60,11 @@ namespace GUI
                             strResponseValue = reader.ReadToEnd();
                         }
                     }
-                }
+                }//end of using Response stream
             }
 
             return strResponseValue;
-        }
+        }//end of using stream
        
 
     }
