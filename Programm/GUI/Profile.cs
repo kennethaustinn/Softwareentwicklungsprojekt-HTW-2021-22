@@ -11,6 +11,9 @@ namespace GUI
 {
     public partial class Profile : Form
     {
+        /// <summary>
+        /// Sucht die Connection bzw. ruft die Klasse ab.
+        /// </summary>
         Connection con = new Connection();
 
         public static Profile profile = new Profile();

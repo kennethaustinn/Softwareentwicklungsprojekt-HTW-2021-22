@@ -21,13 +21,17 @@ namespace GUI
             return connMaster;
 
         }
-        // Connection wird mit dieser Methode geöffnet
+        /// <summary>
+        /// Connection wird mit dieser Methode geöffnet
+        /// </summary>
         public void connOpen()
         {
             DataSource();
             connMaster.Open();
         }
-        // Connection wird mit dieser Methode geschlossen
+        /// <summary>
+        /// Connection wird mit dieser Methode geschlossen
+        /// </summary>
         public void connClose()
         {
             DataSource();

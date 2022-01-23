@@ -9,7 +9,7 @@ namespace GUI
     static class Program
     {
         /// <summary>
-        ///  The main entry point for the application.
+        ///  Der Haupteinstiegspunkt für die Anwendung.
         /// </summary>
         [STAThread]
         static void Main()

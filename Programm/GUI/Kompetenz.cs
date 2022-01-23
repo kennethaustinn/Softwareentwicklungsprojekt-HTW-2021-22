@@ -10,6 +10,9 @@ namespace GUI
 {
     public partial class Kompetenz : Form
     {
+        /// <summary>
+        /// 
+        /// </summary>
         insertData insrtd = new insertData();
         public Kompetenz()
         {

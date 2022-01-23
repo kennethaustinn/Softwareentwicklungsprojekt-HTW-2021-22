@@ -14,14 +14,23 @@ namespace GUI
 {
     public partial class Login : Form
     {
-                
-
+        /// <summary>
+        /// Form der Login
+        /// </summary>
         public static Login login = new Login();
+        /// <summary>
+        /// Für das Form Login wird erst alle die Sachen von dem Designer initialisiert 
+        /// </summary>
         public Login()
         {
             InitializeComponent();
         }
-        // Wenn das Login Button geklickt würde die Eingabe in weitere Methode uberprüft ob es mit der Eingabe gleich sind
+        /// <summary>
+        /// Clickevent für Login es würde hier eine Verbindung mit dem Rest API aufgerufen und die Eingabe wurde
+        /// mit dem Methode Select Data in Datenbank überprüft
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LoginButton_Click(object sender, EventArgs e)
         {
             
@@ -33,8 +42,11 @@ namespace GUI
             restHelper.password = txtPassword.Text;
             SelectData(txtUsername.Text, txtPassword.Text);
         }
-
-
+        /// <summary>
+        /// Mit dem Clickevent wird die Hintergrundsfarbe von dem Usernametextbox sich geändert
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtUsername_Click(object sender, EventArgs e)
         {
             txtUsername.BackColor = Color.White;
@@ -42,7 +54,11 @@ namespace GUI
             txtPassword.BackColor = Color.WhiteSmoke;
             panel4.BackColor = Color.WhiteSmoke;
         }
-
+        /// <summary>
+        /// Mit dem Clickevent wird die Hintergrundsfarbe von dem Passwordtextbox sich geändert
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtPassword_Click(object sender, EventArgs e)
         {
             txtUsername.BackColor = Color.WhiteSmoke;
@@ -50,22 +66,38 @@ namespace GUI
             txtPassword.BackColor = Color.White;
             panel4.BackColor = Color.White;
         }
-        // Um das Applikation zu schliessen durch das Click des X Buttons
+        /// <summary>
+        /// Um das Applikation zu schliessen durch das Click des X Buttons
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CloseButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-        // Mit dem Event wird das Password Character lesbar wenn das Schloss Icon gedrückt ist
+        /// <summary>
+        /// Mit dem Event wird das Password Character lesbar wenn das Schloss Icon noch gedrückt wird
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void iconPictureBox2_MouseDown(object sender, MouseEventArgs e)
         {
             txtPassword.UseSystemPasswordChar = false;
         }
-        // Mit dem Event wird das Password Character unlesbar wenn das Schloss Icon nicht mehr gedrückt ist
+        /// <summary>
+        /// Mit dem Event wird das Password Character unlesbar wenn das Schloss Icon nicht mehr gedrückt wird
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void iconPictureBox2_MouseUp(object sender, MouseEventArgs e)
         {
             txtPassword.UseSystemPasswordChar = true;
         }
-        // Wenn das Link geklickt wird diesem Event durchgeführt und das Web wird geöffnet
+        /// <summary>
+        /// Wenn das Link geklickt wird diesem Event durchgeführt und das Web wird geöffnet
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             try
@@ -79,19 +111,17 @@ namespace GUI
         }
         private void VisitLink()
         {
-            // Change the color of the link text by setting LinkVisited
-            // to true.
+            // Ändern die Farbe des Linktextes, indem das besuchte Link auf true setzen
             linkLabel1.LinkVisited = true;
-            //Call the Process.Start method to open the default browser
-            //with a URL:
+            // Es rüft sich die Methode Process.Start auf, um den Standardbrowser mit einer URL zu öffnen
             Process.Start("https://www.google.com/");
         }
         /// <summary>
-        /// Diese Methode uberprüft die Login Datei in MySQL Database, die schon angegeben (Benutzername und Passwort) 
+        /// Diese Methode uberprüft die Mitarbeiter Datei in MySQL Database, die schon angegeben (Benutzername und Passwort) 
         /// </summary>
-        /// <param name="userInsert"></param>
-        /// <param name="passInsert"></param>
-        /// <returns></returns>
+        /// <param name="userInsert"> Die angegebene Benutzername vom Benutzer bei Login</param>
+        /// <param name="passInsert"> Das angegebene Passwort vom Benutzer bei Login</param>
+        /// <returns> Ergibt sich die angegebene Benutzername und das Passwort zurück als Zeichnen ob es erfolgreich oder nicht</returns>
         /// 
         private string SelectData(string userInsert, string passInsert)
         {
@@ -153,7 +183,11 @@ namespace GUI
                 con.connClose();
             }
         }
-        // Um das Form zu minimieren
+        /// <summary>
+        /// Mit dem Clickevent kann man das aktuelle Form minimeren
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void iconButton1_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
