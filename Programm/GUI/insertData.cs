@@ -8,18 +8,21 @@ using MySql.Data.MySqlClient;
 namespace GUI { 
     public class insertData
     {
+        /// <summary>
+        /// Sucht die Connection bzw. ruft die Klasse ab.
+        /// </summary>
         Connection con = new Connection();
-        Encrypt en = new Encrypt();
+
         /// <summary>
         /// Das Einfügen eines neuen Benutzer erfolgt mit dieser Methode. Jeder Eingabe wird in MySQL gespeichert mit dem Connection via MySQL 
         /// </summary>
-        /// <param name="benutzerInsert"></param>
-        /// <param name="passInsert"></param>
-        /// <param name="vornameInsert"></param>
-        /// <param name="nameInsert"></param>
-        /// <param name="aufgabenInsert"></param>
-        /// <param name="abteilungInsert"></param>
-        /// <param name="rolleInsert"></param>
+        /// <param name="benutzerInsert"> Die Benutzername des Users</param>
+        /// <param name="passInsert"> Das Passwort des Users</param>
+        /// <param name="vornameInsert"> Die Vorname des Users</param>
+        /// <param name="nameInsert"> Die Nachname des Users</param>
+        /// <param name="aufgabenInsert">Die Aufgabenbereich des Users</param>
+        /// <param name="abteilungInsert"> Die Abteilung des Users</param>
+        /// <param name="rolleInsert">Die Rolle des Users</param>
         /// <returns></returns>
         public string InsertData(string benutzerInsert, string passInsert, string vornameInsert, string nameInsert, string aufgabenInsert, string abteilungInsert, string rolleInsert)
         {
@@ -60,10 +63,10 @@ namespace GUI {
         /// <summary>
         /// Das Einfügen einer neuen Kompetenz erfolgt mit dieser Methode. Jeder Eingabe wird in MySQL gespeichert mit dem Connection via MySQL
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="bezeichnung"></param>
-        /// <param name="alternativebezeichnung"></param>
-        /// <param name="beschreibung"></param>
+        /// <param name="name"> Die Name der Kompetenz</param>
+        /// <param name="bezeichnung"> Die Bezeichnung der Kompetenz</param>
+        /// <param name="alternativebezeichnung"> Die Alternativebezeichnung der Kompetenz</param>
+        /// <param name="beschreibung"> Die Beschreibung der Kompetenz</param>
         /// <returns></returns>
         public string InsertKompetenz(string name, string bezeichnung, string alternativebezeichnung, string beschreibung)
         {
@@ -98,10 +101,10 @@ namespace GUI {
         /// <summary>
         /// Das Einfügen eines neuen Projekts erfolgt über diese Methode. Jeder Eingabe wird in MySQL gespeichert mit dem Connection via MySQL
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="start"></param>
-        /// <param name="ende"></param>
-        /// <param name="beschreibung"></param>
+        /// <param name="name"> Die Name des Projekts</param>
+        /// <param name="start"> Das Startdatum des Projekts</param>
+        /// <param name="ende"> Das Endedatum des Projekts</param>
+        /// <param name="beschreibung"> Die Beschreibung des Projekts</param>
         /// <returns></returns>
         public string InsertProjekt(string name, string start, string ende, string beschreibung)
         {

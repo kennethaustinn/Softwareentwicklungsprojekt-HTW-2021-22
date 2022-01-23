@@ -12,6 +12,7 @@ using MySql.Data.MySqlClient;
 
 namespace GUI
 {
+    //  Zu Hilfe für die Interaktion jeweilige Forms und Panel wurde diese Quelle verwendet : 
     public partial class Hauptseite : Form
     { 
 
@@ -20,8 +21,16 @@ namespace GUI
     private IconButton currentBtn;
     private Panel leftBorderBtn;
     private Form currentChildForm;
-    Connection con = new Connection();
-    public Hauptseite()
+    
+        /// <summary>
+        /// Sucht die Connection bzw. ruft die Klasse ab.
+        /// </summary>
+        Connection con = new Connection();
+        /// <summary>
+        /// Für das Form Hauptseite wird erst alle die Sachen von dem Designer initialisiert
+        /// Sowie das Button Border für das Panel Menu wird hier initialisiert.
+        /// </summary>
+        public Hauptseite()
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
@@ -34,7 +43,14 @@ namespace GUI
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
-
+        /// <summary>
+        /// initialisiert das Button, das gerade gedrückt wird wo auf dem MenuForm aktiv ist,
+        /// hier ändert sich die Farbe das aktuelle Button und das Bild Format ändert sich auch nach rechte Seite
+        /// nach dem Text im Button 
+        /// </summary>
+        /// <param name="senderBtn">als Parameter hier ist das gerade gedrückte Button wird im object
+        /// als sender Button geliefert</param>
+        /// <param name="color"> als Parameter ist die Farbe gedrückte Button geliefert</param>
         public void ActivateButton(object senderBtn, Color color)
         {
             if (senderBtn != null)
@@ -57,7 +73,10 @@ namespace GUI
                 currentChildFormText.Text = currentBtn.Text;
             }
         }
-
+        /// <summary>
+        /// Diese Methode wird verwendet, um die gerade aktive Button zu deaktivieren,
+        /// damit sie in das normale Format zurückkehrt.
+        /// </summary>
         private void DisableButton()
         {
             if (currentBtn != null)
@@ -68,7 +87,11 @@ namespace GUI
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
         }
-
+        /// <summary>
+        /// Wird das Form im PanelChildForm hier neue abgerufen und angezeigt. Mit dem Parameter Form
+        /// die man gerade gedrückt von dem beliebigen Button.
+        /// </summary>
+        /// <param name="childForm"> aktuelles Form, das wir angeklickt haben </param>
         public void openChildForm(Form childForm)
         {
             if (currentChildForm != null)
@@ -84,43 +107,74 @@ namespace GUI
             childForm.BringToFront();
             childForm.Show();
         }
-
+        /// <summary>
+        /// Ein Eventhandler wenn das Button Neue Mitarbeiter angeklickt dann wird das Neue Mitarbeiter Form geladen,
+        /// sowie der Neue Mitarbeiter im PanelMenu wird aktualisiert
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NeueMitarbeiterButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.Black);
             openChildForm(new NeueMitarbeiter());
         }
-
+        /// <summary>
+        /// Ein Eventhandler wenn das Button Mitarbeiter Liste angeklickt dann wird das Mitarbeiter Liste Form geladen,
+        /// sowie die Mitarbeiter Liste im PanelMenu wird aktualisiert
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MitarbeiterListeButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.Black);
             openChildForm(new MitarbeiterListe());
         }
-
+        /// <summary>
+        /// Ein Eventhandler wenn das Button Projekt Liste angeklickt dann wird das Projekt Liste Form geladen,
+        /// sowie das Projekt Liste im PanelMenu wird aktualisiert
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ProjekteListeButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.Black);
             openChildForm(new ProjektListe());
         }
-
+        /// <summary>
+        /// Ein Eventhandler wenn das Button Kompetenz angeklickt dann wird das Kompetenz Form geladen,
+        /// sowie das Kompetenz Button im PanelMenu wird aktualisiert
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void KompetenzListeButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.Black);
             openChildForm(new KompetenzListe());
         }
-
+        /// <summary>
+        /// Ein Eventhandler wenn das Button Einstellungen angeklickt dann wird das Einstellungen Form geladen,
+        /// sowie das Einstellungen Button im PanelMenu wird aktualisiert
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EinstellungenButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.Black);
             openChildForm(new Einstellungen());
         }
-
+        /// <summary>
+        /// Ein Eventhandler wenn das Button Home angeklickt dann wird das Home Form geladen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void HomeLogo_Click(object sender, EventArgs e)
         {
             Reset();
             currentChildForm.Close();           
         }
-
+        /// <summary>
+        /// setzt die aktuell aktive Button durch Aufruf einer DisableButton Methode
+        /// </summary>
         private void Reset()
         {
             if (currentChildForm != null)
@@ -133,24 +187,44 @@ namespace GUI
             }
         }
 
-        //Drag Form
+        /// <summary>
+        /// Drag Form
+        /// </summary>
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="hWnd"> panel lokasi</param>
+        /// <param name="wMsg"> Message biar bisa ngirim ke system command</param>
+        /// <param name="wParam"> movement </param>
+        /// <param name="lParam"> movement</param>
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
+        /// <summary>
+        /// Ein Eventhandler damit man das Form sich verschieben kann
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
+        /// <summary>
+        /// Mit dem Clickevent kann man das aktuelle Form minimeren
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
-
+        /// <summary>
+        /// Mit dem Clickevent kann man das aktuelle Form maximieren
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnMaximize_Click(object sender, EventArgs e)
         {
             if(WindowState == FormWindowState.Normal)
@@ -162,26 +236,43 @@ namespace GUI
                 WindowState = FormWindowState.Normal;
             }
         }
-
+        /// <summary>
+        /// Um das Applikation zu schliessen durch das Click des X Buttons
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
+        /// <summary>
+        /// Mit dem Event wird das Datum und die Uhrzeit in der Hauptseite angezeigt
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AdministratorHauptseite_Load(object sender, EventArgs e)
         {
             //DateTimer.Start();
             TimeLabel.Text = DateTime.Now.ToLongTimeString();
             DateLabel.Text = DateTime.Now.ToLongDateString();
         }
-
+        /// <summary>
+        /// Hier wird das aktuelle Datum und Zeit geladen in UI
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DateTimer_Tick(object sender, EventArgs e)
         {
             TimeLabel.Text = DateTime.Now.ToLongTimeString();
             DateTimer.Start();
         }
 
-        //Mit diesem Button wird das Profil des aktuell eingeloggten Benutzernamens mit den Daten aus der Datenbank des Benutzernamens angezeigt
+        /// <summary>
+        /// Ein Clickevent damit wird das neue Profilform der Benutzer angezeigt mit den Daten 
+        /// aus der Datenbank mit der Verbindung von MySQL
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ProfileButton_Click(object sender, EventArgs e)
         {
             
@@ -212,7 +303,11 @@ namespace GUI
                 MessageBox.Show(ex.Message);
             }
 }
-
+        /// <summary>
+        /// Ein Clickevent, der Benutzer wird von der Hauptseite ausgeloggt  und zurück zum Login
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LogoutButton_Click(object sender, EventArgs e)
         {
             Reset();

@@ -11,13 +11,17 @@ namespace GUI
 {
     public partial class Einstellungen : Form
     {
+        /// <summary>
+        /// Sucht die Connection bzw. ruft die Klasse ab.
+        /// </summary>
         Connection con = new Connection();
         public Einstellungen()
         {
             InitializeComponent();
         }
         /// <summary>
-        /// wenn das Button gedrückt wurde, wird die Benutzername aktualisiert und in der Datenbank gelagert
+        /// Ein Clickevent damit wird die geänderte Benutzername aktualisiert und in der Datenbank gespeichert
+        /// mit einer Verbindung von MySQL
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -45,7 +49,7 @@ namespace GUI
         }
         /// <summary>
         /// Mit diesem Event wird das alte Password vergleicht ob die Eingabe schon genau wie die in der Datenbank und auch das zwei neue Passwort
-        /// wurde verglichen. Wenn alles klappt dann wird das Passwort aktualisiert und in der Datenbank gespeichert
+        /// wurde verglichen. Wenn alles klappt dann wird das Passwort aktualisiert und in der Datenbank gespeichert mit einer Verbindung von MySQL
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
