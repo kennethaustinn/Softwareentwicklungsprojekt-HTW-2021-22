@@ -50,7 +50,7 @@ namespace GUI
                     throw new ApplicationException("Error" + response.StatusCode.ToString());
                 }
 
-                //process the response stream
+                //die ResponseStream verarbeiten
                 using (Stream responseStream = response.GetResponseStream())
                 {
                     if(responseStream != null)
@@ -60,11 +60,11 @@ namespace GUI
                             strResponseValue = reader.ReadToEnd();
                         }
                     }
-                }//end of using Response stream
+                }//ende der verarbeitung von Responsestream
             }
 
             return strResponseValue;
-        }//end of using stream
+        }//ende der Verwendung von Stream
        
 
     }

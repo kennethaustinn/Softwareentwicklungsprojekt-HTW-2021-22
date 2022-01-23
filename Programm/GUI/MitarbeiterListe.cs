@@ -36,7 +36,7 @@ namespace GUI
             InitializeComponent();
         }
         /// <summary>
-        /// 
+        /// Wenn das Formular angezeigt wird, ruft die Funktion die GetEmployeesList als Datasource für die Datagridview auf
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -45,7 +45,7 @@ namespace GUI
             MitarbeiterListeTable.DataSource = GetEmployeesList("");
         }
         /// <summary>
-        /// 
+        /// Diese Funktion ruft die Mitarbeiter Daten aus der Datenbank ab und fügt sie als DataTable in die Datagridview ein
         /// </summary>
         /// <param name="valueToSearch"></param>
         /// <returns></returns>
@@ -113,7 +113,7 @@ namespace GUI
             }
         }
         /// <summary>
-        /// 
+        /// Wenn der Administrator auf diese Button klickt, das Formular von Neumitarbeiter wird angezeigt
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -123,7 +123,7 @@ namespace GUI
             Hauptseite.hauptseite.openChildForm(new NeueMitarbeiter());
         }
         /// <summary>
-        /// 
+        /// Lade die Seite neu
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -132,7 +132,7 @@ namespace GUI
             MitarbeiterListeTable.DataSource = GetEmployeesList("");
         }
         /// <summary>
-        /// 
+        /// Filtern  die Datagridview mit der Eingabe aus dem Texbox
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

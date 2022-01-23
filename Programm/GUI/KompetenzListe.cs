@@ -23,7 +23,7 @@ namespace GUI
             InitializeComponent();
         }
         /// <summary>
-        /// 
+        /// Wenn das Formular angezeigt wird, ruft die Funktion die GetKompetenzliste als Datasource für die Datagridview auf
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -51,9 +51,9 @@ namespace GUI
                 form1.labelBeschreibung.Text = this.KompetenzListeTable.CurrentRow.Cells[5].Value.ToString();
                 form1.ShowDialog();
             }
-        } 
+        }
         /// <summary>
-        /// 
+        /// Diese Funktion ruft die Kompetenz Daten aus der Datenbank ab und fügt sie als DataTable in die Datagridview ein
         /// </summary>
         /// <param name="valueToSearch"></param>
         /// <returns></returns>
@@ -70,7 +70,7 @@ namespace GUI
             return KompetenzListe;
         }
         /// <summary>
-        /// 
+        /// Wenn der Administrator auf diese Button klickt, kann er der Datenbank eine neue Kompetenz hinzufügen
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -80,7 +80,7 @@ namespace GUI
             form1.ShowDialog();
         }
         /// <summary>
-        /// 
+        /// Lade die Seite neu
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -89,7 +89,7 @@ namespace GUI
             KompetenzListeTable.DataSource = GetKompetenzList("");
         }
         /// <summary>
-        /// 
+        /// Filtern  die Datagridview mit der Eingabe aus dem Texbox
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
