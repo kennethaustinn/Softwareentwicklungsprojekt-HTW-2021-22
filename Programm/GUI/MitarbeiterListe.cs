@@ -61,6 +61,7 @@ namespace GUI
                 form1.labelVorname.Text = this.MitarbeiterListeTable.CurrentRow.Cells[4].Value.ToString();
                 form1.labelAbteilung.Text = this.MitarbeiterListeTable.CurrentRow.Cells[5].Value.ToString();
                 form1.labelAufgabenbereich.Text = this.MitarbeiterListeTable.CurrentRow.Cells[6].Value.ToString();
+                form1.iconButton3.Hide();
                 form1.ShowDialog();
             }
         }
@@ -88,6 +89,11 @@ namespace GUI
         private void iconButton3_Click(object sender, EventArgs e)
         {
             MitarbeiterListeTable.DataSource = GetEmployeesList();
+        }
+
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

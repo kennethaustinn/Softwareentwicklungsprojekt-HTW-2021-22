@@ -58,5 +58,10 @@ namespace GUI
             Projekt form1 = new Projekt();
             form1.ShowDialog();
         }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            ProjektListeTable.DataSource = GetProjektList();
+        }
     }
 }

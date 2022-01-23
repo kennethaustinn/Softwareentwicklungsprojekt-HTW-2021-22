@@ -139,6 +139,7 @@ namespace GUI
             this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
             this.iconPictureBox1.TabIndex = 6;
             this.iconPictureBox1.TabStop = false;
+            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
             // 
             // MitarbeiterListeTable
             // 
@@ -146,7 +147,8 @@ namespace GUI
             this.MitarbeiterListeTable.AllowUserToDeleteRows = false;
             this.MitarbeiterListeTable.AllowUserToOrderColumns = true;
             this.MitarbeiterListeTable.AllowUserToResizeRows = false;
-            this.MitarbeiterListeTable.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.MitarbeiterListeTable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MitarbeiterListeTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.MitarbeiterListeTable.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
             this.MitarbeiterListeTable.BorderStyle = System.Windows.Forms.BorderStyle.None;

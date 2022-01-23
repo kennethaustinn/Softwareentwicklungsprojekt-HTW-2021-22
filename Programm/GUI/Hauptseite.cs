@@ -183,6 +183,7 @@ namespace GUI
 
         private void ProfileButton_Click(object sender, EventArgs e)
         {
+            
             try
             { 
             Connection.DataSource();
@@ -193,15 +194,16 @@ namespace GUI
             command.Connection = Connection.connMaster;
             MySqlDataReader reader = command.ExecuteReader();
             reader.Read();
-            Profile form1 = new Profile();
-            Profile.profile.iconButton2.Hide();
-            Profile.profile.iconButton4.Hide();
+            Profile form1 = new Profile();           
             form1.labelBenutzername.Text = reader[1].ToString();
             form1.labelName.Text = reader[5].ToString();
             form1.labelVorname.Text = reader[4].ToString();
             form1.labelAufgabenbereich.Text = reader[6].ToString();
             form1.labelAbteilung.Text = reader[7].ToString();
+            form1.iconButton2.Hide();
+            form1.iconButton4.Hide();
             form1.ShowDialog();
+            
             }
             catch (Exception ex)
             {
@@ -212,7 +214,6 @@ namespace GUI
         private void LogoutButton_Click(object sender, EventArgs e)
         {
             Reset();
-            currentChildForm.Close();
             this.Hide();
             Login m = new Login();
             m.Show();

@@ -115,14 +115,16 @@ namespace GUI
                         Hauptseite.hauptseite.NeueMitarbeiterButton.Show();
                         Hauptseite.hauptseite.MitarbeiterListeButton.Show();
                         Hauptseite.hauptseite.Username.Text = reader[1].ToString();
+                        Hauptseite.hauptseite.labelName.Text = reader[5].ToString();
                         Hauptseite.hauptseite.ShowDialog();
                     }
                     else if (reader[8].ToString() == "Mitarbeiter")
                     {
                         this.Hide();
                         Hauptseite.hauptseite.NeueMitarbeiterButton.Hide();
-                        Hauptseite.hauptseite.MitarbeiterListeButton.Hide();                       
+                        Hauptseite.hauptseite.MitarbeiterListeButton.Hide();
                         Hauptseite.hauptseite.Username.Text = reader[1].ToString();
+                        Hauptseite.hauptseite.labelName.Text = reader[5].ToString();
                         Hauptseite.hauptseite.ShowDialog();
                     }
                     else
