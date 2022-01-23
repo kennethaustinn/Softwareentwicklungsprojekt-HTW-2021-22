@@ -93,35 +93,6 @@ namespace GUI
         /// <param name="passInsert"></param>
         /// <returns></returns>
         /// 
-        private string GetPassFromDB(string username)
-        {
-            Connection con = new Connection();
-            try
-            {
-                Connection.DataSource();
-                con.connOpen();
-                MySqlCommand command = new MySqlCommand();
-                command.CommandText = ("select * from mitarbeiter where (Benutzername) = (@name)");
-                command.Parameters.AddWithValue("@name", username);
-                command.Connection = Connection.connMaster;
-                MySqlDataReader reader = command.ExecuteReader();
-                if (reader.Read())
-                {
-                    return reader[3].ToString();
-                }
-                else
-                {
-                    return null;
-                }
-            }
-
-            finally
-            {
-                con.connClose();
-            }
-
-        }
-
         private string SelectData(string userInsert, string passInsert)
         {
             Connection con = new Connection();
@@ -149,11 +120,23 @@ namespace GUI
                     }
                     else if (reader[8].ToString() == "Mitarbeiter")
                     {
-                        this.Hide();
-                        Hauptseite.hauptseite.NeueMitarbeiterButton.Hide();
-                        Hauptseite.hauptseite.MitarbeiterListeButton.Hide();
-                        Hauptseite.hauptseite.Username.Text = reader[1].ToString();
-                        Hauptseite.hauptseite.ShowDialog();
+                        if (reader[9].ToString() == "False")
+                        {
+                            this.Hide();
+                            Hauptseite.hauptseite.NeueMitarbeiterButton.Hide();
+                            Hauptseite.hauptseite.MitarbeiterListeButton.Hide();
+                            Hauptseite.hauptseite.Username.Text = reader[1].ToString();
+                            Hauptseite.hauptseite.ShowDialog();
+                        }
+                        else if (reader[9].ToString() == "True")
+                        {
+                            MessageBox.Show("Konto Deaktiviert, Bitte melden Sie sich bei Administrator", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Passwort falsch oder Sie haben kein Konto", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        
                     }
                     else
                     {
