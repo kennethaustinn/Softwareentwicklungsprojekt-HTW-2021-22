@@ -21,21 +21,25 @@ namespace GUI
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-            try
+            if (MessageBox.Show("Sind Sie sicher das Konto zu löschen?", "Kompetenzdatenbank", MessageBoxButtons.OKCancel,
+                       MessageBoxIcon.Information) == DialogResult.OK)
             {
-                Connection.DataSource();
-                con.connOpen();
-                MySqlCommand command = new MySqlCommand();
-                command.CommandText = "delete from mitarbeiter where benutzername = '" + this.labelBenutzername.Text + "';";
-                command.Connection = Connection.connMaster;
-                command.ExecuteNonQuery();
-                MessageBox.Show("Account deleted");
-                con.connClose();
-                this.Close();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                try
+                {
+                    Connection.DataSource();
+                    con.connOpen();
+                    MySqlCommand command = new MySqlCommand();
+                    command.CommandText = "delete from mitarbeiter where benutzername = '" + this.labelBenutzername.Text + "';";
+                    command.Connection = Connection.connMaster;
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Account deleted");
+                    con.connClose();
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
 
         }
@@ -62,44 +66,54 @@ namespace GUI
 
         private void iconButton4_Click(object sender, EventArgs e)
         {
-            if (iconButton4.Text == "Konto deaktivieren")
-            {
-                try
+            
+                if (iconButton4.Text == "Konto deaktivieren")
                 {
-                    Connection.DataSource();
-                    con.connOpen();
-                    MySqlCommand command = new MySqlCommand();
-                    command.CommandText = ("update mitarbeiter set Deaktiviert = true where name ='" + this.labelName.Text + "'");
-                    command.Connection = Connection.connMaster;
-                    command.ExecuteNonQuery();
-                    MessageBox.Show("Account deaktiviert");
-                    con.connClose();
-                    this.Close();
-                }
-                catch (Exception ex)
+                if (MessageBox.Show("Sind Sie sicher das Konto zu deaktivieren?", "Kompetenzdatenbank", MessageBoxButtons.OKCancel,
+                    MessageBoxIcon.Information) == DialogResult.OK)
                 {
-                    MessageBox.Show(ex.Message);
+                    try
+                    {
+                        Connection.DataSource();
+                        con.connOpen();
+                        MySqlCommand command = new MySqlCommand();
+                        command.CommandText = ("update mitarbeiter set Deaktiviert = true where name ='" + this.labelName.Text + "'");
+                        command.Connection = Connection.connMaster;
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Account deaktiviert");
+                        con.connClose();
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
-            }
-            else
-            {
-                try
+                }
+                else
                 {
-                    Connection.DataSource();
-                    con.connOpen();
-                    MySqlCommand command = new MySqlCommand();
-                    command.CommandText = ("update mitarbeiter set Deaktiviert = false where name ='" + this.labelName.Text + "'");
-                    command.Connection = Connection.connMaster;
-                    command.ExecuteNonQuery();
-                    MessageBox.Show("Account aktiviert");
-                    con.connClose();
-                    this.Close();
-                }
-                catch (Exception ex)
+                if (MessageBox.Show("Sind Sie sicher das Konto zu deaktivieren?", "Kompetenzdatenbank", MessageBoxButtons.OKCancel,
+                    MessageBoxIcon.Information) == DialogResult.OK)
                 {
-                    MessageBox.Show(ex.Message);
+                    try
+                    {
+                        Connection.DataSource();
+                        con.connOpen();
+                        MySqlCommand command = new MySqlCommand();
+                        command.CommandText = ("update mitarbeiter set Deaktiviert = false where name ='" + this.labelName.Text + "'");
+                        command.Connection = Connection.connMaster;
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Account aktiviert");
+                        con.connClose();
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
-            }
+                }
+            
         }
     }
 }
