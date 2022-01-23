@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
 namespace GUI { 
-    class insertData
+    public class insertData
     {
         Connection con = new Connection();
         Encrypt en = new Encrypt();
