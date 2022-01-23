@@ -1,0 +1,106 @@
+\hypertarget{class_g_u_i_1_1insert_data}{}\doxysection{GUI.\+insert\+Data Class Reference}
+\label{class_g_u_i_1_1insert_data}\index{GUI.insertData@{GUI.insertData}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_g_u_i_1_1insert_data_a55738ead7c99dd3feffab20d86555e3c}{Insert\+Data}} (string benutzer\+Insert, string pass\+Insert, string vorname\+Insert, string name\+Insert, string aufgaben\+Insert, string abteilung\+Insert, string rolle\+Insert)
+\begin{DoxyCompactList}\small\item\em Das Einfügen eines neuen Benutzer erfolgt mit dieser Methode. Jeder Eingabe wird in My\+SQL gespeichert mit dem \mbox{\hyperlink{class_g_u_i_1_1_connection}{Connection}} via My\+SQL \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_g_u_i_1_1insert_data_a061759d73e1f78150f8d18e0b62018be}{Insert\+Kompetenz}} (string name, string bezeichnung, string alternativebezeichnung, string beschreibung)
+\begin{DoxyCompactList}\small\item\em Das Einfügen einer neuen \mbox{\hyperlink{class_g_u_i_1_1_kompetenz}{Kompetenz}} erfolgt mit dieser Methode. Jeder Eingabe wird in My\+SQL gespeichert mit dem \mbox{\hyperlink{class_g_u_i_1_1_connection}{Connection}} via My\+SQL \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_g_u_i_1_1insert_data_a27fc56659d073c0691b3c30e5a34f6a5}{Insert\+Projekt}} (string name, string start, string ende, string beschreibung)
+\begin{DoxyCompactList}\small\item\em Das Einfügen eines neuen Projekts erfolgt über diese Methode. Jeder Eingabe wird in My\+SQL gespeichert mit dem \mbox{\hyperlink{class_g_u_i_1_1_connection}{Connection}} via My\+SQL \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_u_i_1_1insert_data_a7e6adf088d7c0f0e41474112e84a1171}\label{class_g_u_i_1_1insert_data_a7e6adf088d7c0f0e41474112e84a1171}} 
+\mbox{\hyperlink{class_g_u_i_1_1_connection}{Connection}} {\bfseries con} = new \mbox{\hyperlink{class_g_u_i_1_1_connection}{Connection}}()
+\item 
+\mbox{\Hypertarget{class_g_u_i_1_1insert_data_a0b25747a1cdfe04c17cf83bec33cd64e}\label{class_g_u_i_1_1insert_data_a0b25747a1cdfe04c17cf83bec33cd64e}} 
+\mbox{\hyperlink{class_g_u_i_1_1_encrypt}{Encrypt}} {\bfseries en} = new \mbox{\hyperlink{class_g_u_i_1_1_encrypt}{Encrypt}}()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_u_i_1_1insert_data_a55738ead7c99dd3feffab20d86555e3c}\label{class_g_u_i_1_1insert_data_a55738ead7c99dd3feffab20d86555e3c}} 
+\index{GUI.insertData@{GUI.insertData}!InsertData@{InsertData}}
+\index{InsertData@{InsertData}!GUI.insertData@{GUI.insertData}}
+\doxysubsubsection{\texorpdfstring{InsertData()}{InsertData()}}
+{\footnotesize\ttfamily string GUI.\+insert\+Data.\+Insert\+Data (\begin{DoxyParamCaption}\item[{string}]{benutzer\+Insert,  }\item[{string}]{pass\+Insert,  }\item[{string}]{vorname\+Insert,  }\item[{string}]{name\+Insert,  }\item[{string}]{aufgaben\+Insert,  }\item[{string}]{abteilung\+Insert,  }\item[{string}]{rolle\+Insert }\end{DoxyParamCaption})}
+
+
+
+Das Einfügen eines neuen Benutzer erfolgt mit dieser Methode. Jeder Eingabe wird in My\+SQL gespeichert mit dem \mbox{\hyperlink{class_g_u_i_1_1_connection}{Connection}} via My\+SQL 
+
+
+\begin{DoxyParams}{Parameters}
+{\em benutzer\+Insert} & \\
+\hline
+{\em pass\+Insert} & \\
+\hline
+{\em vorname\+Insert} & \\
+\hline
+{\em name\+Insert} & \\
+\hline
+{\em aufgaben\+Insert} & \\
+\hline
+{\em abteilung\+Insert} & \\
+\hline
+{\em rolle\+Insert} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_u_i_1_1insert_data_a061759d73e1f78150f8d18e0b62018be}\label{class_g_u_i_1_1insert_data_a061759d73e1f78150f8d18e0b62018be}} 
+\index{GUI.insertData@{GUI.insertData}!InsertKompetenz@{InsertKompetenz}}
+\index{InsertKompetenz@{InsertKompetenz}!GUI.insertData@{GUI.insertData}}
+\doxysubsubsection{\texorpdfstring{InsertKompetenz()}{InsertKompetenz()}}
+{\footnotesize\ttfamily string GUI.\+insert\+Data.\+Insert\+Kompetenz (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{string}]{bezeichnung,  }\item[{string}]{alternativebezeichnung,  }\item[{string}]{beschreibung }\end{DoxyParamCaption})}
+
+
+
+Das Einfügen einer neuen \mbox{\hyperlink{class_g_u_i_1_1_kompetenz}{Kompetenz}} erfolgt mit dieser Methode. Jeder Eingabe wird in My\+SQL gespeichert mit dem \mbox{\hyperlink{class_g_u_i_1_1_connection}{Connection}} via My\+SQL 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em bezeichnung} & \\
+\hline
+{\em alternativebezeichnung} & \\
+\hline
+{\em beschreibung} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_u_i_1_1insert_data_a27fc56659d073c0691b3c30e5a34f6a5}\label{class_g_u_i_1_1insert_data_a27fc56659d073c0691b3c30e5a34f6a5}} 
+\index{GUI.insertData@{GUI.insertData}!InsertProjekt@{InsertProjekt}}
+\index{InsertProjekt@{InsertProjekt}!GUI.insertData@{GUI.insertData}}
+\doxysubsubsection{\texorpdfstring{InsertProjekt()}{InsertProjekt()}}
+{\footnotesize\ttfamily string GUI.\+insert\+Data.\+Insert\+Projekt (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{string}]{start,  }\item[{string}]{ende,  }\item[{string}]{beschreibung }\end{DoxyParamCaption})}
+
+
+
+Das Einfügen eines neuen Projekts erfolgt über diese Methode. Jeder Eingabe wird in My\+SQL gespeichert mit dem \mbox{\hyperlink{class_g_u_i_1_1_connection}{Connection}} via My\+SQL 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em start} & \\
+\hline
+{\em ende} & \\
+\hline
+{\em beschreibung} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Reynaldo Domenico/\+Desktop/\+Softwareentwicklung/\+Kompetenzdatenbank/team6/\+Programm/\+GUI/insert\+Data.\+cs\end{DoxyCompactItemize}
