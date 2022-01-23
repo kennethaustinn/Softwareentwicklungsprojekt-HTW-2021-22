@@ -31,8 +31,6 @@ namespace GUI
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.labelKompetenzen = new System.Windows.Forms.Label();
             this.labelAufgabenbereich = new System.Windows.Forms.Label();
             this.labelAbteilung = new System.Windows.Forms.Label();
             this.labelVorname = new System.Windows.Forms.Label();
@@ -41,8 +39,6 @@ namespace GUI
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -57,8 +53,6 @@ namespace GUI
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.panel1.Controls.Add(this.iconButton1);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.labelKompetenzen);
             this.panel1.Controls.Add(this.labelAufgabenbereich);
             this.panel1.Controls.Add(this.labelAbteilung);
             this.panel1.Controls.Add(this.labelVorname);
@@ -67,8 +61,6 @@ namespace GUI
             this.panel1.Controls.Add(this.iconButton4);
             this.panel1.Controls.Add(this.iconButton3);
             this.panel1.Controls.Add(this.iconButton2);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
@@ -100,32 +92,6 @@ namespace GUI
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = false;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(522, 326);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 24);
-            this.label3.TabIndex = 37;
-            this.label3.Text = "Projekte";
-            // 
-            // labelKompetenzen
-            // 
-            this.labelKompetenzen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelKompetenzen.AutoSize = true;
-            this.labelKompetenzen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelKompetenzen.Location = new System.Drawing.Point(572, 222);
-            this.labelKompetenzen.Name = "labelKompetenzen";
-            this.labelKompetenzen.Size = new System.Drawing.Size(128, 24);
-            this.labelKompetenzen.TabIndex = 36;
-            this.labelKompetenzen.Text = "Kompetenzen";
             // 
             // labelAufgabenbereich
             // 
@@ -255,32 +221,6 @@ namespace GUI
             this.iconButton2.UseVisualStyleBackColor = false;
             this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(428, 326);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(88, 24);
-            this.label9.TabIndex = 23;
-            this.label9.Text = "Projekte :";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(428, 222);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(138, 24);
-            this.label8.TabIndex = 22;
-            this.label8.Text = "Kompetenzen :";
-            // 
             // label7
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -383,11 +323,7 @@ namespace GUI
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
         public System.Windows.Forms.Label labelPasswort;
-        private System.Windows.Forms.Label label3;
-        public System.Windows.Forms.Label labelKompetenzen;
         public System.Windows.Forms.Label labelAufgabenbereich;
         public System.Windows.Forms.Label labelAbteilung;
         public System.Windows.Forms.Label labelVorname;
