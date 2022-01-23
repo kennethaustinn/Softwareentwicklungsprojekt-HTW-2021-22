@@ -130,7 +130,7 @@ namespace GUI
                 Connection.DataSource();
                 con.connOpen();
                 MySqlCommand command = new MySqlCommand();
-                command.CommandText = ("select * from mitarbeiter where (Benutzername, Passwort) = (@name, @password)");
+                command.CommandText = ("select * from mitarbeiter where (Benutzername, passwort) = (@name, @password)");
                 command.Parameters.AddWithValue("@name", userInsert);
                 command.Parameters.AddWithValue("@password", Encrypt.HashString(passInsert));
                 command.Connection = Connection.connMaster;
@@ -145,6 +145,7 @@ namespace GUI
                         Hauptseite.hauptseite.NeueMitarbeiterButton.Show();
                         Hauptseite.hauptseite.MitarbeiterListeButton.Show();
                         Hauptseite.hauptseite.Username.Text = reader[1].ToString();
+                        Hauptseite.hauptseite.labelName.Text = reader[5].ToString();
                         Hauptseite.hauptseite.ShowDialog();
                     }
                     else if (reader[8].ToString() == "Mitarbeiter")
@@ -153,6 +154,7 @@ namespace GUI
                         Hauptseite.hauptseite.NeueMitarbeiterButton.Hide();
                         Hauptseite.hauptseite.MitarbeiterListeButton.Hide();
                         Hauptseite.hauptseite.Username.Text = reader[1].ToString();
+                        Hauptseite.hauptseite.labelName.Text = reader[5].ToString();
                         Hauptseite.hauptseite.ShowDialog();
                     }
                     else

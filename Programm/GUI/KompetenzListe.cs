@@ -58,5 +58,10 @@ namespace GUI
             Kompetenz form1 = new Kompetenz();
             form1.ShowDialog();
         }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            KompetenzListeTable.DataSource = GetKompetenzList();
+        }
     }
 }

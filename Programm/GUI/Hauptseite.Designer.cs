@@ -61,7 +61,7 @@ namespace GUI
             this.panel2 = new System.Windows.Forms.Panel();
             this.ProfileButton = new FontAwesome.Sharp.IconButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panelSideMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -480,7 +480,7 @@ namespace GUI
             this.panel2.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.panel2.Controls.Add(this.ProfileButton);
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.labelName);
             this.panel2.Location = new System.Drawing.Point(646, 90);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(289, 337);
@@ -510,15 +510,15 @@ namespace GUI
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 
-            // label4
+            // labelName
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(34, 157);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 20);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Name";
+            this.labelName.AutoSize = true;
+            this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelName.Location = new System.Drawing.Point(34, 157);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(51, 20);
+            this.labelName.TabIndex = 8;
+            this.labelName.Text = "Name";
             // 
             // label3
             // 
@@ -594,12 +594,12 @@ namespace GUI
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconButton ProfileButton;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
         private FontAwesome.Sharp.IconButton LogoutButton;
         public FontAwesome.Sharp.IconButton NeueMitarbeiterButton;
         public FontAwesome.Sharp.IconButton MitarbeiterListeButton;
         public System.Windows.Forms.Label Username;
+        public System.Windows.Forms.Label labelName;
     }
 }

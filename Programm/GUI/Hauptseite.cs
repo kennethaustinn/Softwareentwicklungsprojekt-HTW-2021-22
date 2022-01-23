@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 using System.Runtime.InteropServices;
+using MySql.Data.MySqlClient;
 
 namespace GUI
 {
@@ -19,7 +20,7 @@ namespace GUI
     private IconButton currentBtn;
     private Panel leftBorderBtn;
     private Form currentChildForm;
-    
+    Connection con = new Connection();
     public Hauptseite()
         {
             InitializeComponent();
@@ -182,18 +183,40 @@ namespace GUI
 
         private void ProfileButton_Click(object sender, EventArgs e)
         {
-            Profile form1 = new Profile();
+            
+            try
+            { 
+            Connection.DataSource();
+            con.connOpen();
+            MySqlCommand command = new MySqlCommand();
+            command.CommandText = ("select * from mitarbeiter where (Benutzername) = (@name)");
+            command.Parameters.AddWithValue("@name", Username.Text);
+            command.Connection = Connection.connMaster;
+            MySqlDataReader reader = command.ExecuteReader();
+            reader.Read();
+            Profile form1 = new Profile();           
+            form1.labelBenutzername.Text = reader[1].ToString();
+            form1.labelName.Text = reader[5].ToString();
+            form1.labelVorname.Text = reader[4].ToString();
+            form1.labelAufgabenbereich.Text = reader[6].ToString();
+            form1.labelAbteilung.Text = reader[7].ToString();
+            form1.iconButton2.Hide();
+            form1.iconButton4.Hide();
             form1.ShowDialog();
-        }
+            
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+}
 
         private void LogoutButton_Click(object sender, EventArgs e)
         {
             Reset();
-            currentChildForm.Close();
             this.Hide();
             Login m = new Login();
             m.Show();
-
          }
     }
 }
