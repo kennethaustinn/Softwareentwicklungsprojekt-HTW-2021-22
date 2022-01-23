@@ -11,9 +11,9 @@ namespace KompetenzDB.UnitTest
             //arrange
             var test = new insertData();
             //act
-            string ergebnis =test.InsertData("test2", "passwort", "max", "mustermann", "code", "it", "mitarbeiter");
+            string ergebnis =test.InsertData("Unittest", "passwort", "max", "mustermann", "code", "it", "mitarbeiter");
             //assert
-            Assert.AreEqual("test2passwortmaxmustermanncodeitmitarbeiter", ergebnis);
+            Assert.AreEqual("Unittestpasswortmaxmustermanncodeitmitarbeiter", ergebnis);
         }
         [Test]
         public void InsertKompetenzTest()
