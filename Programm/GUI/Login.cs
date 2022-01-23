@@ -121,38 +121,24 @@ namespace GUI
                     }
                     else if (reader[8].ToString() == "Mitarbeiter")
                     {
-<<<<<<< HEAD
-                        this.Hide();
-                        Hauptseite.hauptseite.NeueMitarbeiterButton.Hide();
-                        Hauptseite.hauptseite.MitarbeiterListeButton.Hide();
-                        Hauptseite.hauptseite.Username.Text = reader[1].ToString();
-                        Hauptseite.hauptseite.labelName.Text = reader[5].ToString();
-                        Hauptseite.hauptseite.ShowDialog();
-=======
                         if (reader[9].ToString() == "False")
                         {
                             this.Hide();
                             Hauptseite.hauptseite.NeueMitarbeiterButton.Hide();
                             Hauptseite.hauptseite.MitarbeiterListeButton.Hide();
                             Hauptseite.hauptseite.Username.Text = reader[1].ToString();
+                            Hauptseite.hauptseite.labelName.Text = reader[5].ToString();
                             Hauptseite.hauptseite.ShowDialog();
-                        }
-                        else if (reader[9].ToString() == "True")
-                        {
-                            MessageBox.Show("Konto Deaktiviert, Bitte melden Sie sich bei Administrator", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         else
                         {
-                            MessageBox.Show("Passwort falsch oder Sie haben kein Konto", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                        
->>>>>>> Kenneth
+                            MessageBox.Show("Konto Deaktiviert, Bitte melden Sie sich bei Administrator", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }                                            
                     }
                     else
                     {
                         MessageBox.Show("Rolle falsch eingegeben! Nur Mitarbeiter oder Administrator", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-
                 }
                 else
                 {
