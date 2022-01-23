@@ -23,7 +23,7 @@ namespace GUI {
         /// <param name="aufgabenInsert">Die Aufgabenbereich des Users</param>
         /// <param name="abteilungInsert"> Die Abteilung des Users</param>
         /// <param name="rolleInsert">Die Rolle des Users</param>
-        /// <returns></returns>
+        /// <returns> Ergibt sich die angegebene Parameter zurück als Zeichnen ob es erfolgreich in der Datenbank gespeichert oder nicht</returns>
         public string InsertData(string benutzerInsert, string passInsert, string vornameInsert, string nameInsert, string aufgabenInsert, string abteilungInsert, string rolleInsert)
         {
             try
@@ -61,13 +61,14 @@ namespace GUI {
         }
 
         /// <summary>
-        /// Das Einfügen einer neuen Kompetenz erfolgt mit dieser Methode. Jeder Eingabe wird in MySQL gespeichert mit dem Connection via MySQL
+        /// Das Einfügen einer neuen Kompetenz erfolgt mit dieser Methode. Jeder Eingabe wird in 
+        /// MySQL gespeichert mit dem Connection via MySQL
         /// </summary>
         /// <param name="name"> Die Name der Kompetenz</param>
         /// <param name="bezeichnung"> Die Bezeichnung der Kompetenz</param>
         /// <param name="alternativebezeichnung"> Die Alternativebezeichnung der Kompetenz</param>
         /// <param name="beschreibung"> Die Beschreibung der Kompetenz</param>
-        /// <returns></returns>
+        /// <returns> Ergibt sich die angegebene Parameter zurück als Zeichnen ob es erfolgreich in der Datenbank gespeichert oder nicht</returns>
         public string InsertKompetenz(string name, string bezeichnung, string alternativebezeichnung, string beschreibung)
         {
             try
@@ -105,7 +106,7 @@ namespace GUI {
         /// <param name="start"> Das Startdatum des Projekts</param>
         /// <param name="ende"> Das Endedatum des Projekts</param>
         /// <param name="beschreibung"> Die Beschreibung des Projekts</param>
-        /// <returns></returns>
+        /// <returns> Ergibt sich die angegebene Parameter zurück als Zeichnen ob es erfolgreich in der Datenbank gespeichert oder nicht</returns>
         public string InsertProjekt(string name, string start, string ende, string beschreibung)
         {
             try

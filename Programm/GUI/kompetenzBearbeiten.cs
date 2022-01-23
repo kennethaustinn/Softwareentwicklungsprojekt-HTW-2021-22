@@ -11,13 +11,24 @@ namespace GUI
 {
     public partial class kompetenzBearbeiten : Form
     {
+        /// <summary>
+        /// Sucht die Connection bzw. ruft die Klasse ab.
+        /// </summary>
         Connection con = new Connection();
+        /// <summary>
+        /// Für das Form Kompetenzbearbeiten wird erst alle die Sachen von dem Designer initialisiert 
+        /// </summary>
         public kompetenzBearbeiten()
         {
             InitializeComponent();
         }
 
-        //Wenn die  „Speichern“ button gedrückt wird, werden die Kompetenz Datei im Datenbank mit den Daten von dieser Seite geschrieben
+        /// <summary>
+        /// Ein Clickhandler wenndie  „Speichern“ button gedrückt wird, werden die Kompetenz Datei
+        /// im Datenbank mit den Daten von dieser Seite geschrieben
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void speichernButton_Click(object sender, EventArgs e)
         {
             try

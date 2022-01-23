@@ -11,7 +11,13 @@ namespace GUI
 {
     public partial class ProjektListe : Form
     {
+        /// <summary>
+        /// Sucht die Connection bzw. ruft die Klasse ab.
+        /// </summary>
         Connection con = new Connection();
+        /// <summary>
+        /// Form der Projekt Liste
+        /// </summary>
         public ProjektListe()
         {
             InitializeComponent();
@@ -36,7 +42,12 @@ namespace GUI
             return projektliste;
 
         }
-
+        /// <summary>
+        /// Ein Click handler wenn das Anzeigen gedrückt wird, werden die ausgewählten Projekt in der nächsten Form angezeigt
+        /// und wird die Daten vom Datenbank aufgerufen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ProjektListeTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var senderGrid = (DataGridView)sender;

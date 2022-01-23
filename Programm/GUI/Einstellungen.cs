@@ -15,6 +15,9 @@ namespace GUI
         /// Sucht die Connection bzw. ruft die Klasse ab.
         /// </summary>
         Connection con = new Connection();
+        /// <summary>
+        /// Für das Form Einstellungen wird erst alle die Sachen von dem Designer initialisiert 
+        /// </summary>
         public Einstellungen()
         {
             InitializeComponent();

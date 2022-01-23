@@ -15,13 +15,23 @@ namespace GUI
         /// Sucht die Connection bzw. ruft die Klasse ab.
         /// </summary>
         Connection con = new Connection();
-
+        /// <summary>
+        /// Form der Profile
+        /// </summary>
         public static Profile profile = new Profile();
+        /// <summary>
+        /// Für das Form Profile wird erst alle die Sachen von dem Designer initialisiert 
+        /// </summary>
         public Profile()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Ein Event Click wenn das loschen Button gedrückt wird, werden eine Bestätigung angezeigt ob man das Konto löschen wird
+        /// und wenn ja dann wird das Konto vom Datenbank gelöscht mit Verbindung mit MySQL (nur Admin kann das machen)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void iconButton2_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Sind Sie sicher das Konto zu löschen?", "Kompetenzdatenbank", MessageBoxButtons.OKCancel,
@@ -46,7 +56,11 @@ namespace GUI
             }
 
         }
-
+        /// <summary>
+        /// Ein Event Click wenn das bearbeiten Button gedrückt wird, werden eine Form angezeigt damit man ihre Konto bearbeitenn kann
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void iconButton3_Click(object sender, EventArgs e)
         {
             profileBearbeiten form1 = new profileBearbeiten();
@@ -57,7 +71,12 @@ namespace GUI
             form1.ShowDialog();
             this.Close();
         }
-
+        /// <summary>
+        /// Ein Event Click wenn das Passwort bearbeiten Button gedrückt wird, werden eine neue Form für das 
+        /// bearbeiten der Mitarbeiter angezeigt (nur Admin kann das hier machen)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void iconButton1_Click(object sender, EventArgs e)
         {
             MitarbeiterPassword form2 = new MitarbeiterPassword();
@@ -66,7 +85,12 @@ namespace GUI
             form2.ShowDialog();
             this.Close();
         }
-
+        /// <summary>
+        /// Ein Event Click wenn das Deaktivieren Button gedrückt wird, werden eine Bestätigung angezeigt ob man das Konto deaktivieren wird
+        /// und wenn ja dann wird das Konto vom Datenbank deaktiviert mit Verbindung mit MySQL (nur Admin kann das machen)
+        /// und auch angezeigt wenn das Konto doch deaktiviert kann man dann wieder aktivieren mit Verbindung MySQL
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void iconButton4_Click(object sender, EventArgs e)
         {
             

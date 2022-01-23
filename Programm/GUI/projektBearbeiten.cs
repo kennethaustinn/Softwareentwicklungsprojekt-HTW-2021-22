@@ -11,15 +11,25 @@ namespace GUI
 {
     public partial class projektBearbeiten : Form
     {
+        /// <summary>
+        /// Sucht die Connection bzw. ruft die Klasse ab.
+        /// </summary>
         Connection con = new Connection();
+        /// <summary>
+        /// Für das Form projektBearbeiten wird erst alle die Sachen von dem Designer initialisiert 
+        /// </summary>
         public projektBearbeiten()
         {
             InitializeComponent();
         }
 
-        
-        //Wenn die  „Speichern“ button gedrückt wird, werden die Projekt Datei im Datenbank mit den Daten von dieser Seite geschrieben
-         private void speichernButton_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Ein Click event wenn die  „Speichern“ button gedrückt wird, werden die Mitarbeiter 
+        /// Datei im Datenbank mit den Daten von dieser Seite geschrieben
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void speichernButton_Click(object sender, EventArgs e)
         {
             try
             {

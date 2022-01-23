@@ -20,6 +20,9 @@ namespace GUI
 {
     public partial class MitarbeiterListe : Form
     {
+        /// <summary>
+        /// Sucht die Connection bzw. ruft die Klasse ab.
+        /// </summary>
         Connection con = new Connection();
         /// <summary>
         /// Form der Mitarbeiter Liste
@@ -32,12 +35,20 @@ namespace GUI
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MitarbeiterListe_Shown(object sender, EventArgs e)
         {
             MitarbeiterListeTable.DataSource = GetEmployeesList("");
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="valueToSearch"></param>
+        /// <returns></returns>
         private DataTable GetEmployeesList(string valueToSearch)
         {
             DataTable dtEmployees = new DataTable();
@@ -50,7 +61,12 @@ namespace GUI
             dtEmployees.Load(reader);
             return dtEmployees;
         }
-
+        /// <summary>
+        /// Ein Click handler wenn das Anzeigen gedrückt wird, werden die ausgewählten Mitarbeiter in der nächsten Form angezeigt
+        /// und wird die Daten vom Datenbank aufgerufen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MitarbeiterListeTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var senderGrid = (DataGridView)sender;
@@ -96,18 +112,30 @@ namespace GUI
 
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void iconButton1_Click(object sender, EventArgs e)
         {
 
             Hauptseite.hauptseite.openChildForm(new NeueMitarbeiter());
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void iconButton3_Click(object sender, EventArgs e)
         {
             MitarbeiterListeTable.DataSource = GetEmployeesList("");
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void iconPictureBox1_Click(object sender, EventArgs e)
         {
             MitarbeiterListeTable.DataSource = GetEmployeesList("");

@@ -11,13 +11,23 @@ namespace GUI
 {
     public partial class MitarbeiterPassword : Form
     {
+        /// <summary>
+        /// Sucht die Connection bzw. ruft die Klasse ab.
+        /// </summary>
         Connection con = new Connection();
+        /// <summary>
+        /// Für das Form Mitarbeiter Password wird erst alle die Sachen von dem Designer initialisiert 
+        /// </summary>
         public MitarbeiterPassword()
         {
             InitializeComponent();
         }
-
-        //Diese Methode besteht darin, das Mitarbeiterpasswort in der Datenbank basierend auf ihrem Namen in der Datenbank zu ändern
+        /// <summary>
+        /// Diese Event Click besteht darin, das Mitarbeiterpasswort in der Datenbank verändert
+        /// durch das Connection mit Datenbank
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void speichernButton_Click(object sender, EventArgs e)
         {
             try

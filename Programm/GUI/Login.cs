@@ -121,7 +121,7 @@ namespace GUI
         /// </summary>
         /// <param name="userInsert"> Die angegebene Benutzername vom Benutzer bei Login</param>
         /// <param name="passInsert"> Das angegebene Passwort vom Benutzer bei Login</param>
-        /// <returns> Ergibt sich die angegebene Benutzername und das Passwort zurück als Zeichnen ob es erfolgreich oder nicht</returns>
+        /// <returns> Ergibt sich die angegebene Benutzername und das Passwort zurück als Zeichnen ob es erfolgreich in der Datenbank gespeichert oder nicht</returns>
         /// 
         private string SelectData(string userInsert, string passInsert)
         {

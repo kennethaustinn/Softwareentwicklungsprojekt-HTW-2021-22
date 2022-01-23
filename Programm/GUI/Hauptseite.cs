@@ -14,9 +14,11 @@ namespace GUI
 {
     //  Zu Hilfe für die Interaktion jeweilige Forms und Panel wurde diese Quelle verwendet : 
     public partial class Hauptseite : Form
-    { 
-
-    public static Hauptseite hauptseite = new Hauptseite();
+    {
+        /// <summary>
+        /// Form der Hauptseite
+        /// </summary>
+        public static Hauptseite hauptseite = new Hauptseite();
 
     private IconButton currentBtn;
     private Panel leftBorderBtn;
@@ -193,12 +195,12 @@ namespace GUI
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         /// <summary>
-        /// 
+        /// Um das Message vom Ort der Panel schicken kann
         /// </summary>
-        /// <param name="hWnd"> panel lokasi</param>
-        /// <param name="wMsg"> Message biar bisa ngirim ke system command</param>
-        /// <param name="wParam"> movement </param>
-        /// <param name="lParam"> movement</param>
+        /// <param name="hWnd"> Ort die Panel</param>
+        /// <param name="wMsg"> Message damit man zur system command schicken kann</param>
+        /// <param name="wParam"> movement von links nach rechts </param>
+        /// <param name="lParam"> movement von oben nach unten </param>
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         /// <summary>

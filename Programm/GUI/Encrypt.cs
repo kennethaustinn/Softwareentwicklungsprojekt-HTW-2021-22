@@ -12,8 +12,8 @@ namespace GUI
         /// <summary>
         /// Ändern das Passwort in Hash, aus String Datei von der Eingabe der Nutzer
         /// </summary>
-        /// <param name="passwordString"></param>
-        /// <returns></returns>
+        /// <param name="passwordString"> Eingabe Parameter hier ist das Passwort vom Nutzer</param>
+        /// <returns> bekommt man als return das gehashte Passwort </returns>
         public static string HashString(string passwordString)
         {
             StringBuilder sb = new StringBuilder();
@@ -24,8 +24,8 @@ namespace GUI
         /// <summary>
         /// Ändern das Passwort in Salt, aus String Datei von der Eingabe der Nutzer
         /// </summary>
-        /// <param name="passwordString"></param>
-        /// <returns></returns>
+        /// <param name="passwordString"> Eingabe Parameter hier ist das Passwort vom Nutzer</param>
+        /// <returns> bekommt man als return das gesalte Passwort</returns>
         public static string SaltString(string passwordString)
         {
             string salt = CreateSalt(10);
@@ -51,7 +51,7 @@ namespace GUI
         /// <summary>
         /// Hashing wird mit dieser Methode durchgeführt mit Namespace von Cryptography mit SHA256 Verfahren
         /// </summary>
-        /// <param name="passwordString"></param>
+        /// <param name="passwordString"> Eingabe Parameter hier ist das Passwort vom Nutzer</param>
         /// <returns></returns>
         public static byte[] GetHash(string passwordString)
         {
@@ -61,8 +61,8 @@ namespace GUI
         /// <summary>
         /// Salting wird mit dieser Methode durchgeführt mit Namespace von Cryptography mit SHA256 Verfahren 
         /// </summary>
-        /// <param name="passwordString"></param>
-        /// <param name="salt"></param>
+        /// <param name="passwordString"> Eingabe Parameter hier ist das Passwort vom Nutzer</param>
+        /// <param name="salt"> Salt bekommt man vom Create Salt</param>
         /// <returns></returns>
         public static byte[] GetSalt (string passwordString, string salt)
         {

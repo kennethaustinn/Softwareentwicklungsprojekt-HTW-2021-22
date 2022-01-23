@@ -11,17 +11,32 @@ namespace GUI
 {
     public partial class KompetenzListe : Form
     {
+        /// <summary>
+        /// Sucht die Connection bzw. ruft die Klasse ab.
+        /// </summary>
         Connection con = new Connection();
+        /// <summary>
+        /// Für das Form KompetenzListe wird erst alle die Sachen von dem Designer initialisiert 
+        /// </summary>
         public KompetenzListe()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void KompetenzListe_Shown(object sender, EventArgs e)
         {
             KompetenzListeTable.DataSource = GetKompetenzList("");
         }
-
+        /// <summary>
+        /// Ein Click handler wenn das Anzeigen gedrückt wird, werden die ausgewählten Kompetenz in der nächsten Form angezeigt
+        /// und wird die Daten vom Datenbank aufgerufen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void KompetenzListeTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var senderGrid = (DataGridView)sender;
@@ -36,10 +51,12 @@ namespace GUI
                 form1.labelBeschreibung.Text = this.KompetenzListeTable.CurrentRow.Cells[5].Value.ToString();
                 form1.ShowDialog();
             }
-        }
-
- 
-
+        } 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="valueToSearch"></param>
+        /// <returns></returns>
         private DataTable GetKompetenzList(string valueToSearch)
         {
             DataTable KompetenzListe = new DataTable();
@@ -52,18 +69,30 @@ namespace GUI
             KompetenzListe.Load(reader);
             return KompetenzListe;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void iconButton1_Click(object sender, EventArgs e)
         {
             Kompetenz form1 = new Kompetenz();
             form1.ShowDialog();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void iconButton3_Click(object sender, EventArgs e)
         {
             KompetenzListeTable.DataSource = GetKompetenzList("");
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void iconPictureBox1_Click(object sender, EventArgs e)
         {
             KompetenzListeTable.DataSource = GetKompetenzList("");

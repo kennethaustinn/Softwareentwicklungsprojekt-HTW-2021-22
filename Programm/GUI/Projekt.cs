@@ -10,12 +10,23 @@ namespace GUI
 {
     public partial class Projekt : Form
     {
+        /// <summary>
+        /// ruft die Klasse insert data ab.
+        /// </summary>
         insertData insrtd = new insertData();
+        /// <summary>
+        /// Für das Form Projekt wird erst alle die Sachen von dem Designer initialisiert 
+        /// </summary>
         public Projekt()
         {
             InitializeComponent();
         }
-        //Wenn die  „Speichern“ button gedrückt wird, werden die Daten mithilfe der Methode „insertprojekt“ aus der Klasse „insertdata“ mit Daten aus den Textboxen in die Datenbank geschrieben      
+        /// <summary>
+        /// Ein Click event wenn die  „Speichern“ button gedrückt wird, werden die Mitarbeiter 
+        /// Datei im Datenbank mit den Daten von dieser Seite geschrieben
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void speichernButton_Click(object sender, EventArgs e)
         {
             insrtd.InsertProjekt(txtProjektName.Text, dateTimePicker1.Text, dateTimePicker2.Text, txtBeschreibung.Text);

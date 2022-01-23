@@ -10,19 +10,32 @@ namespace GUI
 {
     public partial class NeueMitarbeiter : Form
     {
+        /// <summary>
+        /// ruft die Klasse insert data ab.
+        /// </summary>
         insertData insrtd = new insertData();
-        Connection con = new Connection();
+        /// <summary>
+        /// Für das Form NeueMitarbeiter wird erst alle die Sachen von dem Designer initialisiert 
+        /// </summary>
         public NeueMitarbeiter()
         {
             InitializeComponent();
         }
-                   
-        // Mit dem Event wird das Password Character lesbar wenn das Passwort Button gedrückt ist
+
+        /// <summary>
+        /// Mit dem Event wird das Password Character lesbar wenn das Passwort Button gedrückt wird
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void iconButton1_MouseDown(object sender, MouseEventArgs e)
         {
             txtPassword.UseSystemPasswordChar = false;
         }
-        // Mit dem Event wird das Password Character unlesbar wenn das Passwort Button nicht mehr gedrückt ist
+        /// <summary>
+        /// Mit dem Event wird das Password Character únlesbar wenn das Passwort Button nicht mehr gedrückt wird
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void iconButton1_MouseUp(object sender, MouseEventArgs e)
         {
             txtPassword.UseSystemPasswordChar = true;
