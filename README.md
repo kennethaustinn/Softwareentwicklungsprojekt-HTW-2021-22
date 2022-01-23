@@ -54,10 +54,10 @@ zum Beispiel "https://localhost:44340/weatherforecast", nehmen Sie die "https://
 für den Befehl(Get,Post,Put,Delete) im **Postman** bitte JSON (body-> raw-> JSON) verwenden.
 
 ## Abgabe Sprint 3 (23.01.2021)
-* Datenbank :  
+* Datenbank :  Datenbank wird eine neue Collumn für Deaktiviert Mitarbeiter Funktion hinzugefügt. Die Konnektivität mit Azure (online) würde verbessert werden auch die Bugs würde gefixt.
 
-* Fachkonzept : Die Anmeldung erfolgt jetzt über den Restserver. Wenn der Restserver also nicht online ist, kann sich der Benutzer nicht anmelden. Admin kann das Passwort und Biographie von Mitarbeiteren änderen .
-Admin kann die Mitarbeiter aktivieren und deaktiviren (wird durch Atributt innerhalb SQL gmeacht und durch ein Funktion in C# ) .
+* Fachkonzept : Die Anmeldung erfolgt jetzt über den Restserver. Wenn der Restserver also nicht online ist, kann sich der Benutzer nicht anmelden. Admin kann das Passwort und Biographie von Mitarbeiteren ändern .
+Admin kann die Mitarbeiter aktivieren und deaktiviren (wird durch Atributt innerhalb SQL gmeacht und durch ein Funktion in C# ).
 wird alle wichtigeste Zeile kommentiert und wird wichtigeste Tabellen mit der Verbindung mit C# Programm überpruft (durch Nunit und Doxyegen).
 wird Die Verbindung und die Kommunikation zwischen Sql-server und Visual-Studio für letzte mal geprüft . 
 Wird immer durch die Rolle innerhalb Mitarbeiter-Tabelle erkannt , ob der Benutzer ein Admin oder Mitarbeiter ist .
@@ -77,8 +77,9 @@ Installationshinweise :
 * Datenbank : Machen Sie eine neue Connection im App **mysqlworkbench** mit :  
 hostname :kompetenzdb.mysql.database.azure.com  
 username :neueadmin
-password :Kompetenz_2021   
-Für die Lokal Datenbank importieren, gehen Sie unter Folder Datenbank und die 'Dump Datenbank.sql' in **phpmyadmin** importieren. 
+password :Kompetenz_2021
+
+Üm die Lokal Datenbank zu überprufen, gehen Sie unter Folder Datenbank und die 'Dump Datenbank.sql' in **phpmyadmin** importieren. 
 
 * GUI: Run und für Anmeldung können Sie gerne für :  
 Administrator - Benutzername : 'thomasm' als Passwort : 'pass123'  
