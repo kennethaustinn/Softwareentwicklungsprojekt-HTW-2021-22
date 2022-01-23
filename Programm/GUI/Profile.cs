@@ -42,7 +42,6 @@ namespace GUI
 
         private void iconButton3_Click(object sender, EventArgs e)
         {
-            this.Hide();
             profileBearbeiten form1 = new profileBearbeiten();
             form1.txtAbteilung.Text = this.labelAbteilung.Text;
             form1.txtAufgabenbereich.Text = this.labelAufgabenbereich.Text;
@@ -54,7 +53,6 @@ namespace GUI
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            this.Hide();
             MitarbeiterPassword form2 = new MitarbeiterPassword();
             form2.labelName.Text = this.labelName.Text;
             form2.labelVorname.Text = this.labelVorname.Text;
