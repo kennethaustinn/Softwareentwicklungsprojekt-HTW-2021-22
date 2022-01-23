@@ -52,3 +52,34 @@ Mitarbeiter -   Benutzername : 'maxm' oder 'jakobs' als Passwort : 'pass123'
 * REST: Machen Sie die Projekt "RestAPI" als "set as start up project", dann run die Programm, kopieren Sie die URL, die im Browser angezeigt wird.
 zum Beispiel "https://localhost:44340/weatherforecast", nehmen Sie die "https://localhost:44340/" und fügen Sie in dem **Postman** ein, addieren Sie die URL mit was wollen sie zeigen, zum Beispiel mitarbeiter, es wird als "https://localhost:44340/API/mitarbeiter" sein.
 für den Befehl(Get,Post,Put,Delete) im **Postman** bitte JSON (body-> raw-> JSON) verwenden.
+
+## Abgabe Sprint 3 (23.01.2021)
+* Datenbank :  
+
+* Fachkonzept : Die Anmeldung erfolgt jetzt über den Restserver. Wenn der Restserver also nicht online ist, kann sich der Benutzer nicht anmelden
+
+* GUI : Für Anmeldung kann man sich mit den Daten aus der Datenbank anmelden. 
+Der login wird für admin und mitarbeiter unterschiedlich sein, und die hauptseite wird unterschiedliche funktionsbuttons zwischen mitarbeiter und admin haben.
+Der Login hat jetzt einen "Aktivierung"-Filter, dh wenn das Konto des Mitarbeiters deaktiviert ist, kann sich der Mitarbeiter nicht in die Anwendung einloggen.
+Mitarbeiter und Administrator können ihre Biografie, ihren Benutzernamen und ihr Passwort ändern.
+Der Administrator kann das Passwort des Mitarbeiters ändern.
+Die Liste der Projekte, Kompetenzen und Mitarbeiter zeigt die Daten aus der Datenbank.
+Der Administrator kann die Kompetenz- und Projektdetails ändern.
+Der Administrator kann das Konto des Mitarbeiters deaktivieren oder löschen.
+
+Installationshinweise :
+* Datenbank : Machen Sie eine neue Connection im App **mysqlworkbench** mit :  
+hostname :kompetenzdb.mysql.database.azure.com  
+username :neueadmin
+password :Kompetenz_2021   
+Für die Lokal Datenbank importieren, gehen Sie unter Folder Datenbank und die 'Dump Datenbank.sql' in **phpmyadmin** importieren. 
+
+* GUI: Run und für Anmeldung können Sie gerne für :  
+Administrator - Benutzername : 'thomasm' als Passwort : 'pass123'  
+Mitarbeiter -   Benutzername : 'maxm' oder 'jakobs' als Passwort : 'pass123'
+
+Bitte erstellen Sie "GUI" und "RestAPI" als Startprojekt.
+Rechtsklick auf Solution Explorer -> properties -> Startup Project -> Multiple startup projects wählen -> bei dem Action für GUI bitte wählen Sie "Start" and for RestAPI wählen Sie "Start without debugging" -> OK
+
+* REST: nehmen Sie die "https://localhost:44340/" und fügen Sie in dem **Postman** ein, addieren Sie die URL mit was wollen sie zeigen, zum Beispiel mitarbeiter, es wird als "https://localhost:44340/API/mitarbeiter" sein.
+für den Befehl(Get,Post,Put,Delete) im **Postman** bitte JSON (body-> raw-> JSON) verwenden.
