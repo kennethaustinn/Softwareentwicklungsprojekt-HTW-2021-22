@@ -5,19 +5,25 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
 using GUI;
-
+/// <author>
+///  Zakaria Radman 
+///  Team 6  
+/// </author
 namespace SQLConnection
 {
     class HashPassword
     {
 
+        /// <summary>
+        /// Hashpasswort Erschtellung
+        /// </summary>
         public HashPassword()
         {
 
         }
 
 
-
+        /** Wird hier HashPasswort erstellt */
         public static string Hashpassword(string password) {
 
             SHA1CryptoServiceProvider shal = new SHA1CryptoServiceProvider();
@@ -26,6 +32,8 @@ namespace SQLConnection
             return Convert.ToBase64String(encryptedbyts);
 
         }
+        /** Wird hier HashPasswort innerhalb Datenbank gespeichert */
+
         public void ImportHashPassword(int Mitarbeiter_ID, String Benutzername, String Passwort, String Vorname, String Name, String Aufgabenbereich, string Abteilung , string Rolle) // user einfugen
         {
 

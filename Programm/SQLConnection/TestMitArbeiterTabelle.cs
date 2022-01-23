@@ -3,8 +3,17 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+/// <author>
+///  Zakaria Radman 
+///  Team 6  
+/// </author
+
 namespace SQLConnection
 {
+    /// <summary>
+    /// Testen Sql-Tabellen 
+    /// </summary>
+
 
     [TestFixture]
     /**hier wird getestet ob die namen von DB sind innerhalb c# programm richtig gespeichert */
