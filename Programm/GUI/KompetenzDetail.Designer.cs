@@ -37,6 +37,7 @@ namespace GUI
             this.labelBeschreibung = new System.Windows.Forms.Label();
             this.labelKompetenzName = new System.Windows.Forms.Label();
             this.labelBezeichnung = new System.Windows.Forms.Label();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +47,7 @@ namespace GUI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panel1.Controls.Add(this.iconButton3);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.labelAlternative);
@@ -128,6 +130,27 @@ namespace GUI
             this.labelBezeichnung.TabIndex = 1;
             this.labelBezeichnung.Text = "Bezeichnung :";
             // 
+            // iconButton3
+            // 
+            this.iconButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton3.BackColor = System.Drawing.Color.Yellow;
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.iconButton3.IconColor = System.Drawing.Color.Black;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 20;
+            this.iconButton3.Location = new System.Drawing.Point(623, 484);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(134, 44);
+            this.iconButton3.TabIndex = 28;
+            this.iconButton3.Text = "Kompetenz bearbeiten";
+            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
+            // 
             // KompetenzDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -153,5 +176,6 @@ namespace GUI
         public System.Windows.Forms.Label labelBezeichnung;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label label2;
+        public FontAwesome.Sharp.IconButton iconButton3;
     }
 }

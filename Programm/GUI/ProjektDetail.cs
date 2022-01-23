@@ -24,5 +24,15 @@ namespace GUI
             labelLaufzeit.Text = duration.ToString("dd") + " Tag";
         }
 
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            projektBearbeiten form1 = new projektBearbeiten();
+            form1.labelProjektName.Text = this.labelProjektName.Text;
+            form1.txtBeschreibung.Text = this.labelBeschreibung.Text;
+            form1.dateTimePicker1.Text = this.labelStartDatum.Text;
+            form1.dateTimePicker2.Text = this.labelEndeDatum.Text;
+            form1.ShowDialog();
+            this.Close();
+        }
     }
 }

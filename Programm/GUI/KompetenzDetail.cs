@@ -15,5 +15,15 @@ namespace GUI
             InitializeComponent();
         }
 
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            kompetenzBearbeiten form1 = new kompetenzBearbeiten();
+            form1.labelKompetenzName.Text = this.labelKompetenzName.Text;
+            form1.txtBezeichnung.Text = this.labelBezeichnung.Text;
+            form1.txtAlternativeBezeichnung.Text = this.labelAlternative.Text;
+            form1.txtBeschreibung.Text = this.labelBeschreibung.Text;
+            form1.ShowDialog();
+            this.Close();
+        }
     }
 }
