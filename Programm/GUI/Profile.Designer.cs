@@ -30,8 +30,7 @@ namespace GUI
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.labelKompetenzen = new System.Windows.Forms.Label();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.labelAufgabenbereich = new System.Windows.Forms.Label();
             this.labelAbteilung = new System.Windows.Forms.Label();
             this.labelVorname = new System.Windows.Forms.Label();
@@ -40,8 +39,6 @@ namespace GUI
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -55,8 +52,7 @@ namespace GUI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.labelKompetenzen);
+            this.panel1.Controls.Add(this.iconButton1);
             this.panel1.Controls.Add(this.labelAufgabenbereich);
             this.panel1.Controls.Add(this.labelAbteilung);
             this.panel1.Controls.Add(this.labelVorname);
@@ -65,44 +61,37 @@ namespace GUI
             this.panel1.Controls.Add(this.iconButton4);
             this.panel1.Controls.Add(this.iconButton3);
             this.panel1.Controls.Add(this.iconButton2);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(23, 26);
+            this.panel1.Location = new System.Drawing.Point(21, 28);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 543);
             this.panel1.TabIndex = 0;
             // 
-            // label3
+            // iconButton1
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(522, 326);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 24);
-            this.label3.TabIndex = 37;
-            this.label3.Text = "Projekte";
-            // 
-            // labelKompetenzen
-            // 
-            this.labelKompetenzen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelKompetenzen.AutoSize = true;
-            this.labelKompetenzen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelKompetenzen.Location = new System.Drawing.Point(572, 222);
-            this.labelKompetenzen.Name = "labelKompetenzen";
-            this.labelKompetenzen.Size = new System.Drawing.Size(128, 24);
-            this.labelKompetenzen.TabIndex = 36;
-            this.labelKompetenzen.Text = "Kompetenzen";
+            this.iconButton1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 20;
+            this.iconButton1.Location = new System.Drawing.Point(535, 56);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(128, 29);
+            this.iconButton1.TabIndex = 38;
+            this.iconButton1.Text = "Password ändern";
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // labelAufgabenbereich
             // 
@@ -163,7 +152,7 @@ namespace GUI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelBenutzername.AutoSize = true;
             this.labelBenutzername.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelBenutzername.Location = new System.Drawing.Point(374, 61);
+            this.labelBenutzername.Location = new System.Drawing.Point(373, 61);
             this.labelBenutzername.Name = "labelBenutzername";
             this.labelBenutzername.Size = new System.Drawing.Size(133, 24);
             this.labelBenutzername.TabIndex = 29;
@@ -187,7 +176,8 @@ namespace GUI
             this.iconButton4.TabIndex = 28;
             this.iconButton4.Text = "Konto deaktivieren";
             this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton4.UseVisualStyleBackColor = false;
+            this.iconButton4.UseVisualStyleBackColor = true;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
             // iconButton3
             // 
@@ -201,13 +191,14 @@ namespace GUI
             this.iconButton3.IconColor = System.Drawing.Color.Black;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 20;
-            this.iconButton3.Location = new System.Drawing.Point(388, 483);
+            this.iconButton3.Location = new System.Drawing.Point(225, 110);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(128, 29);
             this.iconButton3.TabIndex = 27;
             this.iconButton3.Text = "Konto bearbeiten";
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // iconButton2
             // 
@@ -229,32 +220,6 @@ namespace GUI
             this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton2.UseVisualStyleBackColor = false;
             this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(428, 326);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(88, 24);
-            this.label9.TabIndex = 23;
-            this.label9.Text = "Projekte :";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(428, 222);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(138, 24);
-            this.label8.TabIndex = 22;
-            this.label8.Text = "Kompetenzen :";
             // 
             // label7
             // 
@@ -358,18 +323,15 @@ namespace GUI
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        public System.Windows.Forms.Label labelPasswort;
         public System.Windows.Forms.Label labelAufgabenbereich;
         public System.Windows.Forms.Label labelAbteilung;
         public System.Windows.Forms.Label labelVorname;
         public System.Windows.Forms.Label labelName;
         public System.Windows.Forms.Label labelBenutzername;
-        public System.Windows.Forms.Label labelPasswort;
-        private System.Windows.Forms.Label label3;
-        public System.Windows.Forms.Label labelKompetenzen;
+        public FontAwesome.Sharp.IconButton iconButton4;
+        public FontAwesome.Sharp.IconButton iconButton3;
+        public FontAwesome.Sharp.IconButton iconButton2;
+        public FontAwesome.Sharp.IconButton iconButton1;
     }
 }

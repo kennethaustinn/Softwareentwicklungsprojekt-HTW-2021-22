@@ -1,0 +1,115 @@
+\hypertarget{class_g_u_i_1_1_encrypt}{}\doxysection{GUI.\+Encrypt Class Reference}
+\label{class_g_u_i_1_1_encrypt}\index{GUI.Encrypt@{GUI.Encrypt}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_g_u_i_1_1_encrypt_a940f54a11e89c27314ebe41fb873d52a}{Hash\+String}} (string password\+String)
+\begin{DoxyCompactList}\small\item\em Ändern das Passwort in Hash, aus String Datei von der Eingabe der Nutzer \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_g_u_i_1_1_encrypt_a2e5c000e5229a3a5e593ae9226da6f2b}{Salt\+String}} (string password\+String)
+\begin{DoxyCompactList}\small\item\em Ändern das Passwort in Salt, aus String Datei von der Eingabe der Nutzer \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_g_u_i_1_1_encrypt_a46ffec894f392ddc04597ad111628511}{Create\+Salt}} (int size)
+\begin{DoxyCompactList}\small\item\em Generieren ein Zufall Zahlen damit man es für Password Salting verwenden kann \end{DoxyCompactList}\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_g_u_i_1_1_encrypt_a845e8f931f3a45d3da54b534e980336a}{Get\+Hash}} (string password\+String)
+\begin{DoxyCompactList}\small\item\em Hashing wird mit dieser Methode durchgeführt mit Namespace von Cryptography mit SHA256 Verfahren \end{DoxyCompactList}\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_g_u_i_1_1_encrypt_ae96072155d164c978eff28ce820587c3}{Get\+Salt}} (string password\+String, string salt)
+\begin{DoxyCompactList}\small\item\em Salting wird mit dieser Methode durchgeführt mit Namespace von Cryptography mit SHA256 Verfahren \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_u_i_1_1_encrypt_a46ffec894f392ddc04597ad111628511}\label{class_g_u_i_1_1_encrypt_a46ffec894f392ddc04597ad111628511}} 
+\index{GUI.Encrypt@{GUI.Encrypt}!CreateSalt@{CreateSalt}}
+\index{CreateSalt@{CreateSalt}!GUI.Encrypt@{GUI.Encrypt}}
+\doxysubsubsection{\texorpdfstring{CreateSalt()}{CreateSalt()}}
+{\footnotesize\ttfamily static string GUI.\+Encrypt.\+Create\+Salt (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Generieren ein Zufall Zahlen damit man es für Password Salting verwenden kann 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_u_i_1_1_encrypt_a845e8f931f3a45d3da54b534e980336a}\label{class_g_u_i_1_1_encrypt_a845e8f931f3a45d3da54b534e980336a}} 
+\index{GUI.Encrypt@{GUI.Encrypt}!GetHash@{GetHash}}
+\index{GetHash@{GetHash}!GUI.Encrypt@{GUI.Encrypt}}
+\doxysubsubsection{\texorpdfstring{GetHash()}{GetHash()}}
+{\footnotesize\ttfamily static byte\mbox{[}$\,$\mbox{]} GUI.\+Encrypt.\+Get\+Hash (\begin{DoxyParamCaption}\item[{string}]{password\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Hashing wird mit dieser Methode durchgeführt mit Namespace von Cryptography mit SHA256 Verfahren 
+
+
+\begin{DoxyParams}{Parameters}
+{\em password\+String} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_u_i_1_1_encrypt_ae96072155d164c978eff28ce820587c3}\label{class_g_u_i_1_1_encrypt_ae96072155d164c978eff28ce820587c3}} 
+\index{GUI.Encrypt@{GUI.Encrypt}!GetSalt@{GetSalt}}
+\index{GetSalt@{GetSalt}!GUI.Encrypt@{GUI.Encrypt}}
+\doxysubsubsection{\texorpdfstring{GetSalt()}{GetSalt()}}
+{\footnotesize\ttfamily static byte\mbox{[}$\,$\mbox{]} GUI.\+Encrypt.\+Get\+Salt (\begin{DoxyParamCaption}\item[{string}]{password\+String,  }\item[{string}]{salt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Salting wird mit dieser Methode durchgeführt mit Namespace von Cryptography mit SHA256 Verfahren 
+
+
+\begin{DoxyParams}{Parameters}
+{\em password\+String} & \\
+\hline
+{\em salt} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_u_i_1_1_encrypt_a940f54a11e89c27314ebe41fb873d52a}\label{class_g_u_i_1_1_encrypt_a940f54a11e89c27314ebe41fb873d52a}} 
+\index{GUI.Encrypt@{GUI.Encrypt}!HashString@{HashString}}
+\index{HashString@{HashString}!GUI.Encrypt@{GUI.Encrypt}}
+\doxysubsubsection{\texorpdfstring{HashString()}{HashString()}}
+{\footnotesize\ttfamily static string GUI.\+Encrypt.\+Hash\+String (\begin{DoxyParamCaption}\item[{string}]{password\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Ändern das Passwort in Hash, aus String Datei von der Eingabe der Nutzer 
+
+
+\begin{DoxyParams}{Parameters}
+{\em password\+String} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_u_i_1_1_encrypt_a2e5c000e5229a3a5e593ae9226da6f2b}\label{class_g_u_i_1_1_encrypt_a2e5c000e5229a3a5e593ae9226da6f2b}} 
+\index{GUI.Encrypt@{GUI.Encrypt}!SaltString@{SaltString}}
+\index{SaltString@{SaltString}!GUI.Encrypt@{GUI.Encrypt}}
+\doxysubsubsection{\texorpdfstring{SaltString()}{SaltString()}}
+{\footnotesize\ttfamily static string GUI.\+Encrypt.\+Salt\+String (\begin{DoxyParamCaption}\item[{string}]{password\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Ändern das Passwort in Salt, aus String Datei von der Eingabe der Nutzer 
+
+
+\begin{DoxyParams}{Parameters}
+{\em password\+String} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Reynaldo Domenico/\+Desktop/\+Softwareentwicklung/\+Kompetenzdatenbank/team6/\+Programm/\+GUI/Encrypt.\+cs\end{DoxyCompactItemize}

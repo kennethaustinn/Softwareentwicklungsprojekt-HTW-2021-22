@@ -11,17 +11,32 @@ namespace GUI
 {
     public partial class KompetenzListe : Form
     {
+        /// <summary>
+        /// Sucht die Connection bzw. ruft die Klasse ab.
+        /// </summary>
         Connection con = new Connection();
+        /// <summary>
+        /// Für das Form KompetenzListe wird erst alle die Sachen von dem Designer initialisiert 
+        /// </summary>
         public KompetenzListe()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Wenn das Formular angezeigt wird, ruft die Funktion die GetKompetenzliste als Datasource für die Datagridview auf
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void KompetenzListe_Shown(object sender, EventArgs e)
         {
-            KompetenzListeTable.DataSource = GetKompetenzList();
+            KompetenzListeTable.DataSource = GetKompetenzList("");
         }
-
+        /// <summary>
+        /// Ein Click handler wenn das Anzeigen gedrückt wird, werden die ausgewählten Kompetenz in der nächsten Form angezeigt
+        /// und wird die Daten vom Datenbank aufgerufen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void KompetenzListeTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var senderGrid = (DataGridView)sender;
@@ -37,26 +52,50 @@ namespace GUI
                 form1.ShowDialog();
             }
         }
-
- 
-
-        private DataTable GetKompetenzList()
+        /// <summary>
+        /// Diese Funktion ruft die Kompetenz Daten aus der Datenbank ab und fügt sie als DataTable in die Datagridview ein
+        /// </summary>
+        /// <param name="valueToSearch"></param>
+        /// <returns></returns>
+        private DataTable GetKompetenzList(string valueToSearch)
         {
             DataTable KompetenzListe = new DataTable();
             Connection.DataSource();
             con.connOpen();
             MySqlCommand command = new MySqlCommand();
-            command.CommandText = ("select * from Kompetenz");
+            command.CommandText = ("select Kompetenz_ID, Name, Bezeichnung, Alternativebezeichnung, Beschreibung from Kompetenz where CONCAT (Kompetenz_ID, Name, Bezeichnung, Alternativebezeichnung) like '%" + textBox1.Text + "%'");
             command.Connection = Connection.connMaster;
             MySqlDataReader reader = command.ExecuteReader();
             KompetenzListe.Load(reader);
             return KompetenzListe;
         }
-
+        /// <summary>
+        /// Wenn der Administrator auf diese Button klickt, kann er der Datenbank eine neue Kompetenz hinzufügen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void iconButton1_Click(object sender, EventArgs e)
         {
             Kompetenz form1 = new Kompetenz();
             form1.ShowDialog();
+        }
+        /// <summary>
+        /// Lade die Seite neu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            KompetenzListeTable.DataSource = GetKompetenzList("");
+        }
+        /// <summary>
+        /// Filtern  die Datagridview mit der Eingabe aus dem Texbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+            KompetenzListeTable.DataSource = GetKompetenzList("");
         }
     }
 }

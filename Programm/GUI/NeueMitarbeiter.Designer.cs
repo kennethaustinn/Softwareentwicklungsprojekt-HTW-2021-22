@@ -30,17 +30,13 @@ namespace GUI
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboRolle = new System.Windows.Forms.ComboBox();
             this.speichernButton = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.txtAufgabenbereich = new System.Windows.Forms.TextBox();
             this.txtAbteilung = new System.Windows.Forms.TextBox();
             this.txtVorname = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.txtRolle = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -60,17 +56,13 @@ namespace GUI
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panel1.Controls.Add(this.comboRolle);
             this.panel1.Controls.Add(this.speichernButton);
             this.panel1.Controls.Add(this.iconButton2);
-            this.panel1.Controls.Add(this.richTextBox2);
-            this.panel1.Controls.Add(this.richTextBox1);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.txtAufgabenbereich);
             this.panel1.Controls.Add(this.txtAbteilung);
             this.panel1.Controls.Add(this.txtVorname);
             this.panel1.Controls.Add(this.txtName);
-            this.panel1.Controls.Add(this.txtRolle);
             this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.txtUser);
             this.panel1.Controls.Add(this.label7);
@@ -85,6 +77,17 @@ namespace GUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(804, 552);
             this.panel1.TabIndex = 3;
+            // 
+            // comboRolle
+            // 
+            this.comboRolle.FormattingEnabled = true;
+            this.comboRolle.Items.AddRange(new object[] {
+            "Administrator",
+            "Mitarbeiter"});
+            this.comboRolle.Location = new System.Drawing.Point(233, 461);
+            this.comboRolle.Name = "comboRolle";
+            this.comboRolle.Size = new System.Drawing.Size(162, 24);
+            this.comboRolle.TabIndex = 22;
             // 
             // speichernButton
             // 
@@ -127,54 +130,6 @@ namespace GUI
             this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton2.UseVisualStyleBackColor = false;
             // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox2.Location = new System.Drawing.Point(588, 341);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(146, 106);
-            this.richTextBox2.TabIndex = 19;
-            this.richTextBox2.Text = "";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.Location = new System.Drawing.Point(588, 235);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(146, 90);
-            this.richTextBox1.TabIndex = 18;
-            this.richTextBox1.Text = "";
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(444, 338);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(88, 24);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "Projekte :";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(444, 234);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(138, 24);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Kompetenzen :";
-            // 
             // txtAufgabenbereich
             // 
             this.txtAufgabenbereich.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -214,16 +169,6 @@ namespace GUI
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(162, 22);
             this.txtName.TabIndex = 11;
-            // 
-            // txtRolle
-            // 
-            this.txtRolle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRolle.Location = new System.Drawing.Point(233, 459);
-            this.txtRolle.Name = "txtRolle";
-            this.txtRolle.Size = new System.Drawing.Size(162, 22);
-            this.txtRolle.TabIndex = 10;
             // 
             // txtPassword
             // 
@@ -353,6 +298,7 @@ namespace GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(850, 601);
             this.Controls.Add(this.panel1);
@@ -380,16 +326,12 @@ namespace GUI
         private System.Windows.Forms.PictureBox pictureBox1;
         private FontAwesome.Sharp.IconButton speichernButton;
         private FontAwesome.Sharp.IconButton iconButton2;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtAufgabenbereich;
         private System.Windows.Forms.TextBox txtAbteilung;
         private System.Windows.Forms.TextBox txtVorname;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtRolle;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.ComboBox comboRolle;
     }
 }
