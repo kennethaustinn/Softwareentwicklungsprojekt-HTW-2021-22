@@ -39,7 +39,6 @@ namespace GUI {
                 command.Parameters.AddWithValue("@rolle", rolleInsert);
                 command.Connection = Connection.connMaster;
                 command.ExecuteNonQuery();
-                System.Windows.Forms.MessageBox.Show("Account created");
                 con.connClose();
 
                 return benutzerInsert + passInsert + vornameInsert + nameInsert + aufgabenInsert + abteilungInsert + rolleInsert;
@@ -71,7 +70,6 @@ namespace GUI {
                 command.Parameters.AddWithValue("@beschreibung", beschreibung);
                 command.Connection = Connection.connMaster;
                 command.ExecuteNonQuery();
-                System.Windows.Forms.MessageBox.Show("Kompetenz hinzugefügt");
                 con.connClose();
 
                 return name + bezeichnung + alternativebezeichnung + beschreibung;
@@ -104,7 +102,6 @@ namespace GUI {
                 command.Parameters.AddWithValue("@beschreibung", beschreibung);
                 command.Connection = Connection.connMaster;
                 command.ExecuteNonQuery();
-                System.Windows.Forms.MessageBox.Show("Projekt hinzugefügt");
                 con.connClose();
 
                 return name + start + ende + beschreibung;
