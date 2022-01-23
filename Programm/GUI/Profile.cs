@@ -92,7 +92,7 @@ namespace GUI
                 }
                 else
                 {
-                if (MessageBox.Show("Sind Sie sicher das Konto zu deaktivieren?", "Kompetenzdatenbank", MessageBoxButtons.OKCancel,
+                if (MessageBox.Show("Sind Sie sicher das Konto zu aktivieren?", "Kompetenzdatenbank", MessageBoxButtons.OKCancel,
                     MessageBoxIcon.Information) == DialogResult.OK)
                 {
                     try
