@@ -53,16 +53,17 @@ Mitarbeiter -   Benutzername : 'maxm' oder 'jakobs' als Passwort : 'pass123'
 zum Beispiel "https://localhost:44340/weatherforecast", nehmen Sie die "https://localhost:44340/" und fügen Sie in dem **Postman** ein, addieren Sie die URL mit was wollen sie zeigen, zum Beispiel mitarbeiter, es wird als "https://localhost:44340/API/mitarbeiter" sein.
 für den Befehl(Get,Post,Put,Delete) im **Postman** bitte JSON (body-> raw-> JSON) verwenden.
 
-## Abgabe Sprint 3 (23.01.2021)
-* Datenbank :  Datenbank wird eine neue Collumn für Deaktiviert Mitarbeiter Funktion hinzugefügt. Die Konnektivität mit Azure (online) würde verbessert werden auch die Bugs würde gefixt.
+## Abgabe Sprint 3 (23.01.2022)
+* Datenbank :  Datenbank wird eine neue Collumn für Deaktiviert Mitarbeiter Funktion hinzugefügt. Die Konnektivität mit Azure (online) würde verbessert und auch so eben Bugs würde gefixt.
 
 * Fachkonzept : Die Anmeldung erfolgt jetzt über den Restserver. Wenn der Restserver also nicht online ist, kann sich der Benutzer nicht anmelden. Admin kann das Passwort und Biographie von Mitarbeiteren ändern .
-Admin kann die Mitarbeiter aktivieren und deaktiviren (wird durch Atributt innerhalb SQL gmeacht und durch ein Funktion in C# ).
-wird alle wichtigeste Zeile kommentiert und wird wichtigeste Tabellen mit der Verbindung mit C# Programm überpruft (durch Nunit und Doxyegen).
+Admin kann die Mitarbeiter aktivieren und deaktiviren (wird durch Atributt innerhalb SQL gemacht und durch ein Funktion in C# ).
+wird alle wichtigeste Zeile kommentiert und wird wichtigeste Tabellen mit der Verbindung mit C# Programm überpruft (durch Nunit und Doxygen).
 wird Die Verbindung und die Kommunikation zwischen Sql-server und Visual-Studio für letzte mal geprüft . 
 Wird immer durch die Rolle innerhalb Mitarbeiter-Tabelle erkannt , ob der Benutzer ein Admin oder Mitarbeiter ist .
 Alle Methoden und Klassen mit den Kommentare werden innerhalb Dokummente gespeichert.
 
+* CI/CD : Windows Runner in GitLab ist eingesetzt, Pipeline auch fertig konfiguriert im GitLab und schon . Nunit im C# kann man auch direkt testen und das Ergebnis im Test Explorer sehen.
 
 * GUI : Für Anmeldung kann man sich mit den Daten aus der Datenbank anmelden. 
 Der login wird für admin und mitarbeiter unterschiedlich sein, und die hauptseite wird unterschiedliche funktionsbuttons zwischen mitarbeiter und admin haben.
