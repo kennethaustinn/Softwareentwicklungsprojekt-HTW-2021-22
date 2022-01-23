@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
 namespace GUI { 
-    class insertData
+    public class insertData
     {
         Connection con = new Connection();
         Encrypt en = new Encrypt();
         /// <summary>
-        /// Einfügen neue User wird durch dieser Methode gemacht. Jeder Eingabe wird in MySQL gelagert durch die Connection mit MySQL 
+        /// Das Einfügen eines neuen Benutzer erfolgt mit dieser Methode. Jeder Eingabe wird in MySQL gespeichert mit dem Connection via MySQL 
         /// </summary>
         /// <param name="benutzerInsert"></param>
         /// <param name="passInsert"></param>
@@ -39,7 +39,6 @@ namespace GUI {
                 command.Parameters.AddWithValue("@rolle", rolleInsert);
                 command.Connection = Connection.connMaster;
                 command.ExecuteNonQuery();
-                System.Windows.Forms.MessageBox.Show("Account created");
                 con.connClose();
 
                 return benutzerInsert + passInsert + vornameInsert + nameInsert + aufgabenInsert + abteilungInsert + rolleInsert;
@@ -59,7 +58,7 @@ namespace GUI {
         }
 
         /// <summary>
-        /// Einfügen neue Kompetenz wird durch dieser Methode gemacht. Jeder Eingabe wird in MySQL gelagert durch die Connection mit MySQL 
+        /// Das Einfügen einer neuen Kompetenz erfolgt mit dieser Methode. Jeder Eingabe wird in MySQL gespeichert mit dem Connection via MySQL
         /// </summary>
         /// <param name="name"></param>
         /// <param name="bezeichnung"></param>
@@ -80,11 +79,9 @@ namespace GUI {
                 command.Parameters.AddWithValue("@beschreibung", beschreibung);
                 command.Connection = Connection.connMaster;
                 command.ExecuteNonQuery();
-                System.Windows.Forms.MessageBox.Show("Kompetenz hinzugefügt");
                 con.connClose();
 
                 return name + bezeichnung + alternativebezeichnung + beschreibung;
-
 
             }
             catch (Exception ex)
@@ -98,9 +95,8 @@ namespace GUI {
                 con.connClose();
             }
         }
-
         /// <summary>
-        /// Einfügen neue Projekt wird durch dieser Methode gemacht. Jeder Eingabe wird in MySQL gelagert durch die Connection mit MySQL 
+        /// Das Einfügen eines neuen Projekts erfolgt über diese Methode. Jeder Eingabe wird in MySQL gespeichert mit dem Connection via MySQL
         /// </summary>
         /// <param name="name"></param>
         /// <param name="start"></param>
@@ -121,7 +117,6 @@ namespace GUI {
                 command.Parameters.AddWithValue("@beschreibung", beschreibung);
                 command.Connection = Connection.connMaster;
                 command.ExecuteNonQuery();
-                System.Windows.Forms.MessageBox.Show("Projekt hinzugefügt");
                 con.connClose();
 
                 return name + start + ende + beschreibung;

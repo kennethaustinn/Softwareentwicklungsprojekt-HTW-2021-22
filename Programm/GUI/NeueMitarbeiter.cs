@@ -40,6 +40,7 @@ namespace GUI
                 MessageBox.Show("Bitte die Benutzername und oder Passwort unbedingt ausfüllen!!");
             }
             insrtd.InsertData(txtUser.Text, txtPassword.Text, txtVorname.Text, txtName.Text, txtAufgabenbereich.Text, txtAbteilung.Text, comboRolle.Text);
+            MessageBox.Show("Account erstellt");
         }
 
     }

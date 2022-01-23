@@ -19,6 +19,7 @@ namespace GUI
         private void speichernButton_Click(object sender, EventArgs e)
         {
             insrtd.InsertProjekt(txtProjektName.Text, dateTimePicker1.Text, dateTimePicker2.Text, txtBeschreibung.Text);
+            MessageBox.Show("Projekt hinzugefügt");
         }
 
     }
