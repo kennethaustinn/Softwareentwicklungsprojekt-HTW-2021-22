@@ -11,7 +11,7 @@ namespace GUI {
         Connection con = new Connection();
         Encrypt en = new Encrypt();
         /// <summary>
-        /// Einfügen neue User wird durch dieser Methode gemacht. Jeder Eingabe wird in MySQL gelagert durch die Connection mit MySQL 
+        /// Das Einfügen eines neuen Benutzer erfolgt mit dieser Methode. Jeder Eingabe wird in MySQL gespeichert mit dem Connection via MySQL 
         /// </summary>
         /// <param name="benutzerInsert"></param>
         /// <param name="passInsert"></param>
@@ -56,6 +56,14 @@ namespace GUI {
                 con.connClose();
             }
         }
+        /// <summary>
+        /// Das Einfügen einer neuen Kompetenz erfolgt mit dieser Methode. Jeder Eingabe wird in MySQL gespeichert mit dem Connection via MySQL
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="bezeichnung"></param>
+        /// <param name="alternativebezeichnung"></param>
+        /// <param name="beschreibung"></param>
+        /// <returns></returns>
         public string InsertKompetenz(string name, string bezeichnung, string alternativebezeichnung, string beschreibung)
         {
             try
@@ -74,7 +82,6 @@ namespace GUI {
 
                 return name + bezeichnung + alternativebezeichnung + beschreibung;
 
-
             }
             catch (Exception ex)
             {
@@ -87,7 +94,14 @@ namespace GUI {
                 con.connClose();
             }
         }
-
+        /// <summary>
+        /// Das Einfügen eines neuen Projekts erfolgt über diese Methode. Jeder Eingabe wird in MySQL gespeichert mit dem Connection via MySQL
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="start"></param>
+        /// <param name="ende"></param>
+        /// <param name="beschreibung"></param>
+        /// <returns></returns>
         public string InsertProjekt(string name, string start, string ende, string beschreibung)
         {
             try
