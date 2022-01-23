@@ -19,7 +19,7 @@ namespace GUI
 
         private void KompetenzListe_Shown(object sender, EventArgs e)
         {
-            KompetenzListeTable.DataSource = GetKompetenzList();
+            KompetenzListeTable.DataSource = GetKompetenzList("");
         }
 
         private void KompetenzListeTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -40,13 +40,13 @@ namespace GUI
 
  
 
-        private DataTable GetKompetenzList()
+        private DataTable GetKompetenzList(string valueToSearch)
         {
             DataTable KompetenzListe = new DataTable();
             Connection.DataSource();
             con.connOpen();
             MySqlCommand command = new MySqlCommand();
-            command.CommandText = ("select * from Kompetenz");
+            command.CommandText = ("select Kompetenz_ID, Name, Bezeichnung, Alternativebezeichnung, Beschreibung from Kompetenz where CONCAT (Kompetenz_ID, Name, Bezeichnung, Alternativebezeichnung) like '%" + textBox1.Text + "%'");
             command.Connection = Connection.connMaster;
             MySqlDataReader reader = command.ExecuteReader();
             KompetenzListe.Load(reader);
@@ -61,7 +61,12 @@ namespace GUI
 
         private void iconButton3_Click(object sender, EventArgs e)
         {
-            KompetenzListeTable.DataSource = GetKompetenzList();
+            KompetenzListeTable.DataSource = GetKompetenzList("");
+        }
+
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+            KompetenzListeTable.DataSource = GetKompetenzList("");
         }
     }
 }

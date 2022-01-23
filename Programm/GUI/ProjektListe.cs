@@ -19,17 +19,17 @@ namespace GUI
 
         private void ProjektListe_Shown(object sender, EventArgs e)
         {
-            ProjektListeTable.DataSource = GetProjektList();
+            ProjektListeTable.DataSource = GetProjektList("");
         }
 
 
-        private DataTable GetProjektList()
+        private DataTable GetProjektList(string valueToSearch)
         {
             DataTable projektliste = new DataTable();
             Connection.DataSource();
             con.connOpen();
             MySqlCommand command = new MySqlCommand();
-            command.CommandText = ("select * from projekt");
+            command.CommandText = ("select Projekt_ID, Name, Start, Ende, Beschreibung from projekt where CONCAT (Projekt_ID, Name, Start, Ende) like '%" + textBox1.Text + "%'");
             command.Connection = Connection.connMaster;
             MySqlDataReader reader = command.ExecuteReader();
             projektliste.Load(reader);
@@ -61,7 +61,12 @@ namespace GUI
 
         private void iconButton3_Click(object sender, EventArgs e)
         {
-            ProjektListeTable.DataSource = GetProjektList();
+            ProjektListeTable.DataSource = GetProjektList("");
+        }
+
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+            ProjektListeTable.DataSource = GetProjektList("");
         }
     }
 }

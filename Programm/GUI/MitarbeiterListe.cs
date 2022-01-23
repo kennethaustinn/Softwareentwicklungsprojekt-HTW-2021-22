@@ -29,24 +29,21 @@ namespace GUI
 
         private void MitarbeiterListe_Shown(object sender, EventArgs e)
         {
-            MitarbeiterListeTable.DataSource = GetEmployeesList();
+            MitarbeiterListeTable.DataSource = GetEmployeesList("");
         }
 
-        private DataTable GetEmployeesList()
+        private DataTable GetEmployeesList(string valueToSearch)
         {
             DataTable dtEmployees = new DataTable();
             Connection.DataSource();
             con.connOpen();
             MySqlCommand command = new MySqlCommand();
-            command.CommandText = ("select Mitarbeiter_ID, Benutzername, Name, Vorname, Abteilung, Aufgabenbereich from mitarbeiter");
+            command.CommandText = ("select Mitarbeiter_ID, Benutzername, Name, Vorname, Abteilung, Aufgabenbereich from mitarbeiter where CONCAT (Mitarbeiter_ID, Name,vorname,benutzername,Abteilung,Aufgabenbereich) like '%" +textBox1.Text+ "%'");
             command.Connection = Connection.connMaster;
             MySqlDataReader reader = command.ExecuteReader();
             dtEmployees.Load(reader);
-            return dtEmployees;
-            
+            return dtEmployees;           
         }
-
-
 
         private void MitarbeiterListeTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -94,20 +91,6 @@ namespace GUI
             }
         }
 
-        //private void GetKompetenz()
-        //{
-        //    Connection.DataSource();
-        //    con.connOpen();
-        //    MySqlCommand command = new MySqlCommand();
-        //    command.CommandText = ("select kompetenz.Name from kompetenz, mitarbeiter_hat_kompetenz, mitarbeiter " +
-        //        "where kompetenz.Kompetenz_ID = mitarbeiter_hat_kompetenz.Zugeordnete_Kompetenz " +
-        //        "and mitarbeiter.Mitarbeiter_ID = mitarbeiter_hat_kompetenz.Zugeordnete_Mitarbeiter and mitarbeiter.Mitarbeiter_ID = 1");
-        //    command.Connection = Connection.connMaster;
-        //    MySqlDataReader reader = command.ExecuteReader();
-        //    string a = reader.ToString();
-        //    return a;
-        //}
-
         private void iconButton1_Click(object sender, EventArgs e)
         {
             
@@ -116,12 +99,12 @@ namespace GUI
 
         private void iconButton3_Click(object sender, EventArgs e)
         {
-            MitarbeiterListeTable.DataSource = GetEmployeesList();
+            MitarbeiterListeTable.DataSource = GetEmployeesList("");
         }
 
         private void iconPictureBox1_Click(object sender, EventArgs e)
         {
-            
+            MitarbeiterListeTable.DataSource = GetEmployeesList("");
         }
     }
 }

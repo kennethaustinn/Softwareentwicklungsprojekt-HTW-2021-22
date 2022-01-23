@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `kompetenzdb` /*!40100 DEFAULT CHARACTER SET utf8 */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `kompetenzdb`;
 -- MySQL dump 10.13  Distrib 8.0.28, for Win64 (x86_64)
 --
 -- Host: kompetenzdb.mysql.database.azure.com    Database: kompetenzdb
@@ -29,7 +31,7 @@ CREATE TABLE `kompetenz` (
   `Alternativebezeichnung` varchar(45) DEFAULT NULL,
   `Beschreibung` longtext,
   PRIMARY KEY (`Kompetenz_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +40,7 @@ CREATE TABLE `kompetenz` (
 
 LOCK TABLES `kompetenz` WRITE;
 /*!40000 ALTER TABLE `kompetenz` DISABLE KEYS */;
-INSERT INTO `kompetenz` VALUES (1,'Textverarbeitungte','Schreibprogramm','asasfdfgdsf','die Erstellung und Bearbeitung von schriftlichen Texten mithilfe von organisatorischen und technischen Mitteln'),(2,'Tabellenkalkulation','sdfsad','sdfas','Eingabe und Verarbeitung von numerischen und alphanumerischen Daten in Form einer Tabelle'),(3,'Präsentationsprogramme','Präsentation','dsfasd','Erarbeitung und Präsentation eines Vortrages oder Referates unterstützt.'),(4,'Frontend','User Interface / User Experience','UI / UX','Entwicklung dynamischer Anwendungen sowie die Konzeption moderner und nutzerfreundlicher User-Interfaces'),(5,'Backend','Programmierung','Coding','Tätigkeit, Computerprogramme zu erstellen'),(15,'KompetenzTest','Test','-','Beschreibung');
+INSERT INTO `kompetenz` VALUES (1,'Textverarbeitungte','Schreibprogramm',NULL,'die Erstellung und Bearbeitung von schriftlichen Texten mithilfe von organisatorischen und technischen Mitteln'),(2,'Tabellenkalkulation',NULL,NULL,'Eingabe und Verarbeitung von numerischen und alphanumerischen Daten in Form einer Tabelle'),(3,'Präsentationsprogramme','Präsentation',NULL,'Erarbeitung und Präsentation eines Vortrages oder Referates unterstützt.'),(4,'Frontend','User Interface / User Experience','UI / UX','Entwicklung dynamischer Anwendungen sowie die Konzeption moderner und nutzerfreundlicher User-Interfaces'),(5,'Backend','Programmierung','Coding','Tätigkeit, Computerprogramme zu erstellen');
 /*!40000 ALTER TABLE `kompetenz` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -61,7 +63,7 @@ CREATE TABLE `mitarbeiter` (
   `Rolle` varchar(20) NOT NULL,
   `Deaktiviert` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`Mitarbeiter_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -70,7 +72,7 @@ CREATE TABLE `mitarbeiter` (
 
 LOCK TABLES `mitarbeiter` WRITE;
 /*!40000 ALTER TABLE `mitarbeiter` DISABLE KEYS */;
-INSERT INTO `mitarbeiter` VALUES (1,'maxm',_binary '09B0870690A40A704209509A02D0020980C306F0B70060230F20DF0AC0DA08403602307D0F008D08D0FD05B03703704C',_binary '00407101C0FC00F00208106201207C01E00E0980650CB05A0680D40890180880D50B607B0840CC0F80290050970560CE','Max','Mustermann','Backend','IT','Mitarbeiter',0),(2,'thomasm',_binary '09B0870690A40A704209509A02D0020980C306F0B70060230F20DF0AC0DA08403602307D0F008D08D0FD05B03703704C',_binary '0440FC0B503D0290EA04001C07E0FC01B0520820730AE02E0C903F0850620C402709006F0580BC0AD07E0210F60A90B5','Thomas','Müller','System','IT','Administrator',0),(3,'jakobs',_binary '09B0870690A40A704209509A02D0020980C306F0B70060230F20DF0AC0DA08403602307D0F008D08D0FD05B03703704C',_binary '0140E80440D10180EE0A300B0E60350FC0680EB0AC01904007E03505C0E40FD09C0AF07D0A40D40F40D20140B2034092','Jakob','Schwarz','Content Manager','IT','Mitarbeiter',0),(28,'Unittest',_binary '0330C50EB0BB0010D60080C20540B30B10240130BD0B003E0460C10270970E509107700C0CF0200F50E20810990290B2',_binary '03B0780B70BC01E0EF04309D04D0800A407502605500D0EB07C07C05206903E02E06008A0BB0310DF0F70AD0D60730EC','max','mustermann','code','it','mitarbeiter',0);
+INSERT INTO `mitarbeiter` VALUES (1,'maxm',_binary '09B0870690A40A704209509A02D0020980C306F0B70060230F20DF0AC0DA08403602307D0F008D08D0FD05B03703704C',_binary '00407101C0FC00F00208106201207C01E00E0980650CB05A0680D40890180880D50B607B0840CC0F80290050970560CE','Max','Mustermann','Backend','IT','Mitarbeiter',1),(2,'thomasm',_binary '09B0870690A40A704209509A02D0020980C306F0B70060230F20DF0AC0DA08403602307D0F008D08D0FD05B03703704C',_binary '0440FC0B503D0290EA04001C07E0FC01B0520820730AE02E0C903F0850620C402709006F0580BC0AD07E0210F60A90B5','Thomas','Müller','System','IT','Administrator',0),(3,'jakobs',_binary '09B0870690A40A704209509A02D0020980C306F0B70060230F20DF0AC0DA08403602307D0F008D08D0FD05B03703704C',_binary '0140E80440D10180EE0A300B0E60350FC0680EB0AC01904007E03505C0E40FD09C0AF07D0A40D40F40D20140B2034092','Jakob','Schwarz','Content Manager','IT','Mitarbeiter',0);
 /*!40000 ALTER TABLE `mitarbeiter` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -143,7 +145,7 @@ CREATE TABLE `projekt` (
   `Ende` date DEFAULT NULL,
   `Beschreibung` longtext,
   PRIMARY KEY (`Projekt_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -152,7 +154,7 @@ CREATE TABLE `projekt` (
 
 LOCK TABLES `projekt` WRITE;
 /*!40000 ALTER TABLE `projekt` DISABLE KEYS */;
-INSERT INTO `projekt` VALUES (1,'Flöhmarkt Webapplikation','2020-02-07','2021-04-24','Es handelt sich um eine Webapplikation für Marktplatz für gebrauchte Ware'),(2,'Ballspiel Android','2019-05-30','2019-07-28','Es ist eine Ballspiel wird in Android Handy betrieben'),(3,'Kompetenzdatenbank','2021-10-20','2022-01-20','Datenbankanwendung, die Mitarbeiter, Projekte und Kompetenzen verwaltet in Desktop'),(13,'ProjektTest','2020-01-01','2020-01-23','Beschreibung test');
+INSERT INTO `projekt` VALUES (1,'Flöhmarkt Webapplikation','2020-02-01','2020-12-15','Es handelt sich um eine Webapplikation für Marktplatz für gebrauchte Ware'),(2,'Ballspiel Android','2019-05-30','2019-07-28','Es ist eine Ballspiel wird in Android Handy betrieben'),(3,'Kompetenzdatenbank','2021-10-20',NULL,'Datenbankanwendung, die Mitarbeiter, Projekte und Kompetenzen verwaltet in Desktop');
 /*!40000 ALTER TABLE `projekt` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -219,4 +221,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-23 20:21:18
+-- Dump completed on 2022-01-23 21:07:39
