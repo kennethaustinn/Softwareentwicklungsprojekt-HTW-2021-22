@@ -61,5 +61,47 @@ namespace GUI
             form2.ShowDialog();
             this.Close();
         }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            if (iconButton4.Text == "Konto deaktivieren")
+            {
+                try
+                {
+                    Connection.DataSource();
+                    con.connOpen();
+                    MySqlCommand command = new MySqlCommand();
+                    command.CommandText = ("update mitarbeiter set Deaktiviert = true where name ='" + this.labelName.Text + "'");
+                    command.Connection = Connection.connMaster;
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Account deaktiviert");
+                    con.connClose();
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                try
+                {
+                    Connection.DataSource();
+                    con.connOpen();
+                    MySqlCommand command = new MySqlCommand();
+                    command.CommandText = ("update mitarbeiter set Deaktiviert = false where name ='" + this.labelName.Text + "'");
+                    command.Connection = Connection.connMaster;
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Account aktiviert");
+                    con.connClose();
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
     }
 }

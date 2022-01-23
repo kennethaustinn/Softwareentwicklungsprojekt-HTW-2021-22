@@ -55,15 +55,42 @@ namespace GUI
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0)
             {
-                this.Hide();
-                Profile form1 = new Profile();
-                form1.labelBenutzername.Text = this.MitarbeiterListeTable.CurrentRow.Cells[2].Value.ToString();
-                form1.labelName.Text = this.MitarbeiterListeTable.CurrentRow.Cells[3].Value.ToString();
-                form1.labelVorname.Text = this.MitarbeiterListeTable.CurrentRow.Cells[4].Value.ToString();
-                form1.labelAbteilung.Text = this.MitarbeiterListeTable.CurrentRow.Cells[5].Value.ToString();
-                form1.labelAufgabenbereich.Text = this.MitarbeiterListeTable.CurrentRow.Cells[6].Value.ToString();
-                form1.iconButton3.Hide();
-                form1.ShowDialog();
+                Connection.DataSource();
+                con.connOpen();
+                MySqlCommand command = new MySqlCommand();
+                command.CommandText = ("select * from mitarbeiter where Benutzername = '"+this.MitarbeiterListeTable.CurrentRow.Cells[2].Value.ToString()+"'");
+                command.Connection = Connection.connMaster;
+                MySqlDataReader reader = command.ExecuteReader();
+                if(reader.Read())
+                {
+                    if (reader[9].ToString() == "True")
+                    {
+                        Profile form1 = new Profile();
+                        form1.labelBenutzername.Text = this.MitarbeiterListeTable.CurrentRow.Cells[2].Value.ToString();
+                        form1.labelName.Text = this.MitarbeiterListeTable.CurrentRow.Cells[3].Value.ToString();
+                        form1.labelVorname.Text = this.MitarbeiterListeTable.CurrentRow.Cells[4].Value.ToString();
+                        form1.labelAbteilung.Text = this.MitarbeiterListeTable.CurrentRow.Cells[5].Value.ToString();
+                        form1.labelAufgabenbereich.Text = this.MitarbeiterListeTable.CurrentRow.Cells[6].Value.ToString();
+                        form1.iconButton3.Hide();                      
+                        form1.iconButton4.Text = "Konto aktivieren";
+                        form1.iconButton4.BackColor = Color.SpringGreen;
+                        form1.iconButton4.IconChar = FontAwesome.Sharp.IconChar.User;
+                        form1.ShowDialog();
+                    }
+                    else 
+                    {
+                        Profile form1 = new Profile();
+                        form1.labelBenutzername.Text = this.MitarbeiterListeTable.CurrentRow.Cells[2].Value.ToString();
+                        form1.labelName.Text = this.MitarbeiterListeTable.CurrentRow.Cells[3].Value.ToString();
+                        form1.labelVorname.Text = this.MitarbeiterListeTable.CurrentRow.Cells[4].Value.ToString();
+                        form1.labelAbteilung.Text = this.MitarbeiterListeTable.CurrentRow.Cells[5].Value.ToString();
+                        form1.labelAufgabenbereich.Text = this.MitarbeiterListeTable.CurrentRow.Cells[6].Value.ToString();
+                        form1.iconButton3.Hide();
+                        form1.iconButton4.Text = "Konto deaktivieren";
+                        form1.ShowDialog();
+                    }
+                }
+                
             }
         }
 
