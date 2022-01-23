@@ -56,7 +56,13 @@ für den Befehl(Get,Post,Put,Delete) im **Postman** bitte JSON (body-> raw-> JSO
 ## Abgabe Sprint 3 (23.01.2021)
 * Datenbank :  
 
-* Fachkonzept : Die Anmeldung erfolgt jetzt über den Restserver. Wenn der Restserver also nicht online ist, kann sich der Benutzer nicht anmelden
+* Fachkonzept : Die Anmeldung erfolgt jetzt über den Restserver. Wenn der Restserver also nicht online ist, kann sich der Benutzer nicht anmelden. Admin kann das Passwort und Biographie von Mitarbeiteren änderen .
+Admin kann die Mitarbeiter aktivieren und deaktiviren (wird durch Atributt innerhalb SQL gmeacht und durch ein Funktion in C# ) .
+wird alle wichtigeste Zeile kommentiert und wird wichtigeste Tabellen mit der Verbindung mit C# Programm überpruft (durch Nunit und Doxyegen).
+wird Die Verbindung und die Kommunikation zwischen Sql-server und Visual-Studio für letzte mal geprüft . 
+Wird immer durch die Rolle innerhalb Mitarbeiter-Tabelle erkannt , ob der Benutzer ein Admin oder Mitarbeiter ist .
+Alle Methoden und Klassen mit den Kommentare werden innerhalb Dokummente gespeichert.
+
 
 * GUI : Für Anmeldung kann man sich mit den Daten aus der Datenbank anmelden. 
 Der login wird für admin und mitarbeiter unterschiedlich sein, und die hauptseite wird unterschiedliche funktionsbuttons zwischen mitarbeiter und admin haben.
