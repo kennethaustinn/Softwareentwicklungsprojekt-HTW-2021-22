@@ -15,6 +15,7 @@ namespace GUI
             InitializeComponent();
         }
 
+        //Wenn die  „Bearbeiten“ Button gedrückt wird, wird die Seite zum Bearbeiten des Kompetenzs geöffnet und die Textbox auf der Seite „Kompetenz bearbeiten“ sind bereits mit den Daten jedes Kompetenzs beschrieben
         private void iconButton3_Click(object sender, EventArgs e)
         {
             kompetenzBearbeiten form1 = new kompetenzBearbeiten();

@@ -17,7 +17,9 @@ namespace GUI
             InitializeComponent();
         }
 
-        private void speichernButton_Click(object sender, EventArgs e)
+        
+        //Wenn die  „Speichern“ button gedrückt wird, werden die Projekt Datei im Datenbank mit den Daten von dieser Seite geschrieben
+         private void speichernButton_Click(object sender, EventArgs e)
         {
             try
             {

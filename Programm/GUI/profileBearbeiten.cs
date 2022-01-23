@@ -17,6 +17,7 @@ namespace GUI
             InitializeComponent();
         }
 
+        //Wenn die  „Speichern“ button gedrückt wird, werden die Mitarbeiter Datei im Datenbank mit den Daten von dieser Seite geschrieben
         private void speichernButton_Click(object sender, EventArgs e)
         {
             try

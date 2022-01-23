@@ -17,6 +17,7 @@ namespace GUI
             InitializeComponent();
         }
 
+        //Diese Methode besteht darin, das Mitarbeiterpasswort in der Datenbank basierend auf ihrem Namen in der Datenbank zu ändern
         private void speichernButton_Click(object sender, EventArgs e)
         {
             try

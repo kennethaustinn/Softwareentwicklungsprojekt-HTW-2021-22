@@ -181,6 +181,7 @@ namespace GUI
             DateTimer.Start();
         }
 
+        //Mit diesem Button wird das Profil des aktuell eingeloggten Benutzernamens mit den Daten aus der Datenbank des Benutzernamens angezeigt
         private void ProfileButton_Click(object sender, EventArgs e)
         {
             

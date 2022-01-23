@@ -22,6 +22,7 @@ namespace GUI
             ProjektListeTable.DataSource = GetProjektList();
         }
 
+
         private DataTable GetProjektList()
         {
             DataTable projektliste = new DataTable();
@@ -35,7 +36,6 @@ namespace GUI
             return projektliste;
 
         }
-
 
         private void ProjektListeTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace GUI
 {
@@ -16,6 +15,7 @@ namespace GUI
             InitializeComponent();
         }
 
+        //Beim Laden der Seite von Projektdetail wird die Dauer des Projekts mit der Methode Timespan berechnet und in LabelLaufzeit geschrieben
         private void ProjektDetail_Load(object sender, EventArgs e)
         {
             DateTime start = DateTime.Parse(labelStartDatum.Text);
@@ -24,6 +24,7 @@ namespace GUI
             labelLaufzeit.Text = duration.ToString("dd") + " Tag";
         }
 
+        //Wenn die  „Bearbeiten“ Button gedrückt wird, wird die Seite zum Bearbeiten des Projekts geöffnet und die Textbox auf der Seite „Projekt bearbeiten“ sind bereits mit den Daten jedes Projekts beschrieben
         private void iconButton3_Click(object sender, EventArgs e)
         {
             projektBearbeiten form1 = new projektBearbeiten();

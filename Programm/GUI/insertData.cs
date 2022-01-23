@@ -57,6 +57,15 @@ namespace GUI {
                 con.connClose();
             }
         }
+
+        /// <summary>
+        /// Einfügen neue Kompetenz wird durch dieser Methode gemacht. Jeder Eingabe wird in MySQL gelagert durch die Connection mit MySQL 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="bezeichnung"></param>
+        /// <param name="alternativebezeichnung"></param>
+        /// <param name="beschreibung"></param>
+        /// <returns></returns>
         public string InsertKompetenz(string name, string bezeichnung, string alternativebezeichnung, string beschreibung)
         {
             try
@@ -90,6 +99,14 @@ namespace GUI {
             }
         }
 
+        /// <summary>
+        /// Einfügen neue Projekt wird durch dieser Methode gemacht. Jeder Eingabe wird in MySQL gelagert durch die Connection mit MySQL 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="start"></param>
+        /// <param name="ende"></param>
+        /// <param name="beschreibung"></param>
+        /// <returns></returns>
         public string InsertProjekt(string name, string start, string ende, string beschreibung)
         {
             try
