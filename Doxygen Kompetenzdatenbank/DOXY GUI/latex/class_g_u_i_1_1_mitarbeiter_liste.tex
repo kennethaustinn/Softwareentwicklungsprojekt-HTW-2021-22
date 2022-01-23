@@ -6,6 +6,12 @@ Inheritance diagram for GUI.\+Mitarbeiter\+Liste\+:\begin{figure}[H]
 \includegraphics[height=2.000000cm]{class_g_u_i_1_1_mitarbeiter_liste}
 \end{center}
 \end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_u_i_1_1_mitarbeiter_liste_ad594838f0e32cfad17a3f90c354ab52d}\label{class_g_u_i_1_1_mitarbeiter_liste_ad594838f0e32cfad17a3f90c354ab52d}} 
+{\bfseries Mitarbeiter\+Liste} ()
+\begin{DoxyCompactList}\small\item\em Für das Form Mitarbeiter Liste wird erst alle die Sachen von dem Designer initialisiert \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -17,7 +23,7 @@ System.\+Windows.\+Forms.\+Data\+Grid\+View {\bfseries Mitarbeiter\+Liste\+Table
 \item 
 \mbox{\Hypertarget{class_g_u_i_1_1_mitarbeiter_liste_ae39c38236be5dd6d69a64bd9aa17b4a0}\label{class_g_u_i_1_1_mitarbeiter_liste_ae39c38236be5dd6d69a64bd9aa17b4a0}} 
 static \mbox{\hyperlink{class_g_u_i_1_1_mitarbeiter_liste}{Mitarbeiter\+Liste}} {\bfseries mitarbeiter\+Liste} = new \mbox{\hyperlink{class_g_u_i_1_1_mitarbeiter_liste}{Mitarbeiter\+Liste}}()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Form der Mitarbeiter Liste \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -26,24 +32,18 @@ override void \mbox{\hyperlink{class_g_u_i_1_1_mitarbeiter_liste_a0e4a77812db200
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_g_u_i_1_1_mitarbeiter_liste_a6d9a780f735cb658f371a1b61d47085d}\label{class_g_u_i_1_1_mitarbeiter_liste_a6d9a780f735cb658f371a1b61d47085d}} 
-void {\bfseries Mitarbeiter\+Liste\+\_\+\+Shown} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_g_u_i_1_1_mitarbeiter_liste_a927bf356ead7230129e5bf44bd29b3b8}\label{class_g_u_i_1_1_mitarbeiter_liste_a927bf356ead7230129e5bf44bd29b3b8}} 
-Data\+Table {\bfseries Get\+Employees\+List} ()
-\item 
-\mbox{\Hypertarget{class_g_u_i_1_1_mitarbeiter_liste_ad920a12357daf4d17c1d1318102b26ae}\label{class_g_u_i_1_1_mitarbeiter_liste_ad920a12357daf4d17c1d1318102b26ae}} 
-void {\bfseries Mitarbeiter\+Liste\+Table\+\_\+\+Cell\+Content\+Click} (object sender, Data\+Grid\+View\+Cell\+Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_g_u_i_1_1_mitarbeiter_liste_a77dcfe91a7ec2018c4b2b81cce978fe0}\label{class_g_u_i_1_1_mitarbeiter_liste_a77dcfe91a7ec2018c4b2b81cce978fe0}} 
-void {\bfseries icon\+Button1\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_g_u_i_1_1_mitarbeiter_liste_af2519e39eae55f797c09aa11b64e3eda}\label{class_g_u_i_1_1_mitarbeiter_liste_af2519e39eae55f797c09aa11b64e3eda}} 
-void {\bfseries icon\+Button3\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_g_u_i_1_1_mitarbeiter_liste_a02a64b0860352e93c5db0ae823538c90}\label{class_g_u_i_1_1_mitarbeiter_liste_a02a64b0860352e93c5db0ae823538c90}} 
-void {\bfseries icon\+Picture\+Box1\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
+void \mbox{\hyperlink{class_g_u_i_1_1_mitarbeiter_liste_a6d9a780f735cb658f371a1b61d47085d}{Mitarbeiter\+Liste\+\_\+\+Shown}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Wenn das Formular angezeigt wird, ruft die Funktion die Get\+Employees\+List als Datasource für die Datagridview auf \end{DoxyCompactList}\item 
+Data\+Table \mbox{\hyperlink{class_g_u_i_1_1_mitarbeiter_liste_a7dd3bec61ec1d1dde78a05c3cf58be9e}{Get\+Employees\+List}} (string value\+To\+Search)
+\begin{DoxyCompactList}\small\item\em Diese Funktion ruft die Mitarbeiter Daten aus der Datenbank ab und fügt sie als Data\+Table in die Datagridview ein \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_u_i_1_1_mitarbeiter_liste_ad920a12357daf4d17c1d1318102b26ae}{Mitarbeiter\+Liste\+Table\+\_\+\+Cell\+Content\+Click}} (object sender, Data\+Grid\+View\+Cell\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Ein Click handler wenn das Anzeigen gedrückt wird, werden die ausgewählten Mitarbeiter in der nächsten Form angezeigt und wird die Daten vom Datenbank aufgerufen \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_u_i_1_1_mitarbeiter_liste_a77dcfe91a7ec2018c4b2b81cce978fe0}{icon\+Button1\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Wenn der Administrator auf diese Button klickt, das Formular von Neumitarbeiter wird angezeigt \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_u_i_1_1_mitarbeiter_liste_af2519e39eae55f797c09aa11b64e3eda}{icon\+Button3\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Lade die Seite neu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_u_i_1_1_mitarbeiter_liste_a02a64b0860352e93c5db0ae823538c90}{icon\+Picture\+Box1\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Filtern die Datagridview mit der Eingabe aus dem Texbox \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_g_u_i_1_1_mitarbeiter_liste_a3bf2dc055cc4b31ad13f8b49fadb8319}\label{class_g_u_i_1_1_mitarbeiter_liste_a3bf2dc055cc4b31ad13f8b49fadb8319}} 
 void {\bfseries Initialize\+Component} ()
 \begin{DoxyCompactList}\small\item\em Required method for Designer support -\/ do not modify the contents of this method with the code editor. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -52,7 +52,7 @@ void {\bfseries Initialize\+Component} ()
 \item 
 \mbox{\Hypertarget{class_g_u_i_1_1_mitarbeiter_liste_ac20bab3ff8c7efb5ff95755e2147738f}\label{class_g_u_i_1_1_mitarbeiter_liste_ac20bab3ff8c7efb5ff95755e2147738f}} 
 \mbox{\hyperlink{class_g_u_i_1_1_connection}{Connection}} {\bfseries con} = new \mbox{\hyperlink{class_g_u_i_1_1_connection}{Connection}}()
-\item 
+\begin{DoxyCompactList}\small\item\em Sucht die \mbox{\hyperlink{class_g_u_i_1_1_connection}{Connection}} bzw. ruft die Klasse ab. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_g_u_i_1_1_mitarbeiter_liste_acceecd2a9d8a464c9470c2bc8a2d5df8}\label{class_g_u_i_1_1_mitarbeiter_liste_acceecd2a9d8a464c9470c2bc8a2d5df8}} 
 System.\+Component\+Model.\+IContainer {\bfseries components} = null
 \begin{DoxyCompactList}\small\item\em Required designer variable. \end{DoxyCompactList}\item 
@@ -93,6 +93,109 @@ Clean up any resources being used.
 
 \begin{DoxyParams}{Parameters}
 {\em disposing} & true if managed resources should be disposed; otherwise, false.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_1_1_mitarbeiter_liste_a7dd3bec61ec1d1dde78a05c3cf58be9e}\label{class_g_u_i_1_1_mitarbeiter_liste_a7dd3bec61ec1d1dde78a05c3cf58be9e}} 
+\index{GUI.MitarbeiterListe@{GUI.MitarbeiterListe}!GetEmployeesList@{GetEmployeesList}}
+\index{GetEmployeesList@{GetEmployeesList}!GUI.MitarbeiterListe@{GUI.MitarbeiterListe}}
+\doxysubsubsection{\texorpdfstring{GetEmployeesList()}{GetEmployeesList()}}
+{\footnotesize\ttfamily Data\+Table GUI.\+Mitarbeiter\+Liste.\+Get\+Employees\+List (\begin{DoxyParamCaption}\item[{string}]{value\+To\+Search }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Diese Funktion ruft die Mitarbeiter Daten aus der Datenbank ab und fügt sie als Data\+Table in die Datagridview ein 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value\+To\+Search} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_u_i_1_1_mitarbeiter_liste_a77dcfe91a7ec2018c4b2b81cce978fe0}\label{class_g_u_i_1_1_mitarbeiter_liste_a77dcfe91a7ec2018c4b2b81cce978fe0}} 
+\index{GUI.MitarbeiterListe@{GUI.MitarbeiterListe}!iconButton1\_Click@{iconButton1\_Click}}
+\index{iconButton1\_Click@{iconButton1\_Click}!GUI.MitarbeiterListe@{GUI.MitarbeiterListe}}
+\doxysubsubsection{\texorpdfstring{iconButton1\_Click()}{iconButton1\_Click()}}
+{\footnotesize\ttfamily void GUI.\+Mitarbeiter\+Liste.\+icon\+Button1\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wenn der Administrator auf diese Button klickt, das Formular von Neumitarbeiter wird angezeigt 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_1_1_mitarbeiter_liste_af2519e39eae55f797c09aa11b64e3eda}\label{class_g_u_i_1_1_mitarbeiter_liste_af2519e39eae55f797c09aa11b64e3eda}} 
+\index{GUI.MitarbeiterListe@{GUI.MitarbeiterListe}!iconButton3\_Click@{iconButton3\_Click}}
+\index{iconButton3\_Click@{iconButton3\_Click}!GUI.MitarbeiterListe@{GUI.MitarbeiterListe}}
+\doxysubsubsection{\texorpdfstring{iconButton3\_Click()}{iconButton3\_Click()}}
+{\footnotesize\ttfamily void GUI.\+Mitarbeiter\+Liste.\+icon\+Button3\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lade die Seite neu 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_1_1_mitarbeiter_liste_a02a64b0860352e93c5db0ae823538c90}\label{class_g_u_i_1_1_mitarbeiter_liste_a02a64b0860352e93c5db0ae823538c90}} 
+\index{GUI.MitarbeiterListe@{GUI.MitarbeiterListe}!iconPictureBox1\_Click@{iconPictureBox1\_Click}}
+\index{iconPictureBox1\_Click@{iconPictureBox1\_Click}!GUI.MitarbeiterListe@{GUI.MitarbeiterListe}}
+\doxysubsubsection{\texorpdfstring{iconPictureBox1\_Click()}{iconPictureBox1\_Click()}}
+{\footnotesize\ttfamily void GUI.\+Mitarbeiter\+Liste.\+icon\+Picture\+Box1\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Filtern die Datagridview mit der Eingabe aus dem Texbox 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_1_1_mitarbeiter_liste_a6d9a780f735cb658f371a1b61d47085d}\label{class_g_u_i_1_1_mitarbeiter_liste_a6d9a780f735cb658f371a1b61d47085d}} 
+\index{GUI.MitarbeiterListe@{GUI.MitarbeiterListe}!MitarbeiterListe\_Shown@{MitarbeiterListe\_Shown}}
+\index{MitarbeiterListe\_Shown@{MitarbeiterListe\_Shown}!GUI.MitarbeiterListe@{GUI.MitarbeiterListe}}
+\doxysubsubsection{\texorpdfstring{MitarbeiterListe\_Shown()}{MitarbeiterListe\_Shown()}}
+{\footnotesize\ttfamily void GUI.\+Mitarbeiter\+Liste.\+Mitarbeiter\+Liste\+\_\+\+Shown (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wenn das Formular angezeigt wird, ruft die Funktion die Get\+Employees\+List als Datasource für die Datagridview auf 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_1_1_mitarbeiter_liste_ad920a12357daf4d17c1d1318102b26ae}\label{class_g_u_i_1_1_mitarbeiter_liste_ad920a12357daf4d17c1d1318102b26ae}} 
+\index{GUI.MitarbeiterListe@{GUI.MitarbeiterListe}!MitarbeiterListeTable\_CellContentClick@{MitarbeiterListeTable\_CellContentClick}}
+\index{MitarbeiterListeTable\_CellContentClick@{MitarbeiterListeTable\_CellContentClick}!GUI.MitarbeiterListe@{GUI.MitarbeiterListe}}
+\doxysubsubsection{\texorpdfstring{MitarbeiterListeTable\_CellContentClick()}{MitarbeiterListeTable\_CellContentClick()}}
+{\footnotesize\ttfamily void GUI.\+Mitarbeiter\+Liste.\+Mitarbeiter\+Liste\+Table\+\_\+\+Cell\+Content\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Data\+Grid\+View\+Cell\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ein Click handler wenn das Anzeigen gedrückt wird, werden die ausgewählten Mitarbeiter in der nächsten Form angezeigt und wird die Daten vom Datenbank aufgerufen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
 \hline
 \end{DoxyParams}
 

@@ -6,6 +6,12 @@ Inheritance diagram for GUI.\+Projekt\+Liste\+:\begin{figure}[H]
 \includegraphics[height=2.000000cm]{class_g_u_i_1_1_projekt_liste}
 \end{center}
 \end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_u_i_1_1_projekt_liste_a22af05c4740cebe704086679cfdd178f}\label{class_g_u_i_1_1_projekt_liste_a22af05c4740cebe704086679cfdd178f}} 
+{\bfseries Projekt\+Liste} ()
+\begin{DoxyCompactList}\small\item\em Form der \mbox{\hyperlink{class_g_u_i_1_1_projekt}{Projekt}} Liste \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -14,21 +20,18 @@ override void \mbox{\hyperlink{class_g_u_i_1_1_projekt_liste_aa2aec69930cbaf0adf
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_g_u_i_1_1_projekt_liste_af67605244b907c3baaaa04e2c560519b}\label{class_g_u_i_1_1_projekt_liste_af67605244b907c3baaaa04e2c560519b}} 
-void {\bfseries Projekt\+Liste\+\_\+\+Shown} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_g_u_i_1_1_projekt_liste_a0de3a9b9da3ce4f3093e154e24b5e239}\label{class_g_u_i_1_1_projekt_liste_a0de3a9b9da3ce4f3093e154e24b5e239}} 
-Data\+Table {\bfseries Get\+Projekt\+List} ()
-\item 
-\mbox{\Hypertarget{class_g_u_i_1_1_projekt_liste_a66e2f04062604b5d2ea75675363fe98c}\label{class_g_u_i_1_1_projekt_liste_a66e2f04062604b5d2ea75675363fe98c}} 
-void {\bfseries Projekt\+Liste\+Table\+\_\+\+Cell\+Content\+Click} (object sender, Data\+Grid\+View\+Cell\+Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_g_u_i_1_1_projekt_liste_a6238ff0b7b18683c39d08c2d03167d36}\label{class_g_u_i_1_1_projekt_liste_a6238ff0b7b18683c39d08c2d03167d36}} 
-void {\bfseries icon\+Button1\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_g_u_i_1_1_projekt_liste_a9bb424b6d61ea10006f10eb36d077919}\label{class_g_u_i_1_1_projekt_liste_a9bb424b6d61ea10006f10eb36d077919}} 
-void {\bfseries icon\+Button3\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
+void \mbox{\hyperlink{class_g_u_i_1_1_projekt_liste_af67605244b907c3baaaa04e2c560519b}{Projekt\+Liste\+\_\+\+Shown}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Wenn das Formular angezeigt wird, ruft die Funktion die Get\+Projekt\+List als Datasource für die Datagridview auf \end{DoxyCompactList}\item 
+Data\+Table \mbox{\hyperlink{class_g_u_i_1_1_projekt_liste_a475ad6078ac80b75e8bda495dab404db}{Get\+Projekt\+List}} (string value\+To\+Search)
+\begin{DoxyCompactList}\small\item\em Diese Funktion ruft die \mbox{\hyperlink{class_g_u_i_1_1_projekt}{Projekt}} Daten aus der Datenbank ab und fügt sie als Data\+Table in die Datagridview ein \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_u_i_1_1_projekt_liste_a66e2f04062604b5d2ea75675363fe98c}{Projekt\+Liste\+Table\+\_\+\+Cell\+Content\+Click}} (object sender, Data\+Grid\+View\+Cell\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Ein Click handler wenn das Anzeigen gedrückt wird, werden die ausgewählten \mbox{\hyperlink{class_g_u_i_1_1_projekt}{Projekt}} in der nächsten Form angezeigt und wird die Daten vom Datenbank aufgerufen \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_u_i_1_1_projekt_liste_a6238ff0b7b18683c39d08c2d03167d36}{icon\+Button1\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Wenn der Administrator auf diese Button klickt, kann er der Datenbank eine neue \mbox{\hyperlink{class_g_u_i_1_1_projekt}{Projekt}} hinzufügen \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_u_i_1_1_projekt_liste_a9bb424b6d61ea10006f10eb36d077919}{icon\+Button3\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Lade die Seite neu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_u_i_1_1_projekt_liste_aef41ab982386bd3c0004d5633a587e2a}{icon\+Picture\+Box1\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Filtern die Datagridview mit der Eingabe aus dem Texbox \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_g_u_i_1_1_projekt_liste_a3fd2996c3e29edd64932a6cb46025841}\label{class_g_u_i_1_1_projekt_liste_a3fd2996c3e29edd64932a6cb46025841}} 
 void {\bfseries Initialize\+Component} ()
 \begin{DoxyCompactList}\small\item\em Required method for Designer support -\/ do not modify the contents of this method with the code editor. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -37,7 +40,7 @@ void {\bfseries Initialize\+Component} ()
 \item 
 \mbox{\Hypertarget{class_g_u_i_1_1_projekt_liste_af3e6ee5ca69db12bb01dc8fc2bef3fec}\label{class_g_u_i_1_1_projekt_liste_af3e6ee5ca69db12bb01dc8fc2bef3fec}} 
 \mbox{\hyperlink{class_g_u_i_1_1_connection}{Connection}} {\bfseries con} = new \mbox{\hyperlink{class_g_u_i_1_1_connection}{Connection}}()
-\item 
+\begin{DoxyCompactList}\small\item\em Sucht die \mbox{\hyperlink{class_g_u_i_1_1_connection}{Connection}} bzw. ruft die Klasse ab. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_g_u_i_1_1_projekt_liste_ab6f6bc9e4ce9f0f748732e24ad640e14}\label{class_g_u_i_1_1_projekt_liste_ab6f6bc9e4ce9f0f748732e24ad640e14}} 
 System.\+Component\+Model.\+IContainer {\bfseries components} = null
 \begin{DoxyCompactList}\small\item\em Required designer variable. \end{DoxyCompactList}\item 
@@ -81,6 +84,109 @@ Clean up any resources being used.
 
 \begin{DoxyParams}{Parameters}
 {\em disposing} & true if managed resources should be disposed; otherwise, false.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_1_1_projekt_liste_a475ad6078ac80b75e8bda495dab404db}\label{class_g_u_i_1_1_projekt_liste_a475ad6078ac80b75e8bda495dab404db}} 
+\index{GUI.ProjektListe@{GUI.ProjektListe}!GetProjektList@{GetProjektList}}
+\index{GetProjektList@{GetProjektList}!GUI.ProjektListe@{GUI.ProjektListe}}
+\doxysubsubsection{\texorpdfstring{GetProjektList()}{GetProjektList()}}
+{\footnotesize\ttfamily Data\+Table GUI.\+Projekt\+Liste.\+Get\+Projekt\+List (\begin{DoxyParamCaption}\item[{string}]{value\+To\+Search }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Diese Funktion ruft die \mbox{\hyperlink{class_g_u_i_1_1_projekt}{Projekt}} Daten aus der Datenbank ab und fügt sie als Data\+Table in die Datagridview ein 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value\+To\+Search} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_u_i_1_1_projekt_liste_a6238ff0b7b18683c39d08c2d03167d36}\label{class_g_u_i_1_1_projekt_liste_a6238ff0b7b18683c39d08c2d03167d36}} 
+\index{GUI.ProjektListe@{GUI.ProjektListe}!iconButton1\_Click@{iconButton1\_Click}}
+\index{iconButton1\_Click@{iconButton1\_Click}!GUI.ProjektListe@{GUI.ProjektListe}}
+\doxysubsubsection{\texorpdfstring{iconButton1\_Click()}{iconButton1\_Click()}}
+{\footnotesize\ttfamily void GUI.\+Projekt\+Liste.\+icon\+Button1\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wenn der Administrator auf diese Button klickt, kann er der Datenbank eine neue \mbox{\hyperlink{class_g_u_i_1_1_projekt}{Projekt}} hinzufügen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_1_1_projekt_liste_a9bb424b6d61ea10006f10eb36d077919}\label{class_g_u_i_1_1_projekt_liste_a9bb424b6d61ea10006f10eb36d077919}} 
+\index{GUI.ProjektListe@{GUI.ProjektListe}!iconButton3\_Click@{iconButton3\_Click}}
+\index{iconButton3\_Click@{iconButton3\_Click}!GUI.ProjektListe@{GUI.ProjektListe}}
+\doxysubsubsection{\texorpdfstring{iconButton3\_Click()}{iconButton3\_Click()}}
+{\footnotesize\ttfamily void GUI.\+Projekt\+Liste.\+icon\+Button3\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lade die Seite neu 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_1_1_projekt_liste_aef41ab982386bd3c0004d5633a587e2a}\label{class_g_u_i_1_1_projekt_liste_aef41ab982386bd3c0004d5633a587e2a}} 
+\index{GUI.ProjektListe@{GUI.ProjektListe}!iconPictureBox1\_Click@{iconPictureBox1\_Click}}
+\index{iconPictureBox1\_Click@{iconPictureBox1\_Click}!GUI.ProjektListe@{GUI.ProjektListe}}
+\doxysubsubsection{\texorpdfstring{iconPictureBox1\_Click()}{iconPictureBox1\_Click()}}
+{\footnotesize\ttfamily void GUI.\+Projekt\+Liste.\+icon\+Picture\+Box1\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Filtern die Datagridview mit der Eingabe aus dem Texbox 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_1_1_projekt_liste_af67605244b907c3baaaa04e2c560519b}\label{class_g_u_i_1_1_projekt_liste_af67605244b907c3baaaa04e2c560519b}} 
+\index{GUI.ProjektListe@{GUI.ProjektListe}!ProjektListe\_Shown@{ProjektListe\_Shown}}
+\index{ProjektListe\_Shown@{ProjektListe\_Shown}!GUI.ProjektListe@{GUI.ProjektListe}}
+\doxysubsubsection{\texorpdfstring{ProjektListe\_Shown()}{ProjektListe\_Shown()}}
+{\footnotesize\ttfamily void GUI.\+Projekt\+Liste.\+Projekt\+Liste\+\_\+\+Shown (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wenn das Formular angezeigt wird, ruft die Funktion die Get\+Projekt\+List als Datasource für die Datagridview auf 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_1_1_projekt_liste_a66e2f04062604b5d2ea75675363fe98c}\label{class_g_u_i_1_1_projekt_liste_a66e2f04062604b5d2ea75675363fe98c}} 
+\index{GUI.ProjektListe@{GUI.ProjektListe}!ProjektListeTable\_CellContentClick@{ProjektListeTable\_CellContentClick}}
+\index{ProjektListeTable\_CellContentClick@{ProjektListeTable\_CellContentClick}!GUI.ProjektListe@{GUI.ProjektListe}}
+\doxysubsubsection{\texorpdfstring{ProjektListeTable\_CellContentClick()}{ProjektListeTable\_CellContentClick()}}
+{\footnotesize\ttfamily void GUI.\+Projekt\+Liste.\+Projekt\+Liste\+Table\+\_\+\+Cell\+Content\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Data\+Grid\+View\+Cell\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ein Click handler wenn das Anzeigen gedrückt wird, werden die ausgewählten \mbox{\hyperlink{class_g_u_i_1_1_projekt}{Projekt}} in der nächsten Form angezeigt und wird die Daten vom Datenbank aufgerufen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
 \hline
 \end{DoxyParams}
 

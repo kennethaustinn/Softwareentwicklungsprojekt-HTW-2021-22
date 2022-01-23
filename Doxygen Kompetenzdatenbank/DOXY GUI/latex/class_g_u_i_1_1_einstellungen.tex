@@ -6,6 +6,12 @@ Inheritance diagram for GUI.\+Einstellungen\+:\begin{figure}[H]
 \includegraphics[height=2.000000cm]{class_g_u_i_1_1_einstellungen}
 \end{center}
 \end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_u_i_1_1_einstellungen_a01f22fa0bf05225155e586365038f91c}\label{class_g_u_i_1_1_einstellungen_a01f22fa0bf05225155e586365038f91c}} 
+{\bfseries Einstellungen} ()
+\begin{DoxyCompactList}\small\item\em Für das Form \mbox{\hyperlink{class_g_u_i_1_1_einstellungen}{Einstellungen}} wird erst alle die Sachen von dem Designer initialisiert \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -15,9 +21,9 @@ override void \mbox{\hyperlink{class_g_u_i_1_1_einstellungen_a18dc67841d93abc204
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_g_u_i_1_1_einstellungen_a0f35c80313de75ad430718a101cb5710}{button\+Change\+Benutzername\+\_\+\+Click}} (object sender, Event\+Args e)
-\begin{DoxyCompactList}\small\item\em wenn das Button gedrückt wurde, wird die Benutzername aktualisiert und in der Datenbank gelagert \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Ein Clickevent damit wird die geänderte Benutzername aktualisiert und in der Datenbank gespeichert mit einer Verbindung von My\+SQL \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_g_u_i_1_1_einstellungen_a4439ed882116270322e6210abde4e619}{button\+Change\+Passwort\+\_\+\+Click}} (object sender, Event\+Args e)
-\begin{DoxyCompactList}\small\item\em Mit diesem Event wird das alte Password vergleicht ob die Eingabe schon genau wie die in der Datenbank und auch das zwei neue Passwort wurde verglichen. Wenn alles klappt dann wird das Passwort aktualisiert und in der Datenbank gespeichert \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Mit diesem Event wird das alte Password vergleicht ob die Eingabe schon genau wie die in der Datenbank und auch das zwei neue Passwort wurde verglichen. Wenn alles klappt dann wird das Passwort aktualisiert und in der Datenbank gespeichert mit einer Verbindung von My\+SQL \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_g_u_i_1_1_einstellungen_a11b808596a3230e6a3e397326db1a619}\label{class_g_u_i_1_1_einstellungen_a11b808596a3230e6a3e397326db1a619}} 
 void {\bfseries Initialize\+Component} ()
 \begin{DoxyCompactList}\small\item\em Required method for Designer support -\/ do not modify the contents of this method with the code editor. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -26,7 +32,7 @@ void {\bfseries Initialize\+Component} ()
 \item 
 \mbox{\Hypertarget{class_g_u_i_1_1_einstellungen_a735a98f6001d502e6b4896741ff06dcb}\label{class_g_u_i_1_1_einstellungen_a735a98f6001d502e6b4896741ff06dcb}} 
 \mbox{\hyperlink{class_g_u_i_1_1_connection}{Connection}} {\bfseries con} = new \mbox{\hyperlink{class_g_u_i_1_1_connection}{Connection}}()
-\item 
+\begin{DoxyCompactList}\small\item\em Sucht die \mbox{\hyperlink{class_g_u_i_1_1_connection}{Connection}} bzw. ruft die Klasse ab. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_g_u_i_1_1_einstellungen_a6e6230e96cf9d1ab89ff455d76f0338e}\label{class_g_u_i_1_1_einstellungen_a6e6230e96cf9d1ab89ff455d76f0338e}} 
 System.\+Component\+Model.\+IContainer {\bfseries components} = null
 \begin{DoxyCompactList}\small\item\em Required designer variable. \end{DoxyCompactList}\item 
@@ -80,7 +86,7 @@ System.\+Windows.\+Forms.\+Label {\bfseries label6}
 
 
 
-wenn das Button gedrückt wurde, wird die Benutzername aktualisiert und in der Datenbank gelagert 
+Ein Clickevent damit wird die geänderte Benutzername aktualisiert und in der Datenbank gespeichert mit einer Verbindung von My\+SQL 
 
 
 \begin{DoxyParams}{Parameters}
@@ -97,7 +103,7 @@ wenn das Button gedrückt wurde, wird die Benutzername aktualisiert und in der D
 
 
 
-Mit diesem Event wird das alte Password vergleicht ob die Eingabe schon genau wie die in der Datenbank und auch das zwei neue Passwort wurde verglichen. Wenn alles klappt dann wird das Passwort aktualisiert und in der Datenbank gespeichert 
+Mit diesem Event wird das alte Password vergleicht ob die Eingabe schon genau wie die in der Datenbank und auch das zwei neue Passwort wurde verglichen. Wenn alles klappt dann wird das Passwort aktualisiert und in der Datenbank gespeichert mit einer Verbindung von My\+SQL 
 
 
 \begin{DoxyParams}{Parameters}

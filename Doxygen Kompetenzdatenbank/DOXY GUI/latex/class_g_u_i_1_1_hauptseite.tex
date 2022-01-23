@@ -9,12 +9,13 @@ Inheritance diagram for GUI.\+Hauptseite\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_ad26d7b495178f30577205dd0cffe3a6b}\label{class_g_u_i_1_1_hauptseite_ad26d7b495178f30577205dd0cffe3a6b}} 
-void {\bfseries Activate\+Button} (object sender\+Btn, Color color)
-\item 
-\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_aa83a7ee48267392d3d7db54c2794f845}\label{class_g_u_i_1_1_hauptseite_aa83a7ee48267392d3d7db54c2794f845}} 
-void {\bfseries open\+Child\+Form} (Form child\+Form)
-\end{DoxyCompactItemize}
+\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_acfffcd9600603be2c0e6f6e7141fe6aa}\label{class_g_u_i_1_1_hauptseite_acfffcd9600603be2c0e6f6e7141fe6aa}} 
+{\bfseries Hauptseite} ()
+\begin{DoxyCompactList}\small\item\em Für das Form \mbox{\hyperlink{class_g_u_i_1_1_hauptseite}{Hauptseite}} wird erst alle die Sachen von dem Designer initialisiert Sowie das Button Border für das Panel Menu wird hier initialisiert. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_u_i_1_1_hauptseite_ad26d7b495178f30577205dd0cffe3a6b}{Activate\+Button}} (object sender\+Btn, Color color)
+\begin{DoxyCompactList}\small\item\em initialisiert das Button, das gerade gedrückt wird wo auf dem Menu\+Form aktiv ist, hier ändert sich die Farbe das aktuelle Button und das Bild Format ändert sich auch nach rechte Seite nach dem Text im Button \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_u_i_1_1_hauptseite_aa83a7ee48267392d3d7db54c2794f845}{open\+Child\+Form}} (Form child\+Form)
+\begin{DoxyCompactList}\small\item\em Wird das Form im Panel\+Child\+Form hier neue abgerufen und angezeigt. Mit dem Parameter Form die man gerade gedrückt von dem beliebigen Button. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -35,7 +36,7 @@ System.\+Windows.\+Forms.\+Label {\bfseries label\+Name}
 \item 
 \mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a9ab9a64579ccca82af1e44e481b96138}\label{class_g_u_i_1_1_hauptseite_a9ab9a64579ccca82af1e44e481b96138}} 
 static \mbox{\hyperlink{class_g_u_i_1_1_hauptseite}{Hauptseite}} {\bfseries hauptseite} = new \mbox{\hyperlink{class_g_u_i_1_1_hauptseite}{Hauptseite}}()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Form der \mbox{\hyperlink{class_g_u_i_1_1_hauptseite}{Hauptseite}} \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,52 +47,38 @@ override void \mbox{\hyperlink{class_g_u_i_1_1_hauptseite_a5c48678d84d8affa87e31
 \item 
 \mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a9d38cae3549142693f9a8bfeaf95bf57}\label{class_g_u_i_1_1_hauptseite_a9d38cae3549142693f9a8bfeaf95bf57}} 
 void {\bfseries Disable\+Button} ()
-\item 
-\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a538f82f110ee952301266f8a1c208a67}\label{class_g_u_i_1_1_hauptseite_a538f82f110ee952301266f8a1c208a67}} 
-void {\bfseries Neue\+Mitarbeiter\+Button\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a3b338740a6ab42f1378c84947445ac3a}\label{class_g_u_i_1_1_hauptseite_a3b338740a6ab42f1378c84947445ac3a}} 
-void {\bfseries Mitarbeiter\+Liste\+Button\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_abddbb70d38c7d208108746a960193e10}\label{class_g_u_i_1_1_hauptseite_abddbb70d38c7d208108746a960193e10}} 
-void {\bfseries Projekte\+Liste\+Button\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a297cb651dc9ae52a8196fcadd4fae5fd}\label{class_g_u_i_1_1_hauptseite_a297cb651dc9ae52a8196fcadd4fae5fd}} 
-void {\bfseries Kompetenz\+Liste\+Button\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a184e15e012ec575daea9cd22a08ab35c}\label{class_g_u_i_1_1_hauptseite_a184e15e012ec575daea9cd22a08ab35c}} 
-void {\bfseries Einstellungen\+Button\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_ade608bc5fc6d6cfe4695abdcbd49ffdb}\label{class_g_u_i_1_1_hauptseite_ade608bc5fc6d6cfe4695abdcbd49ffdb}} 
-void {\bfseries Home\+Logo\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
+\begin{DoxyCompactList}\small\item\em Diese Methode wird verwendet, um die gerade aktive Button zu deaktivieren, damit sie in das normale Format zurückkehrt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_u_i_1_1_hauptseite_a538f82f110ee952301266f8a1c208a67}{Neue\+Mitarbeiter\+Button\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Ein Eventhandler wenn das Button Neue Mitarbeiter angeklickt dann wird das Neue Mitarbeiter Form geladen, sowie der Neue Mitarbeiter im Panel\+Menu wird aktualisiert \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_u_i_1_1_hauptseite_a3b338740a6ab42f1378c84947445ac3a}{Mitarbeiter\+Liste\+Button\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Ein Eventhandler wenn das Button Mitarbeiter Liste angeklickt dann wird das Mitarbeiter Liste Form geladen, sowie die Mitarbeiter Liste im Panel\+Menu wird aktualisiert \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_u_i_1_1_hauptseite_abddbb70d38c7d208108746a960193e10}{Projekte\+Liste\+Button\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Ein Eventhandler wenn das Button \mbox{\hyperlink{class_g_u_i_1_1_projekt}{Projekt}} Liste angeklickt dann wird das \mbox{\hyperlink{class_g_u_i_1_1_projekt}{Projekt}} Liste Form geladen, sowie das \mbox{\hyperlink{class_g_u_i_1_1_projekt}{Projekt}} Liste im Panel\+Menu wird aktualisiert \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_u_i_1_1_hauptseite_a297cb651dc9ae52a8196fcadd4fae5fd}{Kompetenz\+Liste\+Button\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Ein Eventhandler wenn das Button \mbox{\hyperlink{class_g_u_i_1_1_kompetenz}{Kompetenz}} angeklickt dann wird das \mbox{\hyperlink{class_g_u_i_1_1_kompetenz}{Kompetenz}} Form geladen, sowie das \mbox{\hyperlink{class_g_u_i_1_1_kompetenz}{Kompetenz}} Button im Panel\+Menu wird aktualisiert \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_u_i_1_1_hauptseite_a184e15e012ec575daea9cd22a08ab35c}{Einstellungen\+Button\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Ein Eventhandler wenn das Button \mbox{\hyperlink{class_g_u_i_1_1_einstellungen}{Einstellungen}} angeklickt dann wird das \mbox{\hyperlink{class_g_u_i_1_1_einstellungen}{Einstellungen}} Form geladen, sowie das \mbox{\hyperlink{class_g_u_i_1_1_einstellungen}{Einstellungen}} Button im Panel\+Menu wird aktualisiert \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_u_i_1_1_hauptseite_ade608bc5fc6d6cfe4695abdcbd49ffdb}{Home\+Logo\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Ein Eventhandler wenn das Button Home angeklickt dann wird das Home Form geladen \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a9c6858be2fd0b1801f3e6afe0d2dbdbc}\label{class_g_u_i_1_1_hauptseite_a9c6858be2fd0b1801f3e6afe0d2dbdbc}} 
 void {\bfseries Reset} ()
-\item 
-\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_aa9daf96cb5daf331005dbbce7ecd2597}\label{class_g_u_i_1_1_hauptseite_aa9daf96cb5daf331005dbbce7ecd2597}} 
-void {\bfseries panel\+Title\+Bar\+\_\+\+Mouse\+Down} (object sender, Mouse\+Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a16b146627e29f663ae767a766f2db1da}\label{class_g_u_i_1_1_hauptseite_a16b146627e29f663ae767a766f2db1da}} 
-void {\bfseries Btn\+Minimize\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a9884bc414800304d9b9d76f8c236ac60}\label{class_g_u_i_1_1_hauptseite_a9884bc414800304d9b9d76f8c236ac60}} 
-void {\bfseries btn\+Maximize\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a5b0c2efa90e99532e6f926fc1be8becc}\label{class_g_u_i_1_1_hauptseite_a5b0c2efa90e99532e6f926fc1be8becc}} 
-void {\bfseries Btn\+Exit\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a693606c41084f7a6a4978e864ce91886}\label{class_g_u_i_1_1_hauptseite_a693606c41084f7a6a4978e864ce91886}} 
-void {\bfseries Administrator\+Hauptseite\+\_\+\+Load} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_ac94c2f9fa23cca655b0604a4bca7e556}\label{class_g_u_i_1_1_hauptseite_ac94c2f9fa23cca655b0604a4bca7e556}} 
-void {\bfseries Date\+Timer\+\_\+\+Tick} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a2334f64f8c74cd5534fc085943cb4612}\label{class_g_u_i_1_1_hauptseite_a2334f64f8c74cd5534fc085943cb4612}} 
-void {\bfseries Profile\+Button\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
-\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a9d667225219b95dba25057bb253bcae9}\label{class_g_u_i_1_1_hauptseite_a9d667225219b95dba25057bb253bcae9}} 
-void {\bfseries Logout\+Button\+\_\+\+Click} (object sender, Event\+Args e)
-\item 
+\begin{DoxyCompactList}\small\item\em setzt die aktuell aktive Button durch Aufruf einer Disable\+Button Methode \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_u_i_1_1_hauptseite_aa9daf96cb5daf331005dbbce7ecd2597}{panel\+Title\+Bar\+\_\+\+Mouse\+Down}} (object sender, Mouse\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Ein Eventhandler damit man das Form sich verschieben kann \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_u_i_1_1_hauptseite_a16b146627e29f663ae767a766f2db1da}{Btn\+Minimize\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Mit dem Clickevent kann man das aktuelle Form minimeren \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_u_i_1_1_hauptseite_a9884bc414800304d9b9d76f8c236ac60}{btn\+Maximize\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Mit dem Clickevent kann man das aktuelle Form maximieren \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_u_i_1_1_hauptseite_a5b0c2efa90e99532e6f926fc1be8becc}{Btn\+Exit\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Um das Applikation zu schliessen durch das Click des X Buttons \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_u_i_1_1_hauptseite_a693606c41084f7a6a4978e864ce91886}{Administrator\+Hauptseite\+\_\+\+Load}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Mit dem Event wird das Datum und die Uhrzeit in der \mbox{\hyperlink{class_g_u_i_1_1_hauptseite}{Hauptseite}} angezeigt \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_u_i_1_1_hauptseite_ac94c2f9fa23cca655b0604a4bca7e556}{Date\+Timer\+\_\+\+Tick}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Hier wird das aktuelle Datum und Zeit geladen in UI \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_u_i_1_1_hauptseite_a2334f64f8c74cd5534fc085943cb4612}{Profile\+Button\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Ein Clickevent damit wird das neue Profilform der Benutzer angezeigt mit den Daten aus der Datenbank mit der Verbindung von My\+SQL \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_u_i_1_1_hauptseite_a9d667225219b95dba25057bb253bcae9}{Logout\+Button\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Ein Clickevent, der Benutzer wird von der \mbox{\hyperlink{class_g_u_i_1_1_hauptseite}{Hauptseite}} ausgeloggt und zurück zum \mbox{\hyperlink{class_g_u_i_1_1_login}{Login}} \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a3b85f747b55ffb3130783f42ad580e1f}\label{class_g_u_i_1_1_hauptseite_a3b85f747b55ffb3130783f42ad580e1f}} 
 void {\bfseries Initialize\+Component} ()
 \begin{DoxyCompactList}\small\item\em Required method for Designer support -\/ do not modify the contents of this method with the code editor. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -100,10 +87,9 @@ void {\bfseries Initialize\+Component} ()
 \item 
 \mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a0517909695242ae7ef8c56b95e53cff0}\label{class_g_u_i_1_1_hauptseite_a0517909695242ae7ef8c56b95e53cff0}} 
 static void {\bfseries Release\+Capture} ()
-\item 
-\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a2f6d3f123d92cc36c4541097bee07d9a}\label{class_g_u_i_1_1_hauptseite_a2f6d3f123d92cc36c4541097bee07d9a}} 
-static void {\bfseries Send\+Message} (System.\+Int\+Ptr h\+Wnd, int w\+Msg, int w\+Param, int l\+Param)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Drag Form \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_g_u_i_1_1_hauptseite_a2f6d3f123d92cc36c4541097bee07d9a}{Send\+Message}} (System.\+Int\+Ptr h\+Wnd, int w\+Msg, int w\+Param, int l\+Param)
+\begin{DoxyCompactList}\small\item\em Um das Message vom Ort der Panel schicken kann \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -118,7 +104,7 @@ Form {\bfseries current\+Child\+Form}
 \item 
 \mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a31abe506a2a7f9566325cd2bdc58fa71}\label{class_g_u_i_1_1_hauptseite_a31abe506a2a7f9566325cd2bdc58fa71}} 
 \mbox{\hyperlink{class_g_u_i_1_1_connection}{Connection}} {\bfseries con} = new \mbox{\hyperlink{class_g_u_i_1_1_connection}{Connection}}()
-\item 
+\begin{DoxyCompactList}\small\item\em Sucht die \mbox{\hyperlink{class_g_u_i_1_1_connection}{Connection}} bzw. ruft die Klasse ab. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a32814c17953fe3c27d2ab2a05c8ce45d}\label{class_g_u_i_1_1_hauptseite_a32814c17953fe3c27d2ab2a05c8ce45d}} 
 System.\+Component\+Model.\+IContainer {\bfseries components} = null
 \begin{DoxyCompactList}\small\item\em Required designer variable. \end{DoxyCompactList}\item 
@@ -209,6 +195,108 @@ Font\+Awesome.\+Sharp.\+Icon\+Button {\bfseries Logout\+Button}
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_ad26d7b495178f30577205dd0cffe3a6b}\label{class_g_u_i_1_1_hauptseite_ad26d7b495178f30577205dd0cffe3a6b}} 
+\index{GUI.Hauptseite@{GUI.Hauptseite}!ActivateButton@{ActivateButton}}
+\index{ActivateButton@{ActivateButton}!GUI.Hauptseite@{GUI.Hauptseite}}
+\doxysubsubsection{\texorpdfstring{ActivateButton()}{ActivateButton()}}
+{\footnotesize\ttfamily void GUI.\+Hauptseite.\+Activate\+Button (\begin{DoxyParamCaption}\item[{object}]{sender\+Btn,  }\item[{Color}]{color }\end{DoxyParamCaption})}
+
+
+
+initialisiert das Button, das gerade gedrückt wird wo auf dem Menu\+Form aktiv ist, hier ändert sich die Farbe das aktuelle Button und das Bild Format ändert sich auch nach rechte Seite nach dem Text im Button 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender\+Btn} & als Parameter hier ist das gerade gedrückte Button wird im object als sender Button geliefert\\
+\hline
+{\em color} & als Parameter ist die Farbe gedrückte Button geliefert\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a693606c41084f7a6a4978e864ce91886}\label{class_g_u_i_1_1_hauptseite_a693606c41084f7a6a4978e864ce91886}} 
+\index{GUI.Hauptseite@{GUI.Hauptseite}!AdministratorHauptseite\_Load@{AdministratorHauptseite\_Load}}
+\index{AdministratorHauptseite\_Load@{AdministratorHauptseite\_Load}!GUI.Hauptseite@{GUI.Hauptseite}}
+\doxysubsubsection{\texorpdfstring{AdministratorHauptseite\_Load()}{AdministratorHauptseite\_Load()}}
+{\footnotesize\ttfamily void GUI.\+Hauptseite.\+Administrator\+Hauptseite\+\_\+\+Load (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mit dem Event wird das Datum und die Uhrzeit in der \mbox{\hyperlink{class_g_u_i_1_1_hauptseite}{Hauptseite}} angezeigt 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a5b0c2efa90e99532e6f926fc1be8becc}\label{class_g_u_i_1_1_hauptseite_a5b0c2efa90e99532e6f926fc1be8becc}} 
+\index{GUI.Hauptseite@{GUI.Hauptseite}!BtnExit\_Click@{BtnExit\_Click}}
+\index{BtnExit\_Click@{BtnExit\_Click}!GUI.Hauptseite@{GUI.Hauptseite}}
+\doxysubsubsection{\texorpdfstring{BtnExit\_Click()}{BtnExit\_Click()}}
+{\footnotesize\ttfamily void GUI.\+Hauptseite.\+Btn\+Exit\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Um das Applikation zu schliessen durch das Click des X Buttons 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a9884bc414800304d9b9d76f8c236ac60}\label{class_g_u_i_1_1_hauptseite_a9884bc414800304d9b9d76f8c236ac60}} 
+\index{GUI.Hauptseite@{GUI.Hauptseite}!btnMaximize\_Click@{btnMaximize\_Click}}
+\index{btnMaximize\_Click@{btnMaximize\_Click}!GUI.Hauptseite@{GUI.Hauptseite}}
+\doxysubsubsection{\texorpdfstring{btnMaximize\_Click()}{btnMaximize\_Click()}}
+{\footnotesize\ttfamily void GUI.\+Hauptseite.\+btn\+Maximize\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mit dem Clickevent kann man das aktuelle Form maximieren 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a16b146627e29f663ae767a766f2db1da}\label{class_g_u_i_1_1_hauptseite_a16b146627e29f663ae767a766f2db1da}} 
+\index{GUI.Hauptseite@{GUI.Hauptseite}!BtnMinimize\_Click@{BtnMinimize\_Click}}
+\index{BtnMinimize\_Click@{BtnMinimize\_Click}!GUI.Hauptseite@{GUI.Hauptseite}}
+\doxysubsubsection{\texorpdfstring{BtnMinimize\_Click()}{BtnMinimize\_Click()}}
+{\footnotesize\ttfamily void GUI.\+Hauptseite.\+Btn\+Minimize\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mit dem Clickevent kann man das aktuelle Form minimeren 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_ac94c2f9fa23cca655b0604a4bca7e556}\label{class_g_u_i_1_1_hauptseite_ac94c2f9fa23cca655b0604a4bca7e556}} 
+\index{GUI.Hauptseite@{GUI.Hauptseite}!DateTimer\_Tick@{DateTimer\_Tick}}
+\index{DateTimer\_Tick@{DateTimer\_Tick}!GUI.Hauptseite@{GUI.Hauptseite}}
+\doxysubsubsection{\texorpdfstring{DateTimer\_Tick()}{DateTimer\_Tick()}}
+{\footnotesize\ttfamily void GUI.\+Hauptseite.\+Date\+Timer\+\_\+\+Tick (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Hier wird das aktuelle Datum und Zeit geladen in UI 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a5c48678d84d8affa87e311808fd96b24}\label{class_g_u_i_1_1_hauptseite_a5c48678d84d8affa87e311808fd96b24}} 
 \index{GUI.Hauptseite@{GUI.Hauptseite}!Dispose@{Dispose}}
 \index{Dispose@{Dispose}!GUI.Hauptseite@{GUI.Hauptseite}}
@@ -222,6 +310,195 @@ Clean up any resources being used.
 
 \begin{DoxyParams}{Parameters}
 {\em disposing} & true if managed resources should be disposed; otherwise, false.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a184e15e012ec575daea9cd22a08ab35c}\label{class_g_u_i_1_1_hauptseite_a184e15e012ec575daea9cd22a08ab35c}} 
+\index{GUI.Hauptseite@{GUI.Hauptseite}!EinstellungenButton\_Click@{EinstellungenButton\_Click}}
+\index{EinstellungenButton\_Click@{EinstellungenButton\_Click}!GUI.Hauptseite@{GUI.Hauptseite}}
+\doxysubsubsection{\texorpdfstring{EinstellungenButton\_Click()}{EinstellungenButton\_Click()}}
+{\footnotesize\ttfamily void GUI.\+Hauptseite.\+Einstellungen\+Button\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ein Eventhandler wenn das Button \mbox{\hyperlink{class_g_u_i_1_1_einstellungen}{Einstellungen}} angeklickt dann wird das \mbox{\hyperlink{class_g_u_i_1_1_einstellungen}{Einstellungen}} Form geladen, sowie das \mbox{\hyperlink{class_g_u_i_1_1_einstellungen}{Einstellungen}} Button im Panel\+Menu wird aktualisiert 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_ade608bc5fc6d6cfe4695abdcbd49ffdb}\label{class_g_u_i_1_1_hauptseite_ade608bc5fc6d6cfe4695abdcbd49ffdb}} 
+\index{GUI.Hauptseite@{GUI.Hauptseite}!HomeLogo\_Click@{HomeLogo\_Click}}
+\index{HomeLogo\_Click@{HomeLogo\_Click}!GUI.Hauptseite@{GUI.Hauptseite}}
+\doxysubsubsection{\texorpdfstring{HomeLogo\_Click()}{HomeLogo\_Click()}}
+{\footnotesize\ttfamily void GUI.\+Hauptseite.\+Home\+Logo\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ein Eventhandler wenn das Button Home angeklickt dann wird das Home Form geladen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a297cb651dc9ae52a8196fcadd4fae5fd}\label{class_g_u_i_1_1_hauptseite_a297cb651dc9ae52a8196fcadd4fae5fd}} 
+\index{GUI.Hauptseite@{GUI.Hauptseite}!KompetenzListeButton\_Click@{KompetenzListeButton\_Click}}
+\index{KompetenzListeButton\_Click@{KompetenzListeButton\_Click}!GUI.Hauptseite@{GUI.Hauptseite}}
+\doxysubsubsection{\texorpdfstring{KompetenzListeButton\_Click()}{KompetenzListeButton\_Click()}}
+{\footnotesize\ttfamily void GUI.\+Hauptseite.\+Kompetenz\+Liste\+Button\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ein Eventhandler wenn das Button \mbox{\hyperlink{class_g_u_i_1_1_kompetenz}{Kompetenz}} angeklickt dann wird das \mbox{\hyperlink{class_g_u_i_1_1_kompetenz}{Kompetenz}} Form geladen, sowie das \mbox{\hyperlink{class_g_u_i_1_1_kompetenz}{Kompetenz}} Button im Panel\+Menu wird aktualisiert 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a9d667225219b95dba25057bb253bcae9}\label{class_g_u_i_1_1_hauptseite_a9d667225219b95dba25057bb253bcae9}} 
+\index{GUI.Hauptseite@{GUI.Hauptseite}!LogoutButton\_Click@{LogoutButton\_Click}}
+\index{LogoutButton\_Click@{LogoutButton\_Click}!GUI.Hauptseite@{GUI.Hauptseite}}
+\doxysubsubsection{\texorpdfstring{LogoutButton\_Click()}{LogoutButton\_Click()}}
+{\footnotesize\ttfamily void GUI.\+Hauptseite.\+Logout\+Button\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ein Clickevent, der Benutzer wird von der \mbox{\hyperlink{class_g_u_i_1_1_hauptseite}{Hauptseite}} ausgeloggt und zurück zum \mbox{\hyperlink{class_g_u_i_1_1_login}{Login}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a3b338740a6ab42f1378c84947445ac3a}\label{class_g_u_i_1_1_hauptseite_a3b338740a6ab42f1378c84947445ac3a}} 
+\index{GUI.Hauptseite@{GUI.Hauptseite}!MitarbeiterListeButton\_Click@{MitarbeiterListeButton\_Click}}
+\index{MitarbeiterListeButton\_Click@{MitarbeiterListeButton\_Click}!GUI.Hauptseite@{GUI.Hauptseite}}
+\doxysubsubsection{\texorpdfstring{MitarbeiterListeButton\_Click()}{MitarbeiterListeButton\_Click()}}
+{\footnotesize\ttfamily void GUI.\+Hauptseite.\+Mitarbeiter\+Liste\+Button\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ein Eventhandler wenn das Button Mitarbeiter Liste angeklickt dann wird das Mitarbeiter Liste Form geladen, sowie die Mitarbeiter Liste im Panel\+Menu wird aktualisiert 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a538f82f110ee952301266f8a1c208a67}\label{class_g_u_i_1_1_hauptseite_a538f82f110ee952301266f8a1c208a67}} 
+\index{GUI.Hauptseite@{GUI.Hauptseite}!NeueMitarbeiterButton\_Click@{NeueMitarbeiterButton\_Click}}
+\index{NeueMitarbeiterButton\_Click@{NeueMitarbeiterButton\_Click}!GUI.Hauptseite@{GUI.Hauptseite}}
+\doxysubsubsection{\texorpdfstring{NeueMitarbeiterButton\_Click()}{NeueMitarbeiterButton\_Click()}}
+{\footnotesize\ttfamily void GUI.\+Hauptseite.\+Neue\+Mitarbeiter\+Button\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ein Eventhandler wenn das Button Neue Mitarbeiter angeklickt dann wird das Neue Mitarbeiter Form geladen, sowie der Neue Mitarbeiter im Panel\+Menu wird aktualisiert 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_aa83a7ee48267392d3d7db54c2794f845}\label{class_g_u_i_1_1_hauptseite_aa83a7ee48267392d3d7db54c2794f845}} 
+\index{GUI.Hauptseite@{GUI.Hauptseite}!openChildForm@{openChildForm}}
+\index{openChildForm@{openChildForm}!GUI.Hauptseite@{GUI.Hauptseite}}
+\doxysubsubsection{\texorpdfstring{openChildForm()}{openChildForm()}}
+{\footnotesize\ttfamily void GUI.\+Hauptseite.\+open\+Child\+Form (\begin{DoxyParamCaption}\item[{Form}]{child\+Form }\end{DoxyParamCaption})}
+
+
+
+Wird das Form im Panel\+Child\+Form hier neue abgerufen und angezeigt. Mit dem Parameter Form die man gerade gedrückt von dem beliebigen Button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em child\+Form} & aktuelles Form, das wir angeklickt haben \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_aa9daf96cb5daf331005dbbce7ecd2597}\label{class_g_u_i_1_1_hauptseite_aa9daf96cb5daf331005dbbce7ecd2597}} 
+\index{GUI.Hauptseite@{GUI.Hauptseite}!panelTitleBar\_MouseDown@{panelTitleBar\_MouseDown}}
+\index{panelTitleBar\_MouseDown@{panelTitleBar\_MouseDown}!GUI.Hauptseite@{GUI.Hauptseite}}
+\doxysubsubsection{\texorpdfstring{panelTitleBar\_MouseDown()}{panelTitleBar\_MouseDown()}}
+{\footnotesize\ttfamily void GUI.\+Hauptseite.\+panel\+Title\+Bar\+\_\+\+Mouse\+Down (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Mouse\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ein Eventhandler damit man das Form sich verschieben kann 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a2334f64f8c74cd5534fc085943cb4612}\label{class_g_u_i_1_1_hauptseite_a2334f64f8c74cd5534fc085943cb4612}} 
+\index{GUI.Hauptseite@{GUI.Hauptseite}!ProfileButton\_Click@{ProfileButton\_Click}}
+\index{ProfileButton\_Click@{ProfileButton\_Click}!GUI.Hauptseite@{GUI.Hauptseite}}
+\doxysubsubsection{\texorpdfstring{ProfileButton\_Click()}{ProfileButton\_Click()}}
+{\footnotesize\ttfamily void GUI.\+Hauptseite.\+Profile\+Button\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ein Clickevent damit wird das neue Profilform der Benutzer angezeigt mit den Daten aus der Datenbank mit der Verbindung von My\+SQL 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_abddbb70d38c7d208108746a960193e10}\label{class_g_u_i_1_1_hauptseite_abddbb70d38c7d208108746a960193e10}} 
+\index{GUI.Hauptseite@{GUI.Hauptseite}!ProjekteListeButton\_Click@{ProjekteListeButton\_Click}}
+\index{ProjekteListeButton\_Click@{ProjekteListeButton\_Click}!GUI.Hauptseite@{GUI.Hauptseite}}
+\doxysubsubsection{\texorpdfstring{ProjekteListeButton\_Click()}{ProjekteListeButton\_Click()}}
+{\footnotesize\ttfamily void GUI.\+Hauptseite.\+Projekte\+Liste\+Button\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ein Eventhandler wenn das Button \mbox{\hyperlink{class_g_u_i_1_1_projekt}{Projekt}} Liste angeklickt dann wird das \mbox{\hyperlink{class_g_u_i_1_1_projekt}{Projekt}} Liste Form geladen, sowie das \mbox{\hyperlink{class_g_u_i_1_1_projekt}{Projekt}} Liste im Panel\+Menu wird aktualisiert 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_1_1_hauptseite_a2f6d3f123d92cc36c4541097bee07d9a}\label{class_g_u_i_1_1_hauptseite_a2f6d3f123d92cc36c4541097bee07d9a}} 
+\index{GUI.Hauptseite@{GUI.Hauptseite}!SendMessage@{SendMessage}}
+\index{SendMessage@{SendMessage}!GUI.Hauptseite@{GUI.Hauptseite}}
+\doxysubsubsection{\texorpdfstring{SendMessage()}{SendMessage()}}
+{\footnotesize\ttfamily static void GUI.\+Hauptseite.\+Send\+Message (\begin{DoxyParamCaption}\item[{System.\+Int\+Ptr}]{h\+Wnd,  }\item[{int}]{w\+Msg,  }\item[{int}]{w\+Param,  }\item[{int}]{l\+Param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Um das Message vom Ort der Panel schicken kann 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Wnd} & Ort die Panel\\
+\hline
+{\em w\+Msg} & Message damit man zur system command schicken kann\\
+\hline
+{\em w\+Param} & movement von links nach rechts \\
+\hline
+{\em l\+Param} & movement von oben nach unten \\
 \hline
 \end{DoxyParams}
 
