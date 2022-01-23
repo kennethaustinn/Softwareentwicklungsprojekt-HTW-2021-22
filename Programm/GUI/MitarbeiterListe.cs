@@ -55,6 +55,7 @@ namespace GUI
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0)
             {
+                this.Hide();
                 Profile form1 = new Profile();
                 form1.labelBenutzername.Text = this.MitarbeiterListeTable.CurrentRow.Cells[2].Value.ToString();
                 form1.labelName.Text = this.MitarbeiterListeTable.CurrentRow.Cells[3].Value.ToString();

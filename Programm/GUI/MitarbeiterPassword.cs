@@ -9,10 +9,10 @@ using MySql.Data.MySqlClient;
 
 namespace GUI
 {
-    public partial class profileBearbeiten : Form
+    public partial class MitarbeiterPassword : Form
     {
         Connection con = new Connection();
-        public profileBearbeiten()
+        public MitarbeiterPassword()
         {
             InitializeComponent();
         }
@@ -24,11 +24,11 @@ namespace GUI
                 Connection.DataSource();
                 con.connOpen();
                 MySqlCommand command = new MySqlCommand();
-                command.CommandText = ("update mitarbeiter set name ='" + txtName.Text + "',Vorname ='" + txtVorname.Text + "', abteilung ='" + txtAbteilung.Text + "',aufgabenbereich ='" + txtAufgabenbereich.Text + "' where Benutzername = '"+Hauptseite.hauptseite.Username.Text+"'");
+                con.connOpen();
+                command.CommandText = ("update mitarbeiter set Passwort ='" + Encrypt.HashString(txtPassword.Text) + "' where name ='" + this.labelName.Text + "'");
                 command.Connection = Connection.connMaster;
                 command.ExecuteNonQuery();
-                MessageBox.Show("Profile aktualisiert");
-                con.connClose();
+                MessageBox.Show("Passwort aktualisiert");
                 this.Close();
             }
             catch (Exception ex)

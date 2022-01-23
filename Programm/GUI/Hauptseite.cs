@@ -185,7 +185,7 @@ namespace GUI
         {
             
             try
-            { 
+            {
             Connection.DataSource();
             con.connOpen();
             MySqlCommand command = new MySqlCommand();
@@ -200,6 +200,7 @@ namespace GUI
             form1.labelVorname.Text = reader[4].ToString();
             form1.labelAufgabenbereich.Text = reader[6].ToString();
             form1.labelAbteilung.Text = reader[7].ToString();
+            form1.iconButton1.Hide();
             form1.iconButton2.Hide();
             form1.iconButton4.Hide();
             form1.ShowDialog();

@@ -30,6 +30,7 @@ namespace GUI
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
             this.labelKompetenzen = new System.Windows.Forms.Label();
             this.labelAufgabenbereich = new System.Windows.Forms.Label();
@@ -55,6 +56,7 @@ namespace GUI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panel1.Controls.Add(this.iconButton1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.labelKompetenzen);
             this.panel1.Controls.Add(this.labelAufgabenbereich);
@@ -77,6 +79,27 @@ namespace GUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 543);
             this.panel1.TabIndex = 0;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 20;
+            this.iconButton1.Location = new System.Drawing.Point(535, 56);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(128, 29);
+            this.iconButton1.TabIndex = 38;
+            this.iconButton1.Text = "Password ändern";
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // label3
             // 
@@ -201,7 +224,7 @@ namespace GUI
             this.iconButton3.IconColor = System.Drawing.Color.Black;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 20;
-            this.iconButton3.Location = new System.Drawing.Point(388, 483);
+            this.iconButton3.Location = new System.Drawing.Point(225, 110);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(128, 29);
             this.iconButton3.TabIndex = 27;
@@ -372,5 +395,6 @@ namespace GUI
         public FontAwesome.Sharp.IconButton iconButton4;
         public FontAwesome.Sharp.IconButton iconButton3;
         public FontAwesome.Sharp.IconButton iconButton2;
+        public FontAwesome.Sharp.IconButton iconButton1;
     }
 }
