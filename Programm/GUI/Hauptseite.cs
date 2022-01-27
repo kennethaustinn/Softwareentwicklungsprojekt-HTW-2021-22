@@ -277,14 +277,13 @@ namespace GUI
         /// <param name="e"></param>
         private void ProfileButton_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
             Connection.DataSource();
             con.connOpen();
             MySqlCommand command = new MySqlCommand();
-            command.CommandText = ("select * from mitarbeiter where (Benutzername) = (@name)");
-            command.Parameters.AddWithValue("@name", Username.Text);
+            command.CommandText = ("select * from mitarbeiter where Benutzername = '"+ Username.Text +"'");
             command.Connection = Connection.connMaster;
             MySqlDataReader reader = command.ExecuteReader();
             reader.Read();
@@ -294,17 +293,51 @@ namespace GUI
             form1.labelVorname.Text = reader[4].ToString();
             form1.labelAufgabenbereich.Text = reader[6].ToString();
             form1.labelAbteilung.Text = reader[7].ToString();
+            form1.label2.Text = GetKompetenz();
+            form1.label9.Text = GetProjekt();
             form1.iconButton1.Hide();
             form1.iconButton2.Hide();
             form1.iconButton4.Hide();
             form1.ShowDialog();
-            
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-}
+
+        }
+
+        private string GetKompetenz()
+        {
+            Connection.DataSource();
+            con.connOpen();
+            MySqlCommand command = new MySqlCommand();
+            command.CommandText = ("select kompetenz.Name from kompetenz, mitarbeiter_hat_kompetenz, mitarbeiter " +
+                "where kompetenz.Kompetenz_ID = mitarbeiter_hat_kompetenz.Zugeordnete_Kompetenz " +
+                "and mitarbeiter.Mitarbeiter_ID = mitarbeiter_hat_kompetenz.Zugeordnete_Mitarbeiter and benutzername = '" + Username.Text + "'");
+            command.Connection = Connection.connMaster;
+            MySqlDataReader reader = command.ExecuteReader();
+            reader.Read();
+            string a = reader[0].ToString();
+            return a;
+        }
+
+        private string GetProjekt()
+        {
+            Connection.DataSource();
+            con.connOpen();
+            MySqlCommand command = new MySqlCommand();
+            command.CommandText = ("select projekt.Name from projekt, mitarbeiter_hat_projekt, mitarbeiter " +
+                "where mitarbeiter.Mitarbeiter_ID = mitarbeiter_hat_projekt.Zugeordnete_Mitarbeiter " +
+                "and projekt.Projekt_ID = mitarbeiter_hat_projekt.Zugeordnete_Projekt and benutzername = '" + Username.Text + "'");
+            command.Connection = Connection.connMaster;
+            MySqlDataReader reader = command.ExecuteReader();
+            reader.Read();
+            string a = reader[0].ToString();
+            return a;
+        }
+
         /// <summary>
         /// Ein Clickevent, der Benutzer wird von der Hauptseite ausgeloggt  und zurück zum Login
         /// </summary>
