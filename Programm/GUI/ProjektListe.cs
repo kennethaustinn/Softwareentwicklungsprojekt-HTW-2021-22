@@ -30,7 +30,25 @@ namespace GUI
         /// <param name="e"></param>
         private void ProjektListe_Shown(object sender, EventArgs e)
         {
-            ProjektListeTable.DataSource = GetProjektList("");
+            Connection.DataSource();
+            con.connOpen();
+            MySqlCommand command = new MySqlCommand();
+            command.CommandText = ("select * from mitarbeiter where benutzername= '" + Hauptseite.hauptseite.Username.Text + "'");
+            command.Connection = Connection.connMaster;
+            MySqlDataReader reader = command.ExecuteReader();
+
+            if (reader.Read())
+            {
+                // Uberprüft ob es ein Administrator und Mitarbeiter
+                if (reader[8].ToString() == "Administrator")
+                {
+                    ProjektListeTable.DataSource = GetProjektListAdministrator("");
+                }
+                else
+                {
+                    ProjektListeTable.DataSource = GetProjektListMitarbeiter("");
+                }
+            }
         }
 
         /// <summary>
@@ -38,7 +56,7 @@ namespace GUI
         /// </summary>
         /// <param name="valueToSearch"></param>
         /// <returns></returns>
-        private DataTable GetProjektList(string valueToSearch)
+        private DataTable GetProjektListAdministrator(string valueToSearch)
         {
             DataTable projektliste = new DataTable();
             Connection.DataSource();
@@ -50,6 +68,20 @@ namespace GUI
             projektliste.Load(reader);
             return projektliste;
 
+        }
+        private DataTable GetProjektListMitarbeiter(string valueToSearch)
+        {
+            DataTable KompetenzListe = new DataTable();
+            Connection.DataSource();
+            con.connOpen();
+            MySqlCommand command = new MySqlCommand();
+            command.CommandText = ("select projekt.projekt_ID, projekt.Name, projekt.start, projekt.ende, projekt.Beschreibung from projekt, mitarbeiter_hat_projekt, mitarbeiter " +
+                    "where mitarbeiter.Mitarbeiter_ID = mitarbeiter_hat_projekt.Zugeordnete_Mitarbeiter " +
+                    "and projekt.Projekt_ID = mitarbeiter_hat_projekt.Zugeordnete_Projekt and benutzername = '" + Hauptseite.hauptseite.Username.Text + "'");
+            command.Connection = Connection.connMaster;
+            MySqlDataReader reader = command.ExecuteReader();
+            KompetenzListe.Load(reader);
+            return KompetenzListe;
         }
         /// <summary>
         /// Ein Click handler wenn das Anzeigen gedrückt wird, werden die ausgewählten Projekt in der nächsten Form angezeigt
@@ -89,7 +121,25 @@ namespace GUI
         /// <param name="e"></param>
         private void iconButton3_Click(object sender, EventArgs e)
         {
-            ProjektListeTable.DataSource = GetProjektList("");
+            Connection.DataSource();
+            con.connOpen();
+            MySqlCommand command = new MySqlCommand();
+            command.CommandText = ("select * from mitarbeiter where benutzername= '" + Hauptseite.hauptseite.Username.Text + "'");
+            command.Connection = Connection.connMaster;
+            MySqlDataReader reader = command.ExecuteReader();
+
+            if (reader.Read())
+            {
+                // Uberprüft ob es ein Administrator und Mitarbeiter
+                if (reader[8].ToString() == "Administrator")
+                {
+                    ProjektListeTable.DataSource = GetProjektListAdministrator("");
+                }
+                else
+                {
+                    ProjektListeTable.DataSource = GetProjektListMitarbeiter("");
+                }
+            }
         }
         /// <summary>
         /// Filtern  die Datagridview mit der Eingabe aus dem Texbox
@@ -98,7 +148,25 @@ namespace GUI
         /// <param name="e"></param>
         private void iconPictureBox1_Click(object sender, EventArgs e)
         {
-            ProjektListeTable.DataSource = GetProjektList("");
+            Connection.DataSource();
+            con.connOpen();
+            MySqlCommand command = new MySqlCommand();
+            command.CommandText = ("select * from mitarbeiter where benutzername= '" + Hauptseite.hauptseite.Username.Text + "'");
+            command.Connection = Connection.connMaster;
+            MySqlDataReader reader = command.ExecuteReader();
+
+            if (reader.Read())
+            {
+                // Uberprüft ob es ein Administrator und Mitarbeiter
+                if (reader[8].ToString() == "Administrator")
+                {
+                    ProjektListeTable.DataSource = GetProjektListAdministrator("");
+                }
+                else
+                {
+                    ProjektListeTable.DataSource = GetProjektListMitarbeiter("");
+                }
+            }
         }
     }
 }
