@@ -61,6 +61,7 @@ namespace GUI
             dtEmployees.Load(reader);
             return dtEmployees;
         }
+
         /// <summary>
         /// Ein Click handler wenn das Anzeigen gedrückt wird, werden die ausgewählten Mitarbeiter in der nächsten Form angezeigt
         /// und wird die Daten vom Datenbank aufgerufen
@@ -77,7 +78,7 @@ namespace GUI
                 Connection.DataSource();
                 con.connOpen();
                 MySqlCommand command = new MySqlCommand();
-                command.CommandText = ("select * from mitarbeiter where Benutzername = '" + this.MitarbeiterListeTable.CurrentRow.Cells[2].Value.ToString() + "'");
+                command.CommandText = ("select * from mitarbeiter where Mitarbeiter_ID = '" + this.MitarbeiterListeTable.CurrentRow.Cells[1].Value.ToString() + "'");
                 command.Connection = Connection.connMaster;
                 MySqlDataReader reader = command.ExecuteReader();
                 if (reader.Read())
@@ -90,6 +91,8 @@ namespace GUI
                         form1.labelVorname.Text = this.MitarbeiterListeTable.CurrentRow.Cells[4].Value.ToString();
                         form1.labelAbteilung.Text = this.MitarbeiterListeTable.CurrentRow.Cells[5].Value.ToString();
                         form1.labelAufgabenbereich.Text = this.MitarbeiterListeTable.CurrentRow.Cells[6].Value.ToString();
+                        form1.label2.Text = GetKompetenz();
+                        form1.label9.Text = GetProjekt();
                         form1.iconButton3.Hide();
                         form1.iconButton4.Text = "Konto aktivieren";
                         form1.iconButton4.BackColor = Color.SpringGreen;
@@ -104,6 +107,8 @@ namespace GUI
                         form1.labelVorname.Text = this.MitarbeiterListeTable.CurrentRow.Cells[4].Value.ToString();
                         form1.labelAbteilung.Text = this.MitarbeiterListeTable.CurrentRow.Cells[5].Value.ToString();
                         form1.labelAufgabenbereich.Text = this.MitarbeiterListeTable.CurrentRow.Cells[6].Value.ToString();
+                        form1.label2.Text = GetKompetenz();
+                        form1.label9.Text = GetProjekt();
                         form1.iconButton3.Hide();
                         form1.iconButton4.Text = "Konto deaktivieren";
                         form1.ShowDialog();
@@ -112,6 +117,36 @@ namespace GUI
 
             }
         }
+        private string GetKompetenz()
+        {
+            Connection.DataSource();
+            con.connOpen();
+            MySqlCommand command = new MySqlCommand();
+            command.CommandText = ("select kompetenz.Name from kompetenz, mitarbeiter_hat_kompetenz, mitarbeiter " +
+                "where kompetenz.Kompetenz_ID = mitarbeiter_hat_kompetenz.Zugeordnete_Kompetenz " +
+                "and mitarbeiter.Mitarbeiter_ID = mitarbeiter_hat_kompetenz.Zugeordnete_Mitarbeiter and Mitarbeiter_ID = '" + this.MitarbeiterListeTable.CurrentRow.Cells[1].Value.ToString() + "'");
+            command.Connection = Connection.connMaster;
+            MySqlDataReader reader = command.ExecuteReader();
+            reader.Read();
+            string a = reader[0].ToString();
+            return a;
+        }
+
+        private string GetProjekt()
+        {
+            Connection.DataSource();
+            con.connOpen();
+            MySqlCommand command = new MySqlCommand();
+            command.CommandText = ("select projekt.Name from projekt, mitarbeiter_hat_projekt, mitarbeiter " +
+                "where mitarbeiter.Mitarbeiter_ID = mitarbeiter_hat_projekt.Zugeordnete_Mitarbeiter " +
+                "and projekt.Projekt_ID = mitarbeiter_hat_projekt.Zugeordnete_Projekt and Mitarbeiter_ID = '" + this.MitarbeiterListeTable.CurrentRow.Cells[1].Value.ToString() + "'");
+            command.Connection = Connection.connMaster;
+            MySqlDataReader reader = command.ExecuteReader();
+            reader.Read();
+            string a = reader[0].ToString();
+            return a;
+        }
+
         /// <summary>
         /// Wenn der Administrator auf diese Button klickt, das Formular von Neumitarbeiter wird angezeigt
         /// </summary>
@@ -119,7 +154,6 @@ namespace GUI
         /// <param name="e"></param>
         private void iconButton1_Click(object sender, EventArgs e)
         {
-
             Hauptseite.hauptseite.openChildForm(new NeueMitarbeiter());
         }
         /// <summary>
