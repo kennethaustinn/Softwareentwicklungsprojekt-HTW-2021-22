@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 namespace GUI
 {
@@ -191,6 +192,24 @@ namespace GUI
         private void iconButton1_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        /// <summary>
+        /// Um das Message vom Ort der Panel schicken kann
+        /// </summary>
+        /// <param name="hWnd"> Ort die Panel</param>
+        /// <param name="wMsg"> Message damit man zur system command schicken kann</param>
+        /// <param name="wParam"> movement von links nach rechts </param>
+        /// <param name="lParam"> movement von oben nach unten </param>
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

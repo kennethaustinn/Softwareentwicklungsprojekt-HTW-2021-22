@@ -20,9 +20,9 @@ namespace GUI
         /// </summary>
         public static Hauptseite hauptseite = new Hauptseite();
 
-    private IconButton currentBtn;
-    private Panel leftBorderBtn;
-    private Form currentChildForm;
+        private IconButton currentBtn;
+        private Panel leftBorderBtn;
+        private Form currentChildForm;
     
         /// <summary>
         /// Sucht die Connection bzw. ruft die Klasse ab.
@@ -350,5 +350,12 @@ namespace GUI
             Login m = new Login();
             m.Show();
          }
+
+        private void iconPictureBox2_Click(object sender, EventArgs e)
+        {
+            
+            MonthCalendar monthCalendar = new MonthCalendar();
+            iconPictureBox2.Controls.Add(monthCalendar);
+        }
     }
 }

@@ -54,6 +54,7 @@ namespace GUI
             this.currentChildFormText = new System.Windows.Forms.Label();
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             this.DateLabel = new System.Windows.Forms.Label();
             this.TimeLabel = new System.Windows.Forms.Label();
@@ -63,7 +64,6 @@ namespace GUI
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labelName = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelSideMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelChildForm.SuspendLayout();
@@ -73,11 +73,11 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // DateTimer
@@ -105,6 +105,7 @@ namespace GUI
             // LogoutButton
             // 
             this.LogoutButton.BackColor = System.Drawing.Color.Snow;
+            this.LogoutButton.Cursor = System.Windows.Forms.Cursors.Default;
             this.LogoutButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.LogoutButton.FlatAppearance.BorderSize = 0;
             this.LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -127,6 +128,7 @@ namespace GUI
             // 
             // EinstellungenButton
             // 
+            this.EinstellungenButton.Cursor = System.Windows.Forms.Cursors.Default;
             this.EinstellungenButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.EinstellungenButton.FlatAppearance.BorderSize = 0;
             this.EinstellungenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -149,6 +151,7 @@ namespace GUI
             // 
             // KompetenzListeButton
             // 
+            this.KompetenzListeButton.Cursor = System.Windows.Forms.Cursors.Default;
             this.KompetenzListeButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.KompetenzListeButton.FlatAppearance.BorderSize = 0;
             this.KompetenzListeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -171,6 +174,7 @@ namespace GUI
             // 
             // ProjekteListeButton
             // 
+            this.ProjekteListeButton.Cursor = System.Windows.Forms.Cursors.Default;
             this.ProjekteListeButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.ProjekteListeButton.FlatAppearance.BorderSize = 0;
             this.ProjekteListeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -193,6 +197,7 @@ namespace GUI
             // 
             // MitarbeiterListeButton
             // 
+            this.MitarbeiterListeButton.Cursor = System.Windows.Forms.Cursors.Default;
             this.MitarbeiterListeButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.MitarbeiterListeButton.FlatAppearance.BorderSize = 0;
             this.MitarbeiterListeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -215,6 +220,7 @@ namespace GUI
             // 
             // NeueMitarbeiterButton
             // 
+            this.NeueMitarbeiterButton.Cursor = System.Windows.Forms.Cursors.Default;
             this.NeueMitarbeiterButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.NeueMitarbeiterButton.FlatAppearance.BorderSize = 0;
             this.NeueMitarbeiterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -403,6 +409,7 @@ namespace GUI
             // iconCurrentChildForm
             // 
             this.iconCurrentChildForm.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.iconCurrentChildForm.Cursor = System.Windows.Forms.Cursors.Default;
             this.iconCurrentChildForm.ForeColor = System.Drawing.SystemColors.ControlText;
             this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconCurrentChildForm.IconColor = System.Drawing.SystemColors.ControlText;
@@ -423,10 +430,21 @@ namespace GUI
             this.panel1.Controls.Add(this.iconPictureBox2);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label3);
+            this.panel1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.panel1.Location = new System.Drawing.Point(220, 60);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(964, 701);
             this.panel1.TabIndex = 2;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(20, 87);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(620, 449);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 14;
+            this.pictureBox3.TabStop = false;
             // 
             // iconPictureBox3
             // 
@@ -477,6 +495,7 @@ namespace GUI
             this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.iconPictureBox2.TabIndex = 10;
             this.iconPictureBox2.TabStop = false;
+            this.iconPictureBox2.Click += new System.EventHandler(this.iconPictureBox2_Click);
             // 
             // panel2
             // 
@@ -533,16 +552,6 @@ namespace GUI
             this.label3.TabIndex = 8;
             this.label3.Text = "Herzlich Wilkommen bei der Kompetenzdatenbank";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(20, 87);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(620, 449);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 14;
-            this.pictureBox3.TabStop = false;
-            // 
             // Hauptseite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -553,8 +562,8 @@ namespace GUI
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelSideMenu);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(950, 720);
             this.Name = "Hauptseite";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -572,12 +581,12 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
